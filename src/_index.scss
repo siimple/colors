@@ -13,10 +13,10 @@
   @each $color,$list in $siimple-palette
   {
     //Add the base color
-    &--#{$color} { color: siimple-colors-base($color); }
+    &-color--#{$color} { color: siimple-color-base($color); }
 
     //Add the background base color
-    &-bg--#{$color} { background-color: siimple-colors-base($color); }
+    &-bg--#{$color}, &-background--#{$color} { background-color: siimple-color-base($color); }
 
     //For each color in the list
     @each $color_id,$color_hex in $list
@@ -25,10 +25,10 @@
       @if $color_id != "5"
       {
         //Add the color value
-        &--#{$color}-#{$color_id} { color: $color_hex; }
+        &-color--#{$color}-#{$color_id} { color: $color_hex; }
 
         //Add the background color
-        &-bg--#{$color}-#{$color_id} { background-color: $color_hex; }
+        &-bg--#{$color}-#{$color_id}, &-background--#{$color}-#{$color_id} { background-color: $color_hex; }
       }
     }
   }
