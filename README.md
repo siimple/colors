@@ -31,6 +31,9 @@ The source files included are written in [SASS](http://sass-lang.com/) and store
 @import "/path/to/siimple-colors/src/_mixins.scss";
 ```
 
+For each color, there is a variable called with the format `$siimple-colors-{color}-{number}`, where `{color}` is one of the colors of the palette, and `{number}` is an integer from 0 to 4. 
+
+
 ### Using the CSS version
 
 Also, you have a compiled CSS version of this module placed in the `./dist` folder. Simply include it on your HTML file:
@@ -44,6 +47,7 @@ You can also include the minimized CSS version:
 ```html
 <link rel="stylesheet" type="text/css" href="./path/to/siimple-colors/dist/siimple-colors.min.css">
 ```
+
 
 ## Build
 
