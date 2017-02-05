@@ -1,0 +1,17 @@
+//
+// Siimple-colors: a color palette for UI design
+// Under the MIT LICENSE.
+// License:    https://github.com/siimple/siimple-colors/blob/master/LICENSE.md
+// Repository: https://github.com/siimple
+// Website:    https://siimple.juanes.xyz
+//
+
+{{#each colors as |color|}}
+//{{capitalize color.name}} base color
+$siimple-colors-{{ color.name }}: {{lookup color.list ../index_base}};
+
+//{{capitalize color.name}} colors
+{{#each color.list}}
+{{#unless @last}}$siimple-colors-{{color.name}}-{{@index}}: {{this}};{{/unless}}
+{{/each}}
+{{/each}}
