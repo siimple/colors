@@ -7,26 +7,26 @@
 //
 
 //Get the base color
-@function siimple-colors-base($color)
+@function siimple-color-base($color)
 {
   //Get the colors list
   $list: map-get($siimple-palette, "#{$color}");
 
   //Get the color value
-  $value: map-get($list, "#{$siimple-colors-index-base}");
+  $value: map-get($list, "#{$siimple-color-base-index}");
 
   //Return this color
   @return $value;
 };
 
 //Get the over color
-@function siimple-colors-over($color)
+@function siimple-color-over($color)
 {
   //Get the colors list
   $list: map-get($siimple-palette, "#{$color}");
 
   //Get the color value
-  $value: map-get($list, "#{$siimple-colors-index-over}");
+  $value: map-get($list, "#{$siimple-color-over-index}");
 
   //Return this color
   @return $value;
