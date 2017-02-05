@@ -8,10 +8,10 @@
 
 {{#each colors as |color|}}
 //{{capitalize color.name}} base color
-$siimple-colors-{{ color.name }}: {{lookup color.list ../index_base}};
+$siimple-{{ color.name }}: {{lookup color.list ../index_base}};
 
 //{{capitalize color.name}} colors
 {{#each color.list}}
-{{#unless @last}}$siimple-colors-{{color.name}}-{{@index}}: {{this}};{{/unless}}
+{{#unless @last}}$siimple-{{color.name}}-{{@index}}: {{this}};{{/unless}}
 {{/each}}
 {{/each}}
