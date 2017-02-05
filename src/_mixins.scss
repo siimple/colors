@@ -1,0 +1,22 @@
+//
+// Siimple-colors: a color palette for UI design
+// Under the MIT LICENSE.
+// License:    https://github.com/siimple/siimple-colors/blob/master/LICENSE.md
+// Repository: https://github.com/siimple
+// Website:    http://siimple.juanes.xyz
+//
+
+//Import variables
+@import "_variables.scss";
+
+//Import colors palette
+@import "_palette.scss";
+
+//Import colors
+@import "_colors.scss";
+
+//Import utils methods
+@import "_utils.scss";
+
+//Import main colors mixin
+@import "_index.scss";
