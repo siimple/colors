@@ -31,7 +31,7 @@ The source files included are written in [SASS](http://sass-lang.com/) and store
 @import "/path/to/siimple-colors/src/_mixins.scss";
 ```
 
-For each color, there is a variable called with the format `$siimple-colors-{color}-{number}`, where `{color}` is one of the colors of the palette, and `{number}` is an integer from 0 to 4. 
+For each color, there is a variable called with the format `$siimple-colors-{color}-{number}`, where `{color}` is one of the colors of the palette, and `{number}` is an integer from 0 to 4. Also, the base color is stored as a variable with the format `$siimple-colors-{color}`, where `{color}` is one of the colors of the palette.
 
 
 ### Using the CSS version
