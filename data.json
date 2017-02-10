@@ -1,7 +1,7 @@
 {
   "colors":
   [
-    { "name": "navy",   "list": [ "#3f465a", "#495169", "#57607c", "#5e6887", "#697496", "#ffffff" ] },
+    { "name": "navy",   "list": [ "#3f465a", "#495169", "#57607c", "#697496", "#8790ab", "#ffffff" ] },
     { "name": "green",  "list": [ "#15b784", "#18cd94", "#1add9f", "#32e7ad", "#48eab7", "#ffffff" ] },
     { "name": "teal",   "list": [ "#13a08d", "#15b7a1", "#18d2ba", "#1be4c9", "#32e7cf", "#ffffff" ] },
     { "name": "blue",   "list": [ "#1275ed", "#2a82ef", "#4894f0", "#599ef3", "#71acf4", "#ffffff" ] },
@@ -10,7 +10,7 @@
     { "name": "red",    "list": [ "#e60036", "#ff003c", "#ff1a4f", "#ff3363", "#ff4d76", "#ffffff" ] },
     { "name": "orange", "list": [ "#ff5f33", "#ff734d", "#ff8463", "#ff9b80", "#ffaf99", "#ffffff" ] },
     { "name": "yellow", "list": [ "#cc9900", "#e6ac00", "#ffbf00", "#ffc61a", "#ffcc33", "#ffffff" ] },
-    { "name": "grey",   "list": [ "#acb8d2", "#bdc6db", "#cdd5e4", "#dee3ed", "#eef1f6", "#57607c" ] },
+    { "name": "grey",   "list": [ "#c3d7ef", "#d7e4f4", "#ebf2fa", "#f0f5fb", "#f1f4f9", "#57607c" ] },
     { "name": "white",  "list": [ "#ffffff", "#ffffff", "#ffffff", "#ffffff", "#ffffff", "#57607c" ] }
   ],
   "index_base": 2,
