@@ -7,6 +7,7 @@ var rename = require('gulp-rename');
 var header = require('gulp-header');
 var sass = require('gulp-sass');
 var handlebars = require('gulp-compile-handlebars');
+var del = require('del');
 
 //Import the package
 var pkg = require('./package.json');
@@ -27,6 +28,13 @@ banner.push(' ');
 
 //Join the banner
 banner = banner.join('\n');
+
+//Clean the dist folder
+gulp.task('clean', function()
+{
+  //Clean the dist folder
+  return del.sync([ './dist/**' ]);
+});
 
 //Compile the colors palette
 gulp.task('compile', function()
@@ -89,4 +97,4 @@ gulp.task('minimize', function()
 });
 
 //Execute the tasks
-gulp.task('default', [ 'build', 'minimize' ]);
+gulp.task('default', [ 'clean', 'build', 'minimize' ]);
