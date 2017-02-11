@@ -25,10 +25,10 @@ bower install siimple-colors
 
 ### Using the SASS/SCSS mixins
 
-The source files included are written in [SASS](http://sass-lang.com/) and stored in `./src`. You can import all the mixins included on the package like this:
+The source files included are written in [SASS](http://sass-lang.com/) and stored in `./scss`. You can import all the mixins included on the package like this:
 
 ```sass-lang
-@import "/path/to/siimple-colors/src/_mixins.scss";
+@import "/path/to/siimple-colors/scss/_mixins.scss";
 ```
 
 For each color, there is a variable called with the format `$siimple-colors-{color}-{number}`, where `{color}` is one of the colors of the palette, and `{number}` is an integer from 0 to 4. Also, the base color is stored as a variable with the format `$siimple-colors-{color}`, where `{color}` is one of the colors of the palette.
