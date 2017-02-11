@@ -1,12 +1,12 @@
 {
   "name": "siimple-colors",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A color palette for UI design",
   "author": "Josemi Juanes <josemijuanes@gmail.com>",
   "license": "MIT",
   "homepage": "http://siimple.juanes.xyz/colors",
   "repository": { "type": "git", "url": "https://github.com/siimple/siimple-colors.git" },
-  "keywords": [ "siimple", "colors", "palette", "ui", "design", "flat" ],
+  "keywords": [ "siimple", "colors", "palette", "ui", "design", "flat", "scss", "sass" ],
   "devDependencies":
   {
     "gulp": "3.9.1",
