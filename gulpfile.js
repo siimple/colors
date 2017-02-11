@@ -37,7 +37,7 @@ gulp.task('clean', function()
 });
 
 //Compile the colors palette
-gulp.task('compile', function()
+gulp.task('compile:scss', function()
 {
   //Handlebars options
   var opt = { helpers: {} };
@@ -46,7 +46,7 @@ gulp.task('compile', function()
   opt.helpers.capitalize = function(text){ return text.charAt(0).toUpperCase() + text.substring(1); };
 
   //Compile the handlebars files
-  return gulp.src('./templates/**.hbs')
+  return gulp.src('./templates/scss/**.hbs')
 
   //Compile the handlears files
   .pipe(handlebars(data, opt))
@@ -55,14 +55,14 @@ gulp.task('compile', function()
   .pipe(rename({ extname: '.scss' }))
 
   //Save
-  .pipe(gulp.dest('./src/'));
+  .pipe(gulp.dest('./scss/'));
 });
 
 //Build the SCSS files
-gulp.task('build', function()
+gulp.task('build:scss', function()
 {
   //Select all the SCSS files
-  gulp.src('src/**/*.scss')
+  gulp.src('scss/**/*.scss')
 
   //Build the scss files
   .pipe(sass().on('error', sass.logError))
@@ -84,7 +84,7 @@ gulp.task('minimize', function()
   gulp.src('dist/siimple-colors.css')
 
   //Clean the css
-  .pipe(cleanCSS({ compatibility: '*', processImportFrom: ['!fonts.googleapis.com'] }))
+  .pipe(cleanCSS({ compatibility: '*', processImportFrom: [ '!fonts.googleapis.com' ] }))
 
   //Rename the file
   .pipe(rename('siimple-colors.min.css'))
@@ -95,6 +95,12 @@ gulp.task('minimize', function()
   //Save on the dist folder
   .pipe(gulp.dest('dist/'));
 });
+
+//Build task
+gulp.task('build', [ 'build:scss' ]);
+
+//Compile task
+gulp.task('compile', [ 'compile:scss' ]);
 
 //Execute the tasks
 gulp.task('default', [ 'clean', 'build', 'minimize' ]);
