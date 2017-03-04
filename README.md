@@ -35,7 +35,7 @@ You can also include the minimized CSS version:
 
 The source files included are written in [SASS](http://sass-lang.com/) and placed in `./scss`. You can import all the mixins included on the package by adding the following line to your `scss` file:
 
-```sass-lang
+```sass
 @import "./bower_components/siimple-colors/scss/_mixins.scss";
 ```
 
@@ -43,7 +43,7 @@ For each color, there is a variable called with the format `$siimple-{color}-{nu
 
 Example:
 
-```scss-lang
+```scss
 @import "./bower_components/siimple-colors/scss/_mixins.scss";
 
 .text-green
