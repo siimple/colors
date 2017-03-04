@@ -9,55 +9,68 @@
 
 ## Install
 
-You can install the color palette using [npm](https://npmjs.com/package/siimple-colors):
+You can download the color palette using [bower](http://bower.io):
 
 ```
-npm install --save siimple-colors
-```
-
-Or you can install it using [bower](http://bower.io):
-
-```
-bower install siimple-colors
+bower install siimple-colors --save
 ```
 
 ## Usage
-
-### Using the SASS/SCSS mixins
-
-The source files included are written in [SASS](http://sass-lang.com/) and stored in `./scss`. You can import all the mixins included on the package like this:
-
-```sass-lang
-@import "/path/to/siimple-colors/scss/_mixins.scss";
-```
-
-For each color, there is a variable called with the format `$siimple-colors-{color}-{number}`, where `{color}` is one of the colors of the palette, and `{number}` is an integer from 0 to 4. Also, the base color is stored as a variable with the format `$siimple-colors-{color}`, where `{color}` is one of the colors of the palette.
-
 
 ### Using the CSS version
 
 Also, you have a compiled CSS version of this module placed in the `./dist` folder. Simply include it on your HTML file:
 
 ```html
-<link rel="stylesheet" type="text/css" href="./path/to/siimple-colors/dist/siimple-colors.css">
+<link rel="stylesheet" type="text/css" href="/bower_components/siimple-colors/dist/siimple-colors.css">
 ```
 
 You can also include the minimized CSS version:
 
 ```html
-<link rel="stylesheet" type="text/css" href="./path/to/siimple-colors/dist/siimple-colors.min.css">
+<link rel="stylesheet" type="text/css" href="/bower_components/siimple-colors/dist/siimple-colors.min.css">
 ```
 
+### Using the SASS/SCSS mixins
+
+The source files included are written in [SASS](http://sass-lang.com/) and placed in `./scss`. You can import all the mixins included on the package by adding the following line to your `scss` file:
+
+```sass-lang
+@import "./bower_components/siimple-colors/scss/_mixins.scss";
+```
+
+For each color, there is a variable called with the format `$siimple-{color}-{number}`, where `{color}` is one of the colors of the palette, and `{number}` is an integer from 0 to 4 (0 is the darkest, 4 is the lightest). Also, the base color is stored as a variable with the format `$siimple-{color}`, where `{color}` is one of the colors of the palette.
+
+Example:
+
+```scss-lang
+@import "./bower_components/siimple-colors/scss/_mixins.scss";
+
+.text-green
+{
+  color: $siimple-green;
+}
+
+.text-blue-light
+{
+  color: $siimple-blue-4;
+}
+
+.text-blue-dark
+{
+  color: $siimple-blue-0;
+}
+```
 
 ## Build
 
-You need [gulp](http://gulpjs.com) to build and generate the SASS/SCSS and the CSS files for this package. Also, you need to install all the dependencies. For this, navigate to the root of this package and run:
+You need [gulp](http://gulpjs.com) to build and generate the SASS/SCSS and the CSS files for this package (you can install it by running `npm install -g gulp`). Also, you need to install all the dependencies. For this, navigate to the root of this package and run:
 
 ```
 npm install
 ```
 
-The colors that compose this module are stored in `data.json`. SASS/SCSS files like `_variables.scss`, `_colors.scss` and `_palette.scss` can be generated running the following command:
+The colors that compose this module are stored in `data.json`. The SCSS files `_variables.scss`, `_colors.scss` and `_palette.scss` can be generated running the following command:
 
 ```
 gulp compile
