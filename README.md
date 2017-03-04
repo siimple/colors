@@ -15,6 +15,12 @@ You can download the color palette using [bower](http://bower.io):
 bower install siimple-colors --save
 ```
 
+You can also use [npm](https://www.npmjs.com/package/siimple-colors) for installing the package:
+
+```shell
+npm install siimple-colors --save
+```
+
 ## Usage
 
 ### Using the CSS version
