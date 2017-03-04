@@ -96,4 +96,4 @@ Please visit [the main page](http://siimple.juanes.xyz/colors) of this package f
 
 ## License
 
-[MIT LICENSE](./LICENSE) &copy; Josemi Juanes.
+[MIT LICENSE](./LICENSE) &copy; The **siimple** team.
