@@ -1,6 +1,6 @@
 {
   "name": "siimple-colors",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A color palette for UI design",
   "author": "Josemi Juanes <josemijuanes@gmail.com>",
   "license": "MIT",
@@ -10,7 +10,7 @@
   "devDependencies":
   {
     "gulp": "3.9.1",
-    "gulp-clean-css": "^2.3.2",
+    "gulp-clean-css": "3.0.2",
     "gulp-header": "^1.8.8",
     "gulp-rename": "^1.2.2",
     "gulp-sass": "^3.0.0",
