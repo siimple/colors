@@ -28,16 +28,38 @@ npm install siimple-colors --save
 Also, you have a compiled CSS version of this module placed in the `./dist` folder. Simply include it on your HTML file:
 
 ```html
-<link rel="stylesheet" type="text/css" href="/bower_components/siimple-colors/dist/siimple-colors.css">
+<link rel="stylesheet" type="text/css" href="/path/siimple-colors/dist/siimple-colors.css">
 ```
 
-You can also include the minimized CSS version:
+Replace `/path/` with the path where you have downloaded the `siimple-colors` package.
 
-```html
-<link rel="stylesheet" type="text/css" href="/bower_components/siimple-colors/dist/siimple-colors.min.css">
+For each color, there is a CSS variable (https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_variables) with the format `--siimple-{color}-{number}`, where:
+
+- `{color}`: is the color name (`navy`, `blue`, `red`, ...).
+- `{number}`: an integer from 0 to 4 (0 is the darkest, 4 is the lightest).
+
+Also, the base color is stored as a variable with the format `--siimple-{color}`.
+
+**Example:**
+
+```css
+.my_link
+{
+  color: var(--siimple-color-red);
+}
+
+.bg_blue_light
+{
+  background-color: var(--siimple-color-blue-4);
+}
+
+.bg_blue_dark
+{
+  background-color: var(--siimple-color-blue-0);
+}
 ```
 
-### Using the SASS/SCSS mixins
+### Using the SASS/SCSS version
 
 The source files included are written in [SASS](http://sass-lang.com/) and placed in `./scss`. You can import all the mixins included on the package by adding the following line to your `scss` file:
 
@@ -45,12 +67,17 @@ The source files included are written in [SASS](http://sass-lang.com/) and place
 @import "./bower_components/siimple-colors/scss/_mixins.scss";
 ```
 
-For each color, there is a variable called with the format `$siimple-{color}-{number}`, where `{color}` is one of the colors of the palette, and `{number}` is an integer from 0 to 4 (0 is the darkest, 4 is the lightest). Also, the base color is stored as a variable with the format `$siimple-{color}`, where `{color}` is one of the colors of the palette.
+For each color, there is a variable called with the format `$siimple-{color}-{number}`, where:
 
-Example:
+- `{color}`: is the color name (`navy`, `blue`, `red`, ...).
+- `{number}`: an integer from 0 to 4 (0 is the darkest, 4 is the lightest).
+
+Also, the base color is stored as a variable with the format `$siimple-{color}`.
+
+**Example:**
 
 ```scss
-@import "./bower_components/siimple-colors/scss/_mixins.scss";
+@import "/path/siimple-colors/scss/_mixins.scss";
 
 .text-green
 {
@@ -88,13 +115,7 @@ If you want to compile the SASS files and generate the CSS version of this modul
 gulp build
 ```
 
-This will generate a file called `siimple-colors.css` placed in the `./dist/` folder. And if you want to minimize the builded CSS file, run:
-
-```
-gulp minimize
-```
-
-This will generate a file called `siimple-colors.min.css` placed in `./dist/`.
+This will generate a file called `siimple-colors.css` placed in the `./dist/` folder.
 
 ## Documentation
 
