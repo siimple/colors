@@ -2,7 +2,6 @@
 var autoprefixer = require('gulp-autoprefixer');
 var fs = require('fs');
 var gulp = require('gulp');
-var cleanCSS = require('gulp-clean-css');
 var rename = require('gulp-rename');
 var header = require('gulp-header');
 var sass = require('gulp-sass');
@@ -46,13 +45,13 @@ gulp.task('compile:scss', function()
   opt.helpers.capitalize = function(text){ return text.charAt(0).toUpperCase() + text.substring(1); };
 
   //Compile the handlebars files
-  return gulp.src('./templates/scss/**.hbs')
+  return gulp.src('./templates/**.hbs')
 
   //Compile the handlears files
   .pipe(handlebars(data, opt))
 
   //Rename the file
-  .pipe(rename({ extname: '.scss' }))
+  .pipe(rename({ extname: '' }))
 
   //Save
   .pipe(gulp.dest('./scss/'));
@@ -77,25 +76,6 @@ gulp.task('build:scss', function()
   .pipe(gulp.dest('./dist/'));
 });
 
-//Minimize the css
-gulp.task('minimize', function()
-{
-  //Set the source file
-  gulp.src('dist/siimple-colors.css')
-
-  //Clean the css
-  .pipe(cleanCSS({ compatibility: '*', processImportFrom: [ '!fonts.googleapis.com' ] }))
-
-  //Rename the file
-  .pipe(rename('siimple-colors.min.css'))
-
-  //Add the header
-  .pipe(header(banner, { pkg : pkg } ))
-
-  //Save on the dist folder
-  .pipe(gulp.dest('dist/'));
-});
-
 //Build task
 gulp.task('build', [ 'build:scss' ]);
 
@@ -103,4 +83,4 @@ gulp.task('build', [ 'build:scss' ]);
 gulp.task('compile', [ 'compile:scss' ]);
 
 //Execute the tasks
-gulp.task('default', [ 'clean', 'build', 'minimize' ]);
+gulp.task('default', [ 'clean', 'build' ]);
