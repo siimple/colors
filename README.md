@@ -7,6 +7,10 @@
 
 > A color palette for UI design
 
+## The palette
+
+Visit http://siimple.juanes.xyz/colors.
+
 ## Install
 
 You can download the color palette using [bower](http://bower.io):
@@ -117,9 +121,6 @@ gulp build
 
 This will generate a file called `siimple-colors.css` placed in the `./dist/` folder.
 
-## Documentation
-
-Please visit [the main page](http://siimple.juanes.xyz/colors) of this package for getting more information and usage details.
 
 ## License
 
