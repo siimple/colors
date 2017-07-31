@@ -15,6 +15,6 @@
     "gulp-sass": "^3.0.0",
     "gulp-autoprefixer": "^3.1.1",
     "gulp-compile-handlebars": "0.6.1",
-    "del": "2.2.2"
+    "rmr": "^0.0.4"
   }
 }
