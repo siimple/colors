@@ -4,15 +4,18 @@ var fs = require('fs');
 var gulp = require('gulp');
 var rename = require('gulp-rename');
 var header = require('gulp-header');
+var concat = require('gulp-concat');
+var uglify = require('gulp-uglify');
 var sass = require('gulp-sass');
 var handlebars = require('gulp-compile-handlebars');
 var rmr = require('rmr');
+var utily = require('utily');
 
 //Import the package
 var pkg = require('./package.json');
 
-//Import data
-var data = require('./data.json');
+//Import colors
+var colors = require('./colors.json');
 
 //Banner structure
 var banner = [];
@@ -28,6 +31,10 @@ banner.push(' ');
 //Join the banner
 banner = banner.join('\n');
 
+//Initialize the handlebars options
+var hbs_options = { };
+hbs_options.helpers = { capitalize: utily.string.capitalize };
+
 //Clean the dist folder
 gulp.task('clean', function()
 {
@@ -35,26 +42,18 @@ gulp.task('clean', function()
   return rmr.sync('./dist/');
 });
 
-//Compile the colors palette
+//Compile the scss files
 gulp.task('compile-scss', function()
 {
-  //Handlebars options
-  var opt = { helpers: {} };
+  //Compile the scss files
+  gulp.src('./templates/scss/**.hbs').pipe(handlebars(colors, hbs_options)).pipe(rename({ extname: '' })).pipe(gulp.dest('./scss/'));
+});
 
-  //Add the capitalize text helper
-  opt.helpers.capitalize = function(text){ return text.charAt(0).toUpperCase() + text.substring(1); };
-
-  //Compile the handlebars files
-  return gulp.src('./templates/**.hbs')
-
-  //Compile the handlears files
-  .pipe(handlebars(data, opt))
-
-  //Rename the file
-  .pipe(rename({ extname: '' }))
-
-  //Save
-  .pipe(gulp.dest('./scss/'));
+//Compile the js files
+gulp.task('compile-js', function()
+{
+  //Compile the js files
+  gulp.src('./templates/js/**.hbs').pipe(handlebars(colors, hbs_options)).pipe(rename({ extname: '' })).pipe(gulp.dest('./js'));
 });
 
 //Build the SCSS files
@@ -80,7 +79,7 @@ gulp.task('build-scss', function()
 gulp.task('build', [ 'build-scss' ]);
 
 //Compile task
-gulp.task('compile', [ 'compile-scss' ]);
+gulp.task('compile', [ 'compile-scss', 'compile-js' ]);
 
 //Execute the tasks
 gulp.task('default', [ 'clean', 'build' ]);
