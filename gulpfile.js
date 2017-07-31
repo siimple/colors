@@ -75,11 +75,18 @@ gulp.task('build-scss', function()
   .pipe(gulp.dest('./dist/'));
 });
 
-//Build task
-gulp.task('build', [ 'build-scss' ]);
+//Build the js files
+gulp.task('build-js', function()
+{
+  //Concatenate all the js files
+  gulp.src(['js/siimple-colors.js', 'js/**.js']).pipe(concat('siimple-colors.js')).pipe(gulp.dest('./dist/'));
+});
 
 //Compile task
 gulp.task('compile', [ 'compile-scss', 'compile-js' ]);
+
+//Build task
+gulp.task('build', [ 'build-scss', 'build-js' ]);
 
 //Execute the tasks
 gulp.task('default', [ 'clean', 'build' ]);
