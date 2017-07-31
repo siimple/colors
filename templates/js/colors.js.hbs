@@ -1,0 +1,11 @@
+//Colors names
+siimple.colors.names = [ {{#each list as |color|}}'{{ color.name }}'{{#unless @last}}, {{/unless}}{{/each}} ];
+
+//Colors palette
+siimple.colors.palette = {};
+
+{{#each list as |color|}}
+//{{capitalize color.name}} palette
+siimple.colors.palette.{{ color.name }} = [ {{#each color.values}}'{{this}}'{{#unless @last}}, {{/unless}}{{/each}} ];
+
+{{/each}}
