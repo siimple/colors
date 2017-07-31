@@ -10,7 +10,7 @@
 $siimple-palette:
 (
 {{#each list as |color|}}
-  "{{color.name}}": ( {{#each color.value}}"{{@index}}": {{this}}{{#unless @last}}, {{/unless}}{{/each}} ){{#unless @last}}, {{/unless}}
+  "{{color.name}}": ( {{#each color.values}}"{{@index}}": {{this}}{{#unless @last}}, {{/unless}}{{/each}} ){{#unless @last}}, {{/unless}}
 {{/each}}
 );
 
