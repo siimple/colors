@@ -6,7 +6,7 @@ var rename = require('gulp-rename');
 var header = require('gulp-header');
 var sass = require('gulp-sass');
 var handlebars = require('gulp-compile-handlebars');
-var del = require('del');
+var rmr = require('rmr');
 
 //Import the package
 var pkg = require('./package.json');
@@ -15,7 +15,7 @@ var pkg = require('./package.json');
 var data = require('./data.json');
 
 //Banner structure
-var banner = []
+var banner = [];
 banner.push('/**');
 banner.push(' * <%= pkg.name %> - <%= pkg.description %>');
 banner.push(' * @version v<%= pkg.version %>');
@@ -32,11 +32,11 @@ banner = banner.join('\n');
 gulp.task('clean', function()
 {
   //Clean the dist folder
-  return del.sync([ './dist/**' ]);
+  return rmr.sync('./dist/');
 });
 
 //Compile the colors palette
-gulp.task('compile:scss', function()
+gulp.task('compile-scss', function()
 {
   //Handlebars options
   var opt = { helpers: {} };
@@ -58,7 +58,7 @@ gulp.task('compile:scss', function()
 });
 
 //Build the SCSS files
-gulp.task('build:scss', function()
+gulp.task('build-scss', function()
 {
   //Select all the SCSS files
   gulp.src('scss/**/*.scss')
@@ -77,10 +77,10 @@ gulp.task('build:scss', function()
 });
 
 //Build task
-gulp.task('build', [ 'build:scss' ]);
+gulp.task('build', [ 'build-scss' ]);
 
 //Compile task
-gulp.task('compile', [ 'compile:scss' ]);
+gulp.task('compile', [ 'compile-scss' ]);
 
 //Execute the tasks
 gulp.task('default', [ 'clean', 'build' ]);
