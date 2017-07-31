@@ -46,14 +46,14 @@ gulp.task('clean', function()
 gulp.task('compile-scss', function()
 {
   //Compile the scss files
-  gulp.src('./templates/scss/**.hbs').pipe(handlebars(colors, hbs_options)).pipe(rename({ extname: '' })).pipe(gulp.dest('./scss/'));
+  gulp.src('templates/scss/**.hbs').pipe(handlebars(colors, hbs_options)).pipe(rename({ extname: '' })).pipe(gulp.dest('scss/'));
 });
 
 //Compile the js files
 gulp.task('compile-js', function()
 {
   //Compile the js files
-  gulp.src('./templates/js/**.hbs').pipe(handlebars(colors, hbs_options)).pipe(rename({ extname: '' })).pipe(gulp.dest('./js'));
+  gulp.src('templates/js/**.hbs').pipe(handlebars(colors, hbs_options)).pipe(rename({ extname: '' })).pipe(gulp.dest('js/'));
 });
 
 //Build the SCSS files
@@ -72,14 +72,14 @@ gulp.task('build-scss', function()
   .pipe(header(banner, { pkg : pkg } ))
 
   //Save on the dist folder
-  .pipe(gulp.dest('./dist/'));
+  .pipe(gulp.dest('dist/'));
 });
 
 //Build the js files
 gulp.task('build-js', function()
 {
   //Concatenate all the js files
-  gulp.src(['js/siimple-colors.js', 'js/**.js']).pipe(concat('siimple-colors.js')).pipe(gulp.dest('./dist/'));
+  gulp.src(['js/siimple-colors.js', 'js/**.js']).pipe(concat('siimple-colors.js')).pipe(gulp.dest('dist/'));
 });
 
 //Compile task
