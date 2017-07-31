@@ -42,6 +42,9 @@ gulp.task('clean', function()
   return rmr.sync('./dist/');
 });
 
+//Compile task
+gulp.task('compile', [ 'compile-scss', 'compile-js' ]);
+
 //Compile the scss files
 gulp.task('compile-scss', function()
 {
@@ -55,6 +58,9 @@ gulp.task('compile-js', function()
   //Compile the js files
   gulp.src('templates/js/**.hbs').pipe(handlebars(colors, hbs_options)).pipe(rename({ extname: '' })).pipe(gulp.dest('js/'));
 });
+
+//Build task
+gulp.task('build', [ 'build-scss', 'build-js' ]);
 
 //Build the SCSS files
 gulp.task('build-scss', function()
@@ -82,11 +88,6 @@ gulp.task('build-js', function()
   gulp.src(['js/siimple-colors.js', 'js/**.js']).pipe(concat('siimple-colors.js')).pipe(gulp.dest('dist/'));
 });
 
-//Compile task
-gulp.task('compile', [ 'compile-scss', 'compile-js' ]);
-
-//Build task
-gulp.task('build', [ 'build-scss', 'build-js' ]);
 
 //Execute the tasks
 gulp.task('default', [ 'clean', 'build' ]);
