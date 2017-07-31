@@ -9,13 +9,13 @@
 //Colors palette
 $siimple-palette:
 (
-{{#each colors as |color|}}
-  "{{color.name}}": ( {{#each color.list}}"{{@index}}": {{this}}{{#unless @last}}, {{/unless}}{{/each}} ){{#unless @last}}, {{/unless}}
+{{#each list as |color|}}
+  "{{color.name}}": ( {{#each color.value}}"{{@index}}": {{this}}{{#unless @last}}, {{/unless}}{{/each}} ){{#unless @last}}, {{/unless}}
 {{/each}}
 );
 
-{{#each colors as |color|}}
+{{#each list as |color|}}
 //{{capitalize color.name}} palette
-$siimple-palette-{{ color.name }}: ( {{#each color.list}}"{{@index}}": {{this}}{{#unless @last}}, {{/unless}}{{/each}} );
+$siimple-palette-{{ color.name }}: ( {{#each color.values}}"{{@index}}": {{this}}{{#unless @last}}, {{/unless}}{{/each}} );
 
 {{/each}}
