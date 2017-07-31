@@ -6,6 +6,7 @@ var rename = require('gulp-rename');
 var header = require('gulp-header');
 var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
+var cleanCSS = require('gulp-clean-css');
 var sass = require('gulp-sass');
 var handlebars = require('gulp-compile-handlebars');
 var rmr = require('rmr');
@@ -88,6 +89,34 @@ gulp.task('build-js', function()
   gulp.src(['js/siimple-colors.js', 'js/**.js']).pipe(concat('siimple-colors.js')).pipe(gulp.dest('dist/'));
 });
 
+//Minimize task
+gulp.task('minimize', ['minimize-css', 'minimize-js']);
+
+//Minimize the css files
+gulp.task('minimize-css', function()
+{
+  //Set the source file
+  gulp.src('dist/siimple-colors.css')
+
+  //Clean the css
+  .pipe(cleanCSS({ compatibility: '*' }))
+
+  //Rename the file
+  .pipe(rename({ extname: '.min.css' }))
+
+  //Add the header
+  .pipe(header(banner, { pkg : pkg } ))
+
+  //Save on the dist folder
+  .pipe(gulp.dest('dist/'));
+});
+
+//Minimize the js files
+gulp.task('minimize-js', function()
+{
+  //Minimize the output js file
+  gulp.src('./dist/siimple-colors.js').pipe(uglify()).pipe(rename({ extname: '.min.js' })).pipe(gulp.dest('./dist'));
+});
 
 //Execute the tasks
 gulp.task('default', [ 'clean', 'build' ]);
