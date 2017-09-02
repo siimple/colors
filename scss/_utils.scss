@@ -6,8 +6,8 @@
 // Website:    http://siimple.juanes.xyz
 //
 
-//Get a color index
-@function siimple-color-index($color, $index)
+//Get a color by index
+@function siimple-color($color, $index)
 {
   //Get the colors list
   $list: map-get($siimple-palette, "#{$color}");
@@ -23,41 +23,12 @@
 @function siimple-color-base($color)
 {
   //Return the color
-  @return siimple-color-index($color, $siimple-color-base-index);
+  @return siimple-color($color, $siimple-color-base-index);
 };
 
 //Get the over color
 @function siimple-color-over($color)
 {
   //Return the color
-  @return siimple-color-index($color, $siimple-color-over-index);
-};
-
-//Add a color to proterty
-@mixin siimple-color-attribute($property: "background-color", $index: $siimple-color-base-index)
-{
-  //For each color in the list
-  @each $color,$list in $siimple-palette
-  {
-    //Color class
-    &--#{$color} { #{$property}: siimple-color-index($color, $index); }
-  }
-};
-
-//Build a list of colors for background
-@mixin siimple-color-attribute-background($index: $siimple-color-base-index)
-{
-  //For each color in the list
-  @each $color,$list in $siimple-palette
-  {
-    //Color class
-    &--#{$color}
-    {
-      //Set the background color
-      background-color: siimple-color-index($color, $index);
-
-      //Set the text color
-      color: siimple-color-over($color);
-    }
-  }
+  @return siimple-color($color, $siimple-color-over-index);
 };
