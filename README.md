@@ -49,17 +49,17 @@ Also, the base color is stored as a variable with the format `--siimple-{color}`
 ```css
 .my_link
 {
-  color: var(--siimple-color-red);
+  color: var(--siimple-red);
 }
 
 .bg_blue_light
 {
-  background-color: var(--siimple-color-blue-4);
+  background-color: var(--siimple-blue-4);
 }
 
 .bg_blue_dark
 {
-  background-color: var(--siimple-color-blue-0);
+  background-color: var(--siimple-blue-0);
 }
 ```
 
