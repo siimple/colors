@@ -27,9 +27,9 @@ npm install siimple-colors --save
 
 ## Usage
 
-### Using the CSS version
+### Using the compiled CSS file
 
-Also, you have a compiled CSS version of this module placed in the `./dist` folder. Simply include it on your HTML file:
+Also, you have a compiled CSS file of this module placed in the `./dist` folder. Simply include it on your HTML file:
 
 ```html
 <link rel="stylesheet" type="text/css" href="/path/siimple-colors/dist/siimple-colors.css">
@@ -68,7 +68,7 @@ Also, the base color is stored as a variable with the format `--siimple-{color}`
 The source files included are written in [SASS](http://sass-lang.com/) and placed in `./scss`. You can import all the mixins included on the package by adding the following line to your `scss` file:
 
 ```sass
-@import "./bower_components/siimple-colors/scss/_mixins.scss";
+@import "./bower_components/siimple-colors/scss/_all.scss";
 ```
 
 For each color, there is a variable called with the format `$siimple-{color}-{number}`, where:
@@ -81,7 +81,7 @@ Also, the base color is stored as a variable with the format `$siimple-{color}`.
 **Example:**
 
 ```scss
-@import "/path/siimple-colors/scss/_mixins.scss";
+@import "/path/siimple-colors/scss/_all.scss";
 
 .text-green
 {
@@ -107,7 +107,7 @@ You need [gulp](http://gulpjs.com) to build and generate the SASS/SCSS and the C
 npm install
 ```
 
-The colors that compose this module are stored in `data.json`. The SCSS files `_variables.scss`, `_colors.scss` and `_palette.scss` can be generated running the following command:
+The colors that compose this module are stored in `colors.json`. The SCSS files `_variables.scss`, `_colors.scss` and `_palette.scss` can be generated running the following command:
 
 ```
 gulp compile
