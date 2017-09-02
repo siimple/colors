@@ -11,6 +11,7 @@ var sass = require('gulp-sass');
 var handlebars = require('gulp-compile-handlebars');
 var rmr = require('rmr');
 var utily = require('utily');
+var rollup = require('gulp-better-rollup');
 
 //Import the package
 var pkg = require('./package.json');
@@ -86,7 +87,7 @@ gulp.task('build-scss', function()
 gulp.task('build-js', function()
 {
   //Concatenate all the js files
-  gulp.src(['js/siimple-colors.js', 'js/**.js']).pipe(concat('siimple-colors.js')).pipe(gulp.dest('dist/'));
+  gulp.src('js/index.js').pipe(rollup({ }, { format: 'iife' })).pipe(rename('siimple-colors.js')).pipe(gulp.dest('dist/'));
 });
 
 //Minimize task
