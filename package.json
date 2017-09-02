@@ -19,6 +19,7 @@
     "gulp-concat": "^2.6.1",
     "gulp-clean-css": "^3.7.0",
     "rmr": "^0.0.4",
-    "utily": "^0.1.2"
+    "utily": "^0.1.2",
+    "gulp-better-rollup": "^1.1.1"
   }
 }
