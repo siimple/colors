@@ -1,14 +1,11 @@
-//Colors list
-siimple.colors.list = [ {{#each list as |color|}}'{{ color.name }}'{{#unless @last}}, {{/unless}}{{/each}} ];
+//Check if the siimple object exists
+if(typeof window.siimple === 'undefined'){ window.siimple = {}; }
+
+//Initialize the colors object
+window.siimple.colors = {};
 
 {{#each list as |color|}}
-//{{capitalize color.name}} palette
-siimple.colors.{{ color.name }} = [ {{#each color.values}}'{{this}}'{{#unless @last}}, {{/unless}}{{/each}} ];
+//{{capitalize color.name}} color palette
+window.siimple.colors.{{ color.name }} = [ {{#each color.values}}'{{this}}'{{#unless @last}}, {{/unless}}{{/each}} ];
 
 {{/each}}
-
-//Index base
-siimple.colors.index_base = {{ index_base }};
-
-//Index hover
-siimple.colors.index_over = {{ index_over }};
