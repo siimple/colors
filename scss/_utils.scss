@@ -23,12 +23,12 @@
 @function siimple-colors-base($color)
 {
   //Return the color
-  @return siimple-colors($color, $siimple-color-base-index);
+  @return siimple-colors($color, $siimple-colors-base-index);
 };
 
 //Get the over color
 @function siimple-colors-over($color)
 {
   //Return the color
-  @return siimple-colors($color, $siimple-color-over-index);
+  @return siimple-colors($color, $siimple-colors-over-index);
 };
