@@ -3,7 +3,12 @@
   "main": "dist/siimple-colors.css",
   "author": "Josemi Juanes <josemijuanes@gmail.com>",
   "homepage": "https://siimple.juanes.xyz/colors",
-  "repository": { "type": "git", "url": "https://github.com/siimple/siimple-colors.git" },
+  "repository":
+  {
+    "type": "git",
+    "url": "https://github.com/siimple/siimple-colors.git"
+  },
   "license": "MIT",
-  "keywords": [ "siimple", "colors", "palette", "ui", "design", "flat" ]
+  "keywords": [ "siimple", "colors", "palette", "ui", "design", "flat" ],
+  "dependencies": {}
 }
