@@ -11,7 +11,6 @@ var sass = require('gulp-sass');
 var handlebars = require('gulp-compile-handlebars');
 var rmr = require('rmr');
 var utily = require('utily');
-var rollup = require('gulp-better-rollup');
 
 //Import the package
 var pkg = require('./package.json');
@@ -33,10 +32,6 @@ banner.push(' ');
 //Join the banner
 banner = banner.join('\n');
 
-//Initialize the handlebars options
-var hbs_options = { };
-hbs_options.helpers = { capitalize: utily.string.capitalize };
-
 //Clean the dist folder
 gulp.task('clean', function()
 {
@@ -44,28 +39,30 @@ gulp.task('clean', function()
   return rmr.sync('./dist/');
 });
 
-//Compile task
-gulp.task('compile', [ 'compile-scss', 'compile-js' ]);
-
 //Compile the scss files
-gulp.task('compile-scss', function()
+gulp.task('compile', function()
 {
+  //Initialize the handlebars options
+  var hbs_options = { };
+
+  //Add the helpers functions
+  hbs_options.helpers = { capitalize: utily.string.capitalize };
+
   //Compile the scss files
-  gulp.src('templates/scss/**.hbs').pipe(handlebars(colors, hbs_options)).pipe(rename({ extname: '' })).pipe(gulp.dest('scss/'));
-});
+  gulp.src('templates/**.scss.hbs')
 
-//Compile the js files
-gulp.task('compile-js', function()
-{
-  //Compile the js files
-  gulp.src('templates/js/**.hbs').pipe(handlebars(colors, hbs_options)).pipe(rename({ extname: '' })).pipe(gulp.dest('js/'));
-});
+  //Compile using handlebars
+  .pipe(handlebars(colors, hbs_options))
 
-//Build task
-gulp.task('build', [ 'build-scss', 'build-js' ]);
+  //Change the extension name
+  .pipe(rename({ extname: '' }))
+
+  //Save to the scss folder
+  .pipe(gulp.dest('scss/'));
+});
 
 //Build the SCSS files
-gulp.task('build-scss', function()
+gulp.task('build', function()
 {
   //Select all the SCSS files
   gulp.src('scss/**/*.scss')
@@ -83,18 +80,8 @@ gulp.task('build-scss', function()
   .pipe(gulp.dest('dist/'));
 });
 
-//Build the js files
-gulp.task('build-js', function()
-{
-  //Concatenate all the js files
-  gulp.src('js/index.js').pipe(rollup({ }, { format: 'iife' })).pipe(rename('siimple-colors.js')).pipe(gulp.dest('dist/'));
-});
-
-//Minimize task
-gulp.task('minimize', ['minimize-css', 'minimize-js']);
-
 //Minimize the css files
-gulp.task('minimize-css', function()
+gulp.task('minimize', function()
 {
   //Set the source file
   gulp.src('dist/siimple-colors.css')
@@ -110,13 +97,6 @@ gulp.task('minimize-css', function()
 
   //Save on the dist folder
   .pipe(gulp.dest('dist/'));
-});
-
-//Minimize the js files
-gulp.task('minimize-js', function()
-{
-  //Minimize the output js file
-  gulp.src('./dist/siimple-colors.js').pipe(uglify()).pipe(rename({ extname: '.min.js' })).pipe(gulp.dest('./dist'));
 });
 
 //Execute the tasks
