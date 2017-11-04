@@ -16,7 +16,7 @@
   @each $color,$list in $siimple-palette
   {
     //Add the base color
-    --siimple-#{$color}: siimple-color-base($color);
+    --siimple-#{$color}: siimple-colors-base($color);
 
     //For each color in the list
     @each $color_id,$color_hex in $list
