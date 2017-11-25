@@ -114,7 +114,7 @@ You need [gulp](http://gulpjs.com) to build and generate the SASS/SCSS and the C
 npm install
 ```
 
-The colors that compose this module are stored in `colors.json`. The SCSS files `_variables.scss`, `_colors.scss` and `_palette.scss` can be generated running the following command:
+The list with all the colors are stored in `colors.json`. The main SCSS file `_colors.scss` is built using handlebars and can be automatically generated running the following command:
 
 ```
 gulp compile
