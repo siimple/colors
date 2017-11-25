@@ -72,7 +72,7 @@ Also, the base color is stored as a variable with the format `--siimple-{color}`
 
 The source files included are written in [SASS](http://sass-lang.com/) and placed in `./scss`. You can import all mixins included on the package by adding the following line to your `scss` file:
 
-```sass
+```scss
 @import "siimple-colors/scss/_all.scss";
 ```
 
