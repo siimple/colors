@@ -1,3 +1,8 @@
+<div align="center">
+  <img width="100%" src="https://rawgit.com/siimple/siimple-colors/master/media/logo-header.png" alt="siimple-core">
+  <br>
+</div>
+
 # siimple-colors
 
 [![npm](https://img.shields.io/npm/v/siimple-colors.svg?style=flat-square)](https://www.npmjs.com/package/siimple-colors)
