@@ -10,7 +10,7 @@
 [![devDependency Status](https://david-dm.org/siimple/siimple-colors/dev-status.svg?style=flat-square)](https://david-dm.org/siimple/siimple-colors#info=devDependencies)
 [![npm](https://img.shields.io/npm/l/siimple-colors.svg?style=flat-square)](https://github.com/siimpl/siimple-colors)
 
-> A color palette for UI design
+> An elegant and minimalistic color palette for UI design
 
 ## The palette
 
@@ -18,16 +18,16 @@ Visit http://siimple.juanes.xyz/colors.
 
 ## Install
 
-You can download the color palette using [bower](http://bower.io):
+You can download the color palette using [npm](https://www.npmjs.com/package/siimple-colors):
 
 ```
-bower install siimple-colors --save
+npm install siimple-colors --save
 ```
 
-You can also use [npm](https://www.npmjs.com/package/siimple-colors) for installing the package:
+You can also use [bower](http://bower.io) for installing the package:
 
 ```shell
-npm install siimple-colors --save
+bower install siimple-colors --save
 ```
 
 ## Usage
@@ -68,13 +68,15 @@ Also, the base color is stored as a variable with the format `--siimple-{color}`
 }
 ```
 
-### Using the SASS/SCSS version
+### Using SASS/SCSS 
 
-The source files included are written in [SASS](http://sass-lang.com/) and placed in `./scss`. You can import all the mixins included on the package by adding the following line to your `scss` file:
+The source files included are written in [SASS](http://sass-lang.com/) and placed in `./scss`. You can import all mixins included on the package by adding the following line to your `scss` file:
 
 ```sass
-@import "./bower_components/siimple-colors/scss/_all.scss";
+@import "siimple-colors/scss/_all.scss";
 ```
+
+Remember that you must add the `node_modules` path (or the `bower_components` path if you are using **bower**) to the SASS [load_paths](http://sass-lang.com/documentation/file.SASS_REFERENCE.html#load_paths-option) option.
 
 For each color, there is a variable called with the format `$siimple-{color}-{number}`, where:
 
@@ -86,7 +88,7 @@ Also, the base color is stored as a variable with the format `$siimple-{color}`.
 **Example:**
 
 ```scss
-@import "/path/siimple-colors/scss/_all.scss";
+@import "siimple-colors/scss/_all.scss";
 
 .text-green
 {
