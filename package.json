@@ -1,18 +1,25 @@
 {
   "name": "siimple-colors",
   "version": "0.2.0",
-  "description": "A color palette for UI design",
+  "description": "An elegant and minimalistic color palette for UI design",
   "author": "Josemi Juanes <josemijuanes@gmail.com>",
   "license": "MIT",
-  "homepage": "https://siimple.juanes.xyz/colors",
-  "repository":
-  {
+  "homepage": "https://colors.siimple.xyz",
+  "repository": {
     "type": "git",
     "url": "https://github.com/siimple/siimple-colors.git"
   },
-  "keywords": [ "siimple", "colors", "palette", "ui", "design", "flat", "scss", "sass" ],
-  "devDependencies":
-  {
+  "keywords": [
+    "siimple",
+    "colors",
+    "palette",
+    "ui",
+    "design",
+    "flat",
+    "scss",
+    "sass"
+  ],
+  "devDependencies": {
     "gulp": "3.9.1",
     "gulp-header": "^1.8.9",
     "gulp-rename": "^1.2.2",
@@ -23,6 +30,15 @@
     "gulp-concat": "^2.6.1",
     "gulp-clean-css": "^3.9.0",
     "rmr": "^0.1.0",
-    "utily": "^0.2.4"
+    "utily": "^0.2.4",
+    "stattic": "^0.2.3"
+  },
+  "scripts": {
+    "build": "npm run build:main && npm run build:minimize",
+    "build:main": "node ./scripts/build.js",
+    "build:minimize": "node ./scripts/minimize.js",
+    "docs": "npm run docs:build && node ./node_modules/.bin/stattic --folder docs/build --port 5000 --cors",
+    "docs:build": "node ./scripts/docs.js",
+    "docs:deploy": "npm run docs:build && cd ./docs/build && gcloud app deploy app.yaml --project siimple-documentation"
   }
 }
