@@ -108,7 +108,7 @@ Also, the base color is stored as a variable with the format `$siimple-{color}`.
 
 ## Build
 
-You need [gulp](http://gulpjs.com) to build and generate the SASS/SCSS and the CSS files for this package (you can install it by running `npm install -g gulp`). Also, you need to install all the dependencies. For this, navigate to the root of this package and run:
+First, you need to install all the dependencies. Navigate to the root of this package and run:
 
 ```
 npm install
@@ -117,16 +117,16 @@ npm install
 The list with all the colors are stored in `colors.json`. The main SCSS file `_colors.scss` is built using handlebars and can be automatically generated running the following command:
 
 ```
-gulp compile
+npm run compile
 ```
 
 If you want to compile the SASS files and generate the CSS version of this module, run:
 
 ```
-gulp build
+npm run build
 ```
 
-This will generate a file called `siimple-colors.css` placed in the `./dist/` folder.
+This will generate and save a CSS file called `siimple-colors.css` and his minimized file `siimple-colors.min.css` in the `./dist/` folder.
 
 
 ## License
