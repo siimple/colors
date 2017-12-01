@@ -4,7 +4,7 @@
   "description": "An elegant and minimalistic color palette for UI design",
   "author": "Josemi Juanes <josemijuanes@gmail.com>",
   "license": "MIT",
-  "homepage": "https://colors.siimple.xyz",
+  "homepage": "https://www.siimple.xyz/colors",
   "repository": {
     "type": "git",
     "url": "https://github.com/siimple/siimple-colors.git"
@@ -31,14 +31,11 @@
     "gulp-clean-css": "^3.9.0",
     "rmr": "^0.1.0",
     "utily": "^0.2.4",
-    "stattic": "^0.2.3"
+    "stattic": "^0.2.3",
+    "keue": "^0.1.0"
   },
   "scripts": {
-    "build": "npm run build:main && npm run build:minimize",
-    "build:main": "node ./scripts/build.js",
-    "build:minimize": "node ./scripts/minimize.js",
-    "docs": "npm run docs:build && node ./node_modules/.bin/stattic --folder docs/build --port 5000 --cors",
-    "docs:build": "node ./scripts/docs.js",
-    "docs:deploy": "npm run docs:build && cd ./docs/build && gcloud app deploy app.yaml --project siimple-documentation"
+    "build": "node ./scripts/build.js",
+    "compile": "node ./scripts/compile.js"
   }
 }
