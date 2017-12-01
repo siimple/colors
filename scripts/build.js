@@ -7,6 +7,7 @@ var rename = require('gulp-rename');
 var cleanCSS = require('gulp-clean-css');
 var sass = require('gulp-sass');
 var keue = require('keue');
+var rmr = require('rmr');
 
 //Import configuration
 var config = require('./config.js');
