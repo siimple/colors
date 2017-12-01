@@ -14,7 +14,7 @@
 
 ## The palette
 
-Visit http://siimple.juanes.xyz/colors.
+Visit http://www.siimple.xyz/colors.
 
 ## Install
 
