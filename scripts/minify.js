@@ -9,7 +9,7 @@ let config = require("./config.js");
 //Minify the output css file
 let minifyCss = function () {
     return gulp.src("dist/siimple-colors.css")
-        .pipe(cleanCSS({compatibility: "*", processImportFrom: ["!fonts.googleapis.com"]}))
+        .pipe(cleanCSS({compatibility: "*"}))
         .pipe(rename({extname: ".min.css"}))
         .pipe(header(config.getHeader(), {}))
         .pipe(gulp.dest("./dist"));
