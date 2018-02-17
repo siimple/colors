@@ -5,26 +5,15 @@
 // Repository: https://github.com/siimple/siimple-colors
 // Website:    https://www.siimple.xyz/colors
 //
-
-//Import all content
 @import "_all.scss";
 
-//Color variables
-:root
-{
-  //Read all the colors
-  @each $color,$list in $siimple-palette
-  {
-    //Add the base color
+//CSS Color variables
+:root {
+  @each $color, $list in $siimple-colors {
+    //Base color
     --siimple-#{$color}: siimple-color-base($color);
-
-    //For each color in the list
-    @each $color_id,$color_hex in $list
-    {
-      //Check the index value
-      @if $color_id != "5"
-      {
-        //Add the color value
+    @each $color_id, $color_hex in $list {
+      @if $color_id != "5" {
         --siimple-#{$color}-#{$color_id}: $color_hex;
       }
     }
