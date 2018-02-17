@@ -34,10 +34,10 @@
     //Each color in the palette
     @each $color_id, $color_hex in $list {
       @if $color_id != "5" {
-        &--color-#{$color}-#{$color_id} {
+        &--color-#{$color}#{$color_id} {
           color: $color_hex;
         }
-        &--bg-#{$color}-#{$color_id} {
+        &--bg-#{$color}#{$color_id} {
           background-color: $color_hex;
         }
       }
