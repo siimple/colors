@@ -31,7 +31,8 @@
     "utily": "^0.2.4"
   },
   "scripts": {
-    "build": "node ./scripts/build.js",
-    "compile": "node ./scripts/compile.js"
+    "build": "npm run css:compile && npm run css:minify",
+    "css:compile": "node ./scripts/compile.js",
+    "css:minify": "node ./scripts/minify.js"
   }
 }
