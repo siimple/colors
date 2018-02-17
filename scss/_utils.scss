@@ -10,7 +10,7 @@
 @function siimple-color($color, $index)
 {
   //Get the colors list
-  $list: map-get($siimple-palette, "#{$color}");
+  $list: map-get($siimple-colors, "#{$color}");
 
   //Get the color value
   $value: map-get($list, "#{$index}");
