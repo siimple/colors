@@ -1,26 +1,22 @@
-//Import dependencies
-var gulp = require('gulp');
-var rename = require('gulp-rename');
-var handlebars = require('gulp-compile-handlebars');
-var utily = require('utily');
+let gulp = require("gulp");
+let rename = require("gulp-rename");
+let header = require("gulp-header");
+let sass = require("gulp-sass");
+let autoprefixer = require("gulp-autoprefixer");
 
-//Import colors
-var colors = require('../colors.json');
+let config = require("./config.js");
 
-//Initialize the handlebars options
-var hbs_options = { };
+//Compile the css files
+let compileCss = function() {
+    //Sass compiler
+    let sassCompiler = sass({ includePaths: [ "node_modules" ] });
+    sassCompiler.on("error", sass.logError);
 
-//Add the helpers functions
-hbs_options.helpers = { capitalize: utily.string.capitalize };
-
-//Compile the scss files
-gulp.src('templates/**.scss.hbs')
-
-//Compile using handlebars
-.pipe(handlebars(colors, hbs_options))
-
-//Change the extension name
-.pipe(rename({ extname: '' }))
-
-//Save to the scss folder
-.pipe(gulp.dest('scss/'));
+    //Compile the sass files
+    return gulp.src("scss/**/*.scss")
+        .pipe(sassCompiler)
+        .pipe(autoprefixer({ browsers: ["last 3 versions", "IE 9"], cascade: false }))
+        .pipe(header(config.getHeader(), {}))
+        .pipe(gulp.dest("./dist"));
+};
+compileCss();
