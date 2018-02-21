@@ -13,11 +13,13 @@
     //Base color
     --siimple-#{$color}: siimple-color-base($color);
     @each $color_id, $color_hex in $list {
-      @if $color_id != "5" {
+      @if $color_id != "over" {
         --siimple-#{$color}-#{$color_id}: $color_hex;
       }
     }
   }
+  //White color
+  --siimple-white: $siimple-white;
 }
 
 //Colors styles
@@ -33,7 +35,7 @@
     }
     //Each color in the palette
     @each $color_id, $color_hex in $list {
-      @if $color_id != "5" {
+      @if $color_id != "over" {
         &--color-#{$color}-#{$color_id} {
           color: $color_hex;
         }
@@ -42,5 +44,12 @@
         }
       }
     }
+  }
+  //White color and background
+  &--color-white {
+    color: $siimple-white;
+  }
+  &--bg-white {
+    background-color: $siimple-white;
   }
 }
