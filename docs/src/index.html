@@ -8,67 +8,90 @@
 <!-- Scripts -->
 <script type="text/javascript" src="./index.js"></script>
 
-<!-- Presentation block -->
-<div class="presentation">
-    <!-- Header -->
-    <div class="presentation-header" align="center">
-        <div class="presentation-header-logo"></div>
-        <div class="presentation-header-title">siimple-colors</div>
-        <div class="presentation-header-detail">
+<!-- Content -->
+<div class="content bg-gradient" align="center">
+    <!-- Presentation -->
+    <div class="presentation" >
+        <div class="presentation-logo"></div>
+        <div class="presentation-title">siimple-colors</div>
+        <div class="presentation-detail">
             An elegant and minimalistic color palette for UI design.
         </div>
-        <div class="presentation-header-version">
+        <div class="presentation-version">
             Current version: <b>v0.3.0</b>
         </div>
     </div>
-    <!-- Presentation features -->
-    <div class="presentation-features" align="center">
-        <div class="presentation-features-item">
+    <!--  Features -->
+    <div class="features" align="center">
+        <div class="features-item">
             Feature1
         </div>
-        <div class="presentation-features-item">
+        <div class="features-item">
             Feature2
         </div>
-        <div class="presentation-features-item">
+        <div class="features-item">
             Feature3
         </div>
     </div>
-    <!-- Installation -->
-    <div class="presentation-guide" align="center">
-        <div class="presentation-guide-title">Installation</div>
-        <div class="presentation-guide-paragraph">
-            You can download <b>siimple-colors</b> using a package manager or using a hosted version in a CDN.
+    <!-- Installation guide -->
+    <div class="guide" align="center">
+        <div class="guide-title">Installation</div>
+        <div class="guide-paragraph">
+            You can download <b>siimple-colors</b> using the <b>NPM</b> package manager or using a hosted version in a CDN.
         </div>
-        <div class="presentation-guide-options">
-            <div class="presentation-guide-option icon-forklift selected">
+        <div class="guide-options">
+            <div class="guide-option icon-forklift selected">
                 Using NPM
             </div>
-            <div class="presentation-guide-option icon-cloud">
+            <div class="guide-option icon-cloud">
                 Hosted in a CDN
             </div>
         </div>
-        <div class="presentation-guide-paragraph">
-            <b>NPM</b> is the package manager for <b>Node.js</b>.
-            You will need to install <a href="https://nodejs.org" class="link" target="_blank">Node.js</a> if you don’t already have it installed.
-            Open a new terminal window and navigate to your project folder. Then, run the following command:
+        <div class="guide-content selected">
+            <div class="guide-paragraph">
+                <b>NPM</b> is the package manager for <b>Node.js</b>.
+                You will need to install <a href="https://nodejs.org" class="link" target="_blank">Node.js</a> if you don’t already have it installed.
+                Open a new terminal window and navigate to your project folder. Then, run the following command:
+            </div>
+            <div class="guide-pre">
+                $ npm install --save siimple-colors
+            </div>
+            <div class="guide-paragraph">
+                This will install the <b>siimple-colors</b> library files in your project's <code class="guide-code">node_modules</code> folder.
+                Now refer to the main CSS file adding a <code class="guide-code">link</code> element in your HTML pages:
+            </div>
+            <div class="guide-pre">
+                &lt;link rel="stylesheet" href="./node_modules/siimple-colors/css/siimple-colors.min.css"&gt;
+            </div>
         </div>
-        <div class="presentation-guide-code">
-            $ npm install --save siimple-colors
+        <div class="guide-content">
+            <div class="guide-paragraph">
+                Just add the following <code class="guide-code">link</code> element in your HTML pages to import the <b>siimple-colors</b> library.
+            </div>
+            <div class="guide-pre">
+                &lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/siimple-colors@1.0.0/dist/siimple-colors.min.css"&gt;
+            </div>
         </div>
-        <div class="presentation-guide-paragraph">
-            Now that you have <b>siimple-colors</b> imported in your project, you can start using <b>siimple-colors</b>.
+        <div class="guide-paragraph">
+            Well done! Now that you have <b>siimple-colors</b> imported in your project, you can start using all colors provided in the <b>siimple-colors</b> library.
         </div>
     </div>
     <!-- Usage -->
-    <div class="presentation-guide" align="center">
-        <div class="presentation-guide-title">Usage</div>
-        <div class="presentation-guide-options">
-            <div class="presentation-guide-option icon-css selected">
+    <div class="guide" align="center">
+        <div class="guide-title">Usage</div>
+        <div class="guide-options">
+            <div class="guide-option icon-css selected">
                 Using CSS
             </div>
-            <div class="presentation-guide-option icon-sass">
+            <div class="guide-option icon-sass">
                 Using SASS
             </div>
+        </div>
+        <div class="guide-content selected">
+            CSS documentation
+        </div>
+        <div class="guide-content">
+            SASS documentation
         </div>
     </div>
 </div>
