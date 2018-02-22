@@ -1,5 +1,5 @@
 let gulp = require("gulp");
-var handlebars = require('gulp-compile-handlebars');
+let handlebars = require('gulp-compile-handlebars');
 let path = require("path");
 
 let config = require("./config.js");
