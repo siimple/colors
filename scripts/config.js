@@ -14,3 +14,8 @@ module.exports.getHeader = function() {
     banner.push(" ");
     return utily.string.format(banner.join("\n"), pkg);
 };
+
+//Get the package version
+module.exports.getVersion = function() {
+    return pkg.version;
+};
