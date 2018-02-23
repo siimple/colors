@@ -1,0 +1,68 @@
+//Import dependencies
+@import "../../scss/_all.scss";
+//Font
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,700");
+
+//Body
+body {
+  margin: 0px;
+  padding: 0px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: normal;
+  font-size: 14px;
+}
+
+//Global link
+.link {
+  font-weight: bold;
+  text-decoration: underline;
+  color: $siimple-white;
+}
+
+//Background
+.bg-gradient {
+  background: linear-gradient(135deg, $siimple-purple-dark 0, $siimple-pink-dark 50%, $siimple-blue-dark 120%);
+}
+
+//Content
+.content {
+  display: block;
+  max-width: 800px;
+  padding-left: calc(50% - 400px);
+  padding-right: calc(50% - 400px);
+  padding-top: 100px;
+  padding-bottom: 100px;
+  color: #ffffff;
+
+  @media screen and (max-width: 830px) {
+    width: calc(100% - 30px);
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+//Icons
+.icon-cloud::before {
+  background-image: url('./assets/icon-cloud.png');
+}
+
+.icon-forklift::before {
+  background-image: url('./assets/icon-forklift.png');
+}
+
+.icon-css::before {
+  background-image: url('./assets/icon-css.png');
+}
+
+.icon-sass::before {
+  background-image: url('./assets/icon-sass.png');
+}
+
+.icon-palette::before {
+  background-image: url('./assets/icon-palette.png');
+}
+
+//Include partials
+@import "./_presentation.scss";
+@import "./_features.scss";
+@import "./_guide.scss";
