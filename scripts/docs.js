@@ -25,6 +25,9 @@ let buildDocs = function () {
         .pipe(autoprefixer({ browsers: ["last 3 versions", "IE 9"], cascade: false }))
         .pipe(gulp.dest(output));
 
+    //Compile the js files
+    gulp.src("docs/js/**.js").pipe(gulp.dest(output));
+
     //Copy the assets files
     gulp.src("docs/assets/**/*.*", {base: "docs/"}).pipe(gulp.dest(output));
     gulp.src("media/logo.svg").pipe(gulp.dest(output));
