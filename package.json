@@ -29,11 +29,15 @@
     "gulp-clean-css": "^3.9.0",
     "gulp-compile-handlebars": "^0.6.1",
     "rmr": "^0.1.0",
-    "utily": "^0.2.4"
+    "utily": "^0.2.4",
+    "stattic": "^0.2.3"
   },
   "scripts": {
     "build": "npm run css:compile && npm run css:minify",
     "css:compile": "node ./scripts/compile.js",
-    "css:minify": "node ./scripts/minify.js"
+    "css:minify": "node ./scripts/minify.js",
+    "docs": "npm run docs:build && npm run docs:serve",
+    "docs:build": "node ./scripts/docs.js",
+    "docs:serve": "node ./node_modules/.bin/stattic --folder ./docs/dist/ --port 5000"
   }
 }
