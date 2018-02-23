@@ -1,0 +1,63 @@
+.presentation {
+  display: block;
+  margin-top: 70px;
+  margin-bottom: 70px;
+
+  &-logo {
+    display: block;
+    width: 300px;
+    height: 300px;
+    background-image: url('./assets/logo.svg');
+    background-size: 300px 300px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    margin-bottom: 30px;
+  }
+
+  &-title {
+    display: block;
+    font-size: 60px;
+    font-weight: bold;
+    color: #ffffff;
+    line-height: 60px;
+    margin-bottom: 20px;
+  }
+
+  &-detail {
+    display: block;
+    font-size: 22px;
+    color: #ffffff;
+    opacity: 0.8;
+    line-height: 30px;
+    margin-bottom: 5px;
+  }
+
+  &-version {
+    display: block;
+    line-height: 28px;
+    color: #ffffff;
+    font-size: 18px;
+    opacity: 0.6;
+  }
+
+  &-button {
+    display: inline-block;
+    border-radius: 5px;
+    background-color: #ffffff;
+    color: $siimple-pink-dark;
+    height: 44px;
+    line-height: 44px;
+    padding-left: 15px;
+    padding-right: 15px;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    opacity: 1.0;
+    transition: all 0.3s;
+    text-decoration: none;
+    margin-top: 30px;
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+}
