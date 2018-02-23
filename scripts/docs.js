@@ -26,8 +26,8 @@ let buildDocs = function () {
         .pipe(gulp.dest(output));
 
     //Copy the assets files
-    gulp.src("docs/assets/**/*.*", {base: "docs/"})
-        .pipe(gulp.dest(output));
+    gulp.src("docs/assets/**/*.*", {base: "docs/"}).pipe(gulp.dest(output));
+    gulp.src("media/logo.svg").pipe(gulp.dest(output));
 
     //Copy the vendor files
     gulp.src("dist/siimple-colors.scss").pipe(gulp.dest(outputVendor));
