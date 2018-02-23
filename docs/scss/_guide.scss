@@ -65,19 +65,19 @@
       background-size: 50px 50px;
     }
 
-    &-option:hover {
+    &:hover {
       opacity: 0.5;
     }
 
-    &-option:hover::after {
+    &:hover::after {
       width: 100%;
     }
 
-    &-option.selected {
+    &.selected {
       opacity: 0.8 !important;
     }
 
-    &-option.selected::after {
+    &.selected::after {
       width: 100% !important;
       opacity: 0.9 !important;
     }
