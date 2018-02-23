@@ -32,14 +32,14 @@
       background-repeat: no-repeat;
       background-size: 80px 80px;
     }
-  }
 
-  &-title {
-    display: block;
-    font-size: 18px;
-    font-weight: bold;
-    text-align: center;
-    margin-bottom: 10px;
+    &-title {
+      display: block;
+      font-size: 18px;
+      font-weight: bold;
+      text-align: center;
+      margin-bottom: 10px;
+    }
 
     @media screen and (max-width: 830px) {
       width: calc(100% - 20px);
