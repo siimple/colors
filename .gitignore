@@ -38,3 +38,6 @@ jspm_packages
 
 # IntelliJ project management files
 *.iml
+
+# Test files
+test/*.html
