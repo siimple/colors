@@ -1,5 +1,6 @@
 var utily = require("utily");
 var pkg = require("../package.json");
+var colors = require("../colors.json");
 
 //Generate the header
 module.exports.getHeader = function() {
@@ -18,4 +19,9 @@ module.exports.getHeader = function() {
 //Get the package version
 module.exports.getVersion = function() {
     return pkg.version;
+};
+
+//Get the colors list
+module.exports.getColors = function() {
+    return colors;
 };
