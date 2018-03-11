@@ -1,22 +1,57 @@
-let gulp = require("gulp");
-let rename = require("gulp-rename");
-let header = require("gulp-header");
-let sass = require("gulp-sass");
-let autoprefixer = require("gulp-autoprefixer");
+let flow = require("tinyflow");
+let fs = require("fs");
+let path = require("path");
+let sass = require("node-sass");
+let autoprefixer = require("autoprefixer");
+let postcss = require("postcss");
+let cleanCSS = require("clean-css");
+let mkdirp = require("mkdirp");
 
 let config = require("./config.js");
 
-//Compile the css files
-let compileCss = function() {
-    //Sass compiler
-    let sassCompiler = sass({ includePaths: [ "node_modules" ] });
-    sassCompiler.on("error", sass.logError);
-
-    //Compile the sass files
-    return gulp.src("scss/**/*.scss")
-        .pipe(sassCompiler)
-        .pipe(autoprefixer({ browsers: ["last 3 versions", "IE 9"], cascade: false }))
-        .pipe(header(config.getHeader(), {}))
-        .pipe(gulp.dest("./dist"));
+//Files paths
+let paths = {
+    input: "./scss/siimple-colors.scss",
+    output: "./dist/siimple-colors.css",
+    outputMin: "./dist/siimple-colors.min.css"
 };
-compileCss();
+
+//Create the output directory 
+flow.task("dist:create", function (done) {
+    return mkdirp("./dist", function (error) {
+        return done(error);
+    });
+});
+
+//Compile the css files
+flow.task("css:compile", ["dist:create"], function (done) {
+    //Read the main scss file 
+    return fs.readFile(paths.input, "utf8", function (error, content) {
+        if (error) {
+            return done(error); 
+        }
+        //Compile the scss file to generate the css
+        let sassOptions = {data: content, includePaths: ["./scss/"]}; 
+        return sass.render(sassOptions, function (error, result) {
+            if (error) {
+                return done(error); 
+            }
+            //Prefix the generated css
+            let prefixer = postcss(autoprefixer({ browsers: ["last 3 versions", "IE 9"], cascade: false })); 
+            return prefixer.process(result.css).then(function (output) {
+                //Append the header
+                output.css = config.getHeader() + output.css;
+                //Write the colpiled css file 
+                return fs.writeFile(paths.output, output.css, "utf8", function (error) {
+                    return done(error);
+                });
+            }).catch(function (error) {
+                return done(error);
+            });
+        });
+    });
+});
+
+//Set default tasks 
+flow.defaultTask(["css:compile"]);
+
