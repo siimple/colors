@@ -52,6 +52,27 @@ flow.task("css:compile", ["dist:create"], function (done) {
     });
 });
 
+//Minify output css file 
+flow.task("css:minify", ["dist:create"], function (done) {
+    return fs.readFile(paths.output, "utf8", function (error, content) {
+        if (error) {
+            return done(error); 
+        }
+        //Clean the css file
+        new cleanCss({compatibility: "*"}).minify(content, function (error, output) {
+            if (error) {
+                return done(error);
+            }
+            //Append the header 
+            output.styles = config.getHeader() + output.styles;
+            //Write the minified css file
+            return fs.writeFile(paths.outputMin, output.styles, "utf8", function (error) {
+                return done(error);
+            });
+        });
+    });
+});
+
 //Set default tasks 
-flow.defaultTask(["css:compile"]);
+flow.defaultTask(["css:compile", "css:minify"]);
 
