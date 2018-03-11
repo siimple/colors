@@ -24,10 +24,11 @@
     "node-sass": "^4.7.2",
     "autoprefixer": "^8.1.0",
     "clean-css": "^4.1.11",
-    "gulp-compile-handlebars": "^0.6.1",
+    "handlebars": "^4.0.11",
     "rmr": "^0.1.0",
     "utily": "^0.2.4",
-    "stattic": "^0.2.3"
+    "stattic": "^0.3.0",
+    "glob": "^7.1.2"
   },
   "scripts": {
     "build": "node ./scripts/build.js",
@@ -36,6 +37,6 @@
     "docs": "npm run docs:build && npm run docs:serve",
     "docs:build": "node ./scripts/docs.js",
     "docs:serve": "node ./node_modules/.bin/stattic --folder ./docs/dist/ --port 5000",
-    "test": "node ./scripts/test.js"
+    "templates": "node ./scripts/templates.js"
   }
 }
