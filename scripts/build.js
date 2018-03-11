@@ -59,7 +59,7 @@ flow.task("css:minify", ["dist:create"], function (done) {
             return done(error); 
         }
         //Clean the css file
-        new cleanCss({compatibility: "*"}).minify(content, function (error, output) {
+        new cleanCSS({compatibility: "*"}).minify(content, function (error, output) {
             if (error) {
                 return done(error);
             }
