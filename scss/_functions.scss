@@ -8,27 +8,27 @@
 
 //Get a color
 @function siimple-color($color, $index: "base") {
-  $list: map-get($siimple-colors, "#{$color}");
-  $value: map-get($list, "#{$index}");
-  @return $value;
+    $list: map-get($siimple-colors, "#{$color}");
+    $value: map-get($list, "#{$index}");
+    @return $value;
 }
 
 //Get the base color
 @function siimple-color-base($color) {
-  @return siimple-color($color, "base");
+    @return siimple-color($color, "base");
 }
 
 //Get the light variant of the color
 @function siimple-color-light($color) {
-  @return siimple-color($color, "light");
+    @return siimple-color($color, "light");
 }
 
 //Get the dark variant of the color
 @function siimple-color-dark($color) {
-  @return siimple-color($color, "dark");
+    @return siimple-color($color, "dark");
 }
 
 //Get the over color
 @function siimple-color-over($color) {
-  @return siimple-color($color, "over");
+    @return siimple-color($color, "over");
 }
