@@ -46,7 +46,7 @@ We are working on a new documentation for `v1.0.0`.
 <span class="siimple--bg-blue-dark siimple--color-white">White text with dark blue color</span>
 ```
 
-### Using SASS variables 
+### Using SASS/SCSS 
 
 ```scss
 @import "siimple-colors/scss/_all.scss";
