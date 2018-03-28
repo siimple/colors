@@ -10,124 +10,16 @@
 [![devDependency Status](https://david-dm.org/siimple/siimple-colors/dev-status.svg?style=flat-square)](https://david-dm.org/siimple/siimple-colors#info=devDependencies)
 [![npm](https://img.shields.io/npm/l/siimple-colors.svg?style=flat-square)](https://github.com/siimpl/siimple-colors)
 
-> An elegant and minimalistic color palette for UI design
+**siimple-colors** is an elegant and minimalistic color palette for UI design.
 
-## The palette
 
-Visit http://www.siimple.xyz/colors.
+## Getting started
 
-## Install
+**siimple-colors** can be installed using [npm](https://www.npmjs.com/package/siimple-colors), or imported in your HTML files using a [CDN](https://www.jsdelivr.com/package/npm/siimple-colors).
 
-You can download the color palette using [npm](https://www.npmjs.com/package/siimple-colors):
+## Documentation 
 
-```
-npm install siimple-colors --save
-```
-
-You can also use [bower](http://bower.io) for installing the package:
-
-```shell
-bower install siimple-colors --save
-```
-
-## Usage
-
-### Using the compiled CSS file
-
-Also, you have a compiled CSS file of this module placed in the `./dist` folder. Simply include it on your HTML file:
-
-```html
-<link rel="stylesheet" type="text/css" href="/path/siimple-colors/dist/siimple-colors.css">
-```
-
-Replace `/path/` with the path where you have downloaded the `siimple-colors` package.
-
-For each color, there is a CSS variable (https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_variables) with the format `--siimple-{color}-{number}`, where:
-
-- `{color}`: is the color name (`navy`, `blue`, `red`, ...).
-- `{number}`: an integer from 0 to 4 (0 is the darkest, 4 is the lightest).
-
-Also, the base color is stored as a variable with the format `--siimple-{color}`.
-
-**Example:**
-
-```css
-.my_link
-{
-  color: var(--siimple-red);
-}
-
-.bg_blue_light
-{
-  background-color: var(--siimple-blue-4);
-}
-
-.bg_blue_dark
-{
-  background-color: var(--siimple-blue-0);
-}
-```
-
-### Using SASS/SCSS 
-
-The source files included are written in [SASS](http://sass-lang.com/) and placed in `./scss`. You can import all mixins included on the package by adding the following line to your `scss` file:
-
-```scss
-@import "siimple-colors/scss/_all.scss";
-```
-
-Remember that you must add the `node_modules` path (or the `bower_components` path if you are using **bower**) to the SASS [load_paths](http://sass-lang.com/documentation/file.SASS_REFERENCE.html#load_paths-option) option.
-
-For each color, there is a variable called with the format `$siimple-{color}-{number}`, where:
-
-- `{color}`: is the color name (`navy`, `blue`, `red`, ...).
-- `{number}`: an integer from 0 to 4 (0 is the darkest, 4 is the lightest).
-
-Also, the base color is stored as a variable with the format `$siimple-{color}`.
-
-**Example:**
-
-```scss
-@import "siimple-colors/scss/_all.scss";
-
-.text-green
-{
-  color: $siimple-green;
-}
-
-.text-blue-light
-{
-  color: $siimple-blue-4;
-}
-
-.text-blue-dark
-{
-  color: $siimple-blue-0;
-}
-```
-
-## Build
-
-First, you need to install all the dependencies. Navigate to the root of this package and run:
-
-```
-npm install
-```
-
-The list with all the colors are stored in `colors.json`. The main SCSS file `_colors.scss` is built using handlebars and can be automatically generated running the following command:
-
-```
-npm run compile
-```
-
-If you want to compile the SASS files and generate the CSS version of this module, run:
-
-```
-npm run build
-```
-
-This will generate and save a CSS file called `siimple-colors.css` and his minimized file `siimple-colors.min.css` in the `./dist/` folder.
-
+We are working on a new documentation for `v1.0.0`.
 
 ## License
 
