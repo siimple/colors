@@ -1,4 +1,10 @@
 //
+// WARNING: THIS FILE IS AUTO-GENERATED. DO NOT EDIT IT.
+// You can generate this file running the following command from the project root: 
+// $ npm run templates
+//
+
+//
 // siimple-colors: a color palette for UI design
 // Under the MIT LICENSE.
 // License:    https://github.com/siimple/siimple-colors/blob/master/LICENSE.md
@@ -8,75 +14,83 @@
 
 //Colors palette
 $siimple-colors: (
-    "navy":   ("dark": #34414b, "base": #546778, "light": #788ea1, "over": #ffffff),
-    "green":  ("dark": #6cb332, "base": #93d260, "light": #bce39c, "over": #ffffff),
-    "teal":   ("dark": #32b393, "base": #60d2b6, "light": #9ce3d1, "over": #ffffff),
-    "blue":   ("dark": #1e6ac8, "base": #4e91e4, "light": #90bbee, "over": #ffffff),
-    "aqua":   ("dark": #1e9ac8, "base": #4ebce4, "light": #90d5ee, "over": #ffffff),
-    "purple": ("dark": #7c57db, "base": #ac94e8, "light": #ded5f6, "over": #ffffff),
-    "pink":   ("dark": #db3d94, "base": #e77eb8, "light": #f3bedb, "over": #ffffff),
-    "red":    ("dark": #e72618, "base": #ee675d, "light": #f5a8a3, "over": #ffffff),
-    "orange": ("dark": #f4490b, "base": #f78055, "light": #fab69e, "over": #ffffff),
-    "yellow": ("dark": #fab005, "base": #fbc850, "light": #fde09b, "over": #ffffff),
-    "brown":  ("dark": #75413e, "base": #a75d58, "light": #c18e8a, "over": #ffffff),
-    "grey":   ("dark": #cbd8e6, "base": #dde5ee, "light": #eef2f7, "over": #546778)
+    "navy": ("dark": #34414b, "base": #546778, "light": #788ea1, "over": #ffffff), 
+    "green": ("dark": #6cb332, "base": #93d260, "light": #bce39c, "over": #ffffff), 
+    "teal": ("dark": #32b393, "base": #60d2b6, "light": #9ce3d1, "over": #ffffff), 
+    "blue": ("dark": #1e6ac8, "base": #4e91e4, "light": #90bbee, "over": #ffffff), 
+    "aqua": ("dark": #1e9ac8, "base": #4ebce4, "light": #90d5ee, "over": #ffffff), 
+    "purple": ("dark": #7c57db, "base": #ac94e8, "light": #ded5f6, "over": #ffffff), 
+    "pink": ("dark": #db3d94, "base": #e77eb8, "light": #f3bedb, "over": #ffffff), 
+    "red": ("dark": #e72618, "base": #ee675d, "light": #f5a8a3, "over": #ffffff), 
+    "orange": ("dark": #f4490b, "base": #f78055, "light": #fab69e, "over": #ffffff), 
+    "yellow": ("dark": #fab005, "base": #fbc850, "light": #fde09b, "over": #ffffff), 
+    "brown": ("dark": #75413e, "base": #a75d58, "light": #c18e8a, "over": #ffffff), 
+    "grey": ("dark": #cbd8e6, "base": #dde5ee, "light": #eef2f7, "over": #546778)
 );
+
 $siimple-palette: $siimple-colors;
 
-//Navy colors
+//navy colors
 $siimple-navy-dark: siimple-color("navy", "dark");
 $siimple-navy: siimple-color("navy", "base");
 $siimple-navy-light: siimple-color("navy", "light");
 
-//Green colors
+//green colors
 $siimple-green-dark: siimple-color("green", "dark");
 $siimple-green: siimple-color("green", "base");
 $siimple-green-light: siimple-color("green", "light");
 
-//Teal colors
+//teal colors
 $siimple-teal-dark: siimple-color("teal", "dark");
 $siimple-teal: siimple-color("teal", "base");
 $siimple-teal-light: siimple-color("teal", "light");
 
-//Blue colors
+//blue colors
 $siimple-blue-dark: siimple-color("blue", "dark");
 $siimple-blue: siimple-color("blue", "base");
 $siimple-blue-light: siimple-color("blue", "light");
 
-//Aqua colors
+//aqua colors
 $siimple-aqua-dark: siimple-color("aqua", "dark");
 $siimple-aqua: siimple-color("aqua", "base");
 $siimple-aqua-light: siimple-color("aqua", "light");
 
-//Purple colors
+//purple colors
 $siimple-purple-dark: siimple-color("purple", "dark");
 $siimple-purple: siimple-color("purple", "base");
 $siimple-purple-light: siimple-color("purple", "light");
 
-//Pink colors
+//pink colors
 $siimple-pink-dark: siimple-color("pink", "dark");
 $siimple-pink: siimple-color("pink", "base");
 $siimple-pink-light: siimple-color("pink", "light");
 
-//Red colors
+//red colors
 $siimple-red-dark: siimple-color("red", "dark");
 $siimple-red: siimple-color("red", "base");
 $siimple-red-light: siimple-color("red", "light");
 
-//Orange colors
+//orange colors
 $siimple-orange-dark: siimple-color("orange", "dark");
 $siimple-orange: siimple-color("orange", "base");
 $siimple-orange-light: siimple-color("orange", "light");
 
-//Yellow colors
+//yellow colors
 $siimple-yellow-dark: siimple-color("yellow", "dark");
 $siimple-yellow: siimple-color("yellow", "base");
 $siimple-yellow-light: siimple-color("yellow", "light");
 
-//Grey colors
+//brown colors
+$siimple-brown-dark: siimple-color("brown", "dark");
+$siimple-brown: siimple-color("brown", "base");
+$siimple-brown-light: siimple-color("brown", "light");
+
+//grey colors
 $siimple-grey-dark: siimple-color("grey", "dark");
 $siimple-grey: siimple-color("grey", "base");
 $siimple-grey-light: siimple-color("grey", "light");
 
-//White base color
+
+//White base color 
 $siimple-white: #ffffff;
+
