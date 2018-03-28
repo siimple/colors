@@ -22,34 +22,25 @@ let compileTemplates = function (folder, done) {
         }
         flow.log("Compiling " + files.length + " files");
         let data = {colors: config.getColors(), header: header.join("\n")};
-        let compileTemplateFile = function(index) {
-            if(index >= files.length) {
-                return done(null);
-            }
-            let file = path.join(process.cwd(), files[index]);
+        for (let i = 0; i < files.length; i++) {
+            let file = path.join(process.cwd(), files[i]);
             let fileObject = path.parse(file);
             flow.log("Compiling file " + file);
-            //Read the file content
-            return fs.readFile(file, "utf8", function(error, content){
-                if(error) {
-                    return done(error);
-                }
-                //Compile the test file
+            try {
+                let content = fs.readFileSync(file, "utf8");
+                 //Compile the test file
                 let template = handlebars.compile(content);
                 //Output file path
                 let outputDir = path.join(process.cwd(), folder);
                 let output = path.format({dir: outputDir, name: fileObject.name, ext: ""});
                 flow.log("Saving compiled test to " + output);
-                return fs.writeFile(output, template(data), "utf8", function(error){
-                    if(error) {
-                        return done(error);
-                    }
-                    //File completed, continue with the next file in the list
-                    return compileTemplateFile(index + 1);
-                });
-            });
-        };
-        return compileTemplateFile(0);
+                fs.writeFileSync(output, template(data), "utf8");
+            } catch (error) {
+                return done(error);
+            }
+        }
+        //Compile finished
+        return done();
     });
 };
 
