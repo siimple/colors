@@ -68,5 +68,5 @@ flow.task("generate:test", function(done){
 });
 
 //Define default tasks 
-flow.defaultTask(["generate:test"]);
+flow.defaultTask(["generate:scss", "generate:test"]);
 
