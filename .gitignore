@@ -40,4 +40,4 @@ jspm_packages
 *.iml
 
 # Test files
-test/*.html
+#test/*.html
