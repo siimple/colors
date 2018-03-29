@@ -1,6 +1,6 @@
-var utily = require("utily");
-var pkg = require("../package.json");
-var colors = require("../colors.json");
+let kofi = require("kofi");
+let pkg = require("../package.json");
+let colors = require("../colors.json");
 
 //Generate the header
 module.exports.getHeader = function() {
@@ -13,7 +13,7 @@ module.exports.getHeader = function() {
     banner.push("**/");
     banner.push(" ");
     banner.push(" ");
-    return utily.string.format(banner.join("\n"), pkg);
+    return kofi.format(banner.join("\n"), pkg);
 };
 
 //Get the package version
