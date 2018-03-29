@@ -1,42 +1,42 @@
 {
-  "name": "siimple-colors",
-  "version": "0.2.0",
-  "description": "An elegant and minimalistic color palette for UI design",
-  "author": "Josemi Juanes <josemijuanes@gmail.com>",
-  "license": "MIT",
-  "homepage": "https://www.siimple.xyz/colors",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/siimple/siimple-colors.git"
-  },
-  "keywords": [
-    "siimple",
-    "colors",
-    "palette",
-    "ui",
-    "design",
-    "flat",
-    "scss",
-    "sass"
-  ],
-  "devDependencies": {
-    "tinyflow": "^0.0.3",
-    "node-sass": "^4.7.2",
-    "autoprefixer": "^8.1.0",
-    "clean-css": "^4.1.11",
-    "handlebars": "^4.0.11",
-    "rmr": "^0.1.0",
-    "utily": "^0.2.4",
-    "stattic": "^0.3.0",
-    "glob": "^7.1.2"
-  },
-  "scripts": {
-    "build": "node ./scripts/build.js",
-    "css:compile": "node ./scripts/build.js --flow-tasks css:compile",
-    "css:minify": "node ./scripts/build.js --flow-tasks css:minify",
-    "docs": "npm run docs:build && npm run docs:serve",
-    "docs:build": "node ./scripts/docs.js",
-    "docs:serve": "node ./node_modules/.bin/stattic --folder ./docs/dist/ --port 5000",
-    "templates": "node ./scripts/templates.js"
-  }
+    "name": "siimple-colors",
+    "version": "0.2.0",
+    "description": "An elegant and minimalistic color palette for UI design",
+    "author": "Josemi Juanes <josemijuanes@gmail.com>",
+    "license": "MIT",
+    "homepage": "https://www.siimple.xyz/colors",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/siimple/siimple-colors.git"
+    },
+    "keywords": [
+        "siimple",
+        "colors",
+        "palette",
+        "ui",
+        "design",
+        "flat",
+        "scss",
+        "sass"
+    ],
+    "devDependencies": {
+        "tinyflow": "^0.0.3",
+        "node-sass": "^4.7.2",
+        "autoprefixer": "^8.1.0",
+        "clean-css": "^4.1.11",
+        "handlebars": "^4.0.11",
+        "rmr": "^0.1.0",
+        "kofi": "^0.1.0",
+        "stattic": "^0.3.0",
+        "glob": "^7.1.2"
+    },
+    "scripts": {
+        "build": "node ./scripts/build.js",
+        "css:compile": "node ./scripts/build.js --flow-tasks css:compile",
+        "css:minify": "node ./scripts/build.js --flow-tasks css:minify",
+        "docs": "npm run docs:build && npm run docs:serve",
+        "docs:build": "node ./scripts/docs.js",
+        "docs:serve": "node ./node_modules/.bin/stattic --folder ./docs/dist/ --port 5000",
+        "templates": "node ./scripts/templates.js"
+    }
 }
