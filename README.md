@@ -15,7 +15,17 @@
 
 ## Getting started
 
-**siimple-colors** can be installed using [npm](https://www.npmjs.com/package/siimple-colors), or imported in your HTML files using a [CDN](https://www.jsdelivr.com/package/npm/siimple-colors).
+**siimple-colors** can be installed using [npm](https://www.npmjs.com/package/siimple-colors):
+
+```bash
+$ npm install --save siimple-colors
+```
+
+Or imported in your HTML files using a [CDN](https://www.jsdelivr.com/package/npm/siimple-colors).
+
+```html
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/siimple-colors@1.0.0-beta/dist/siimple-colors.min.css">
+```
 
 ## Documentation 
 
