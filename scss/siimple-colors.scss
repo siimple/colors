@@ -11,15 +11,15 @@
 :root {
     @each $color, $list in $siimple-colors {
         //Base color
-        --siimple-#{$color}: siimple-color-base($color);
+        --siimple-#{$color}: #{siimple-color-base($color)};
         @each $color_id, $color_hex in $list {
             @if $color_id != "over" {
-                --siimple-#{$color}-#{$color_id}: $color_hex;
+                --siimple-#{$color}-#{$color_id}: #{$color_hex};
             }
         }
     }
     //White color
-    --siimple-white: $siimple-white;
+    --siimple-white: #{$siimple-white};
 }
 
 //Colors styles
