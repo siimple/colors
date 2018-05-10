@@ -28,7 +28,16 @@
     @return siimple-color($color, "dark");
 }
 
-//Get the over color
+//Get the over color [DEPRECATED]
+//Use the siimple-color-invert function instead. 
 @function siimple-color-over($color) {
-    @return siimple-color($color, "over");
+    @if $color == "grey" {
+        //Return the white color
+        @return #ffffff;
+    } @else {
+        @return siimple-color($color, "over");
+    }
 }
+
+
+
