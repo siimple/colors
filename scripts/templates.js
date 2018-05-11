@@ -2,62 +2,45 @@ let fs = require("fs");
 let path = require("path");
 let glob = require("glob");
 let handlebars = require("handlebars");
-let flow = require("tinyflow");
+let opt = require("get-args")().options;
 
-let config = require("./config.js");
+//Import colors list
+let colors = require("../colors.json");
 
 //Header object
 let header = [];
 header.push("//");
 header.push("// WARNING: THIS FILE IS AUTO-GENERATED. DO NOT EDIT IT.");
 header.push("// You can generate this file running the following command from the project root: ");
-header.push("// $ npm run templates");
+header.push("// $ make compile-templates");
 header.push("//");
 
-//Function to compile the templates
-let compileTemplates = function (folder, done) {
-    return glob("./templates/" + folder + "/*.hbs", function(error, files){
-        if(error) {
-            return done(error);
+//Get all templates from the specified source
+glob("./templates/" + opt.source + "/*.hbs", function(error, files){
+    if(error) {
+        process.stderr.write("ERROR: " + error.message);
+        return process.exit(1);
+    }
+    //Initialize the data object to be passed to all templates
+    let data = {colors: colors, header: header.join("\n")};
+    //Output directory
+    let outputDir = path.join(process.cwd(), opt.source);
+    //Compile each template
+    for (let i = 0; i < files.length; i++) {
+        let file = path.join(process.cwd(), files[i]);
+        let fileObject = path.parse(file);
+        process.stdout.write("Compiling " + file);
+        try {
+            let content = fs.readFileSync(file, "utf8");
+            let template = handlebars.compile(content);
+            let output = path.format({dir: outputDir, name: fileObject.name, ext: ""});
+            fs.writeFileSync(output, template(data), "utf8");
+        } catch (error) {
+            process.stderr.write("ERROR: " + error.message);
+            return process.exit(1);
         }
-        flow.log("Compiling " + files.length + " files");
-        let data = {colors: config.getColors(), header: header.join("\n")};
-        for (let i = 0; i < files.length; i++) {
-            let file = path.join(process.cwd(), files[i]);
-            let fileObject = path.parse(file);
-            flow.log("Compiling file " + file);
-            try {
-                let content = fs.readFileSync(file, "utf8");
-                 //Compile the test file
-                let template = handlebars.compile(content);
-                //Output file path
-                let outputDir = path.join(process.cwd(), folder);
-                let output = path.format({dir: outputDir, name: fileObject.name, ext: ""});
-                flow.log("Saving compiled test to " + output);
-                fs.writeFileSync(output, template(data), "utf8");
-            } catch (error) {
-                return done(error);
-            }
-        }
-        //Compile finished
-        return done();
-    });
-};
-
-//Generate the scss files 
-flow.task("generate:scss", function (done) {
-    return compileTemplates("scss", function (error) {
-        return done(error);
-    });
+    }
+    //Compile finished
+    return process.exit(0);
 });
-
-//Generate the test files
-flow.task("generate:test", function(done){
-    return compileTemplates("test", function(error){
-        return done(error);
-    });
-});
-
-//Define default tasks 
-flow.defaultTask(["generate:scss", "generate:test"]);
 
