@@ -78,6 +78,12 @@
         "light": "#f7e4d4"
     },
     {
+        "name": "watermelon",
+        "dark": "#d72836",
+        "base": "#df535e",
+        "light": "#e77e87"
+    },
+    {
         "name": "grey",
         "dark": "#cbd8e6",
         "base": "#dde5ee",
