@@ -9,6 +9,7 @@ help:
 	@echo "  make build               Generate the compiled CSS files of siimple-colors"
 	@echo "  make clean               Clean the generated folders"
 	@echo "  make compile-templates   Compile all the templates"
+	@echo ""
 
 build:
 	@set -e
