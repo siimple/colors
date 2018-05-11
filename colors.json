@@ -1,69 +1,81 @@
 [
     {
         "name": "navy",
-        "dark": "#2a343c",
+        "dark": "#3f4d5a",
         "base": "#546778",
-        "light": "#879aab"
+        "light": "#698196"
     },
     {
         "name": "green",
-        "dark": "#609f2d",
+        "dark": "#78c738",
         "base": "#93d260",
-        "light": "#c9e9af"
+        "light": "#aedd88"
     },
     {
         "name": "teal",
-        "dark": "#2d9f83",
+        "dark": "#38c7a3",
         "base": "#60d2b6",
-        "light": "#afe9da"
+        "light": "#88ddc8"
     },
     {
         "name": "blue",
-        "dark": "#1b5eb1",
+        "dark": "#2176de",
         "base": "#4e91e4",
-        "light": "#a6c8f2"
+        "light": "#7aadeb"
     },
     {
         "name": "aqua",
-        "dark": "#1b89b1",
+        "dark": "#21acde",
         "base": "#4ebce4",
-        "light": "#a6def2"
+        "light": "#7acdeb"
     },
     {
         "name": "purple",
-        "dark": "#5c2dd2",
+        "dark": "#7c57db",
         "base": "#9d81e4",
-        "light": "#ded5f6"
+        "light": "#beabed"
     },
     {
         "name": "pink",
-        "dark": "#d72888",
+        "dark": "#df53a0",
         "base": "#e77eb8",
-        "light": "#f7d4e7"
+        "light": "#efa9d0"
     },
     {
         "name": "red",
-        "dark": "#d02216",
+        "dark": "#e93c2f",
         "base": "#ee675d",
-        "light": "#f8beba"
+        "light": "#f3928c"
     },
     {
         "name": "orange",
-        "dark": "#db420a",
+        "dark": "#f55c24",
         "base": "#f78055",
-        "light": "#fcc9b6"
+        "light": "#f9a485"
     },
     {
         "name": "yellow",
-        "dark": "#e19f05",
+        "dark": "#fab81e",
         "base": "#fbc850",
-        "light": "#fde7b4"
+        "light": "#fcd882"
     },
     {
         "name": "brown",
-        "dark": "#643835",
+        "dark": "#864b46",
         "base": "#a75d58",
-        "light": "#ca9e9b"
+        "light": "#b97e79"
+    },
+    {
+        "name": "royal",
+        "dark": "#6a74e2",
+        "base": "#939aea",
+        "light": "#bfc3f2"
+    },
+    {
+        "name": "beige",
+        "dark": "#e7ad7e",
+        "base": "#efc8a9",
+        "light": "#f7e4d4"
     },
     {
         "name": "grey",
