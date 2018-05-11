@@ -1,69 +1,69 @@
 [
     {
         "name": "navy",
-        "dark": "#34414b",
+        "dark": "#2a343c",
         "base": "#546778",
-        "light": "#788ea1"
+        "light": "#879aab"
     },
     {
         "name": "green",
-        "dark": "#6cb332",
+        "dark": "#609f2d",
         "base": "#93d260",
-        "light": "#bce39c"
+        "light": "#c9e9af"
     },
     {
         "name": "teal",
-        "dark": "#32b393",
+        "dark": "#2d9f83",
         "base": "#60d2b6",
-        "light": "#9ce3d1"
+        "light": "#afe9da"
     },
     {
         "name": "blue",
-        "dark": "#1e6ac8",
+        "dark": "#1b5eb1",
         "base": "#4e91e4",
-        "light": "#90bbee"
+        "light": "#a6c8f2"
     },
     {
         "name": "aqua",
-        "dark": "#1e9ac8",
+        "dark": "#1b89b1",
         "base": "#4ebce4",
-        "light": "#90d5ee"
+        "light": "#a6def2"
     },
     {
         "name": "purple",
-        "dark": "#7c57db",
-        "base": "#ac94e8",
+        "dark": "#5c2dd2",
+        "base": "#9d81e4",
         "light": "#ded5f6"
     },
     {
         "name": "pink",
-        "dark": "#db3d94",
+        "dark": "#d72888",
         "base": "#e77eb8",
-        "light": "#f3bedb"
+        "light": "#f7d4e7"
     },
     {
         "name": "red",
-        "dark": "#e72618",
+        "dark": "#d02216",
         "base": "#ee675d",
-        "light": "#f5a8a3"
+        "light": "#f8beba"
     },
     {
         "name": "orange",
-        "dark": "#f4490b",
+        "dark": "#db420a",
         "base": "#f78055",
-        "light": "#fab69e"
+        "light": "#fcc9b6"
     },
     {
         "name": "yellow",
-        "dark": "#fab005",
+        "dark": "#e19f05",
         "base": "#fbc850",
-        "light": "#fde09b"
+        "light": "#fde7b4"
     },
     {
         "name": "brown",
-        "dark": "#75413e",
+        "dark": "#643835",
         "base": "#a75d58",
-        "light": "#c18e8a"
+        "light": "#ca9e9b"
     },
     {
         "name": "grey",
