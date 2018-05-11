@@ -24,7 +24,7 @@ $ npm install --save siimple-colors
 Or imported in your HTML files using a [CDN](https://www.jsdelivr.com/package/npm/siimple-colors).
 
 ```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/siimple-colors@1.0.0-beta/dist/siimple-colors.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/siimple-colors@1.0.0-beta.1/dist/siimple-colors.min.css">
 ```
 
 ## Documentation 
