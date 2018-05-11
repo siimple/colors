@@ -5,10 +5,8 @@
     "author": "Josemi Juanes <josemijuanes@gmail.com>",
     "license": "MIT",
     "homepage": "https://www.siimple.xyz/colors",
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/siimple/siimple-colors.git"
-    },
+    "repository": "https://github.com/siimple/siimple-colors",
+    "bugs": "https://github.com/siimple/siimple-colors/issues",
     "keywords": [
         "siimple",
         "colors",
