@@ -16,8 +16,8 @@ build:
 	# Complie the scss files and generate the output css
 	${NODE_BIN}/node-sass ./scss/siimple-colors.scss ./dist/siimple-colors.css
 	# Autoprefix and clean generated css file
-	${NODE_BIN}/postcss --use autoprefixer --config ./postcss.config.js --map false --output ./dist/siimple.css ./dist/siimple.css
-	${NODE_BIN}/cleancss --compatibility "*" --level 2 --output ./dist/siimple.min.css ./dist/siimple.css
+	${NODE_BIN}/postcss --use autoprefixer --config ./postcss.config.js --map false --output ./dist/siimple-colors.css ./dist/siimple-colors.css
+	${NODE_BIN}/cleancss --compatibility "*" --level 2 --output ./dist/siimple-colors.min.css ./dist/siimple-colors.css
 
 clean:
 	@set -e
