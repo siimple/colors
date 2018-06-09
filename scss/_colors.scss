@@ -1,10 +1,4 @@
 //
-// WARNING: THIS FILE IS AUTO-GENERATED. DO NOT EDIT IT.
-// You can generate this file running the following command from the project root: 
-// $ make compile-templates
-//
-
-//
 // siimple-colors: a color palette for UI design
 // Under the MIT LICENSE.
 // License:    https://github.com/siimple/siimple-colors/blob/master/LICENSE.md
@@ -12,102 +6,114 @@
 // Website:    https://www.siimple.xyz/colors
 //
 
-//Colors palette
-$siimple-colors: (
-    "navy": ("dark": #3f4d5a, "base": #546778, "light": #698196), 
-    "green": ("dark": #78c738, "base": #93d260, "light": #aedd88), 
-    "mint": ("dark": #38c7a3, "base": #60d2b6, "light": #88ddc8), 
-    "blue": ("dark": #2176de, "base": #4e91e4, "light": #7aadeb), 
-    "aqua": ("dark": #21acde, "base": #4ebce4, "light": #7acdeb), 
-    "purple": ("dark": #7c57db, "base": #9d81e4, "light": #beabed), 
-    "pink": ("dark": #df53a0, "base": #e77eb8, "light": #efa9d0), 
-    "red": ("dark": #e93c2f, "base": #ee675d, "light": #f3928c), 
-    "orange": ("dark": #f55c24, "base": #f78055, "light": #f9a485), 
-    "yellow": ("dark": #fab81e, "base": #fbc850, "light": #fcd882), 
-    "brown": ("dark": #864b46, "base": #a75d58, "light": #b97e79), 
-    "royal": ("dark": #6a74e2, "base": #939aea, "light": #bfc3f2), 
-    "beige": ("dark": #e7ad7e, "base": #efc8a9, "light": #f7e4d4), 
-    "watermelon": ("dark": #d72836, "base": #df535e, "light": #e77e87), 
-    "grey": ("dark": #cbd8e6, "base": #dde5ee, "light": #eef2f7)
-);
-
-$siimple-palette: $siimple-colors;
+//Import dependencies
+@import "./_palette.scss";
+@import "./_functions.scss";
 
 //navy colors
+$siimple-navy-extra-dark: siimple-color("navy", "extra-dark");
 $siimple-navy-dark: siimple-color("navy", "dark");
 $siimple-navy: siimple-color("navy", "base");
 $siimple-navy-light: siimple-color("navy", "light");
+$siimple-navy-extra-light: siimple-color("navy", "extra-light");
 
 //green colors
+$siimple-green-extra-dark: siimple-color("green", "extra-dark");
 $siimple-green-dark: siimple-color("green", "dark");
 $siimple-green: siimple-color("green", "base");
 $siimple-green-light: siimple-color("green", "light");
+$siimple-green-extra-light: siimple-color("green", "extra-light");
 
 //mint colors
+$siimple-mint-extra-dark: siimple-color("mint", "extra-dark");
 $siimple-mint-dark: siimple-color("mint", "dark");
 $siimple-mint: siimple-color("mint", "base");
 $siimple-mint-light: siimple-color("mint", "light");
+$siimple-mint-extra-dark: siimple-color("mint", "extra-light");
 
 //blue colors
+$siimple-blue-extra-dark: siimple-color("blue", "extra-dark");
 $siimple-blue-dark: siimple-color("blue", "dark");
 $siimple-blue: siimple-color("blue", "base");
 $siimple-blue-light: siimple-color("blue", "light");
+$siimple-blue-extra-light: siimple-color("blue", "extra-light");
 
 //aqua colors
+$siimple-aqua-extra-dark: siimple-color("aqua", "extra-dark");
 $siimple-aqua-dark: siimple-color("aqua", "dark");
 $siimple-aqua: siimple-color("aqua", "base");
 $siimple-aqua-light: siimple-color("aqua", "light");
+$siimple-aqua-extra-light: siimple-color("aqua", "extra-light");
 
 //purple colors
+$siimple-purple-extra-dark: siimple-color("purple", "extra-dark");
 $siimple-purple-dark: siimple-color("purple", "dark");
 $siimple-purple: siimple-color("purple", "base");
 $siimple-purple-light: siimple-color("purple", "light");
+$siimple-purple-extra-light: siimple-color("purple", "extra-light");
 
 //pink colors
+$siimple-pink-extra-dark: siimple-color("pink", "extra-dark");
 $siimple-pink-dark: siimple-color("pink", "dark");
 $siimple-pink: siimple-color("pink", "base");
 $siimple-pink-light: siimple-color("pink", "light");
+$siimple-pink-extra-light: siimple-color("pink", "extra-light");
 
 //red colors
+$siimple-red-extra-dark: siimple-color("red", "extra-dark");
 $siimple-red-dark: siimple-color("red", "dark");
 $siimple-red: siimple-color("red", "base");
 $siimple-red-light: siimple-color("red", "light");
+$siimple-red-extra-light: siimple-color("red", "extra-light");
 
 //orange colors
+$siimple-orange-extra-dark: siimple-color("orange", "extra-dark");
 $siimple-orange-dark: siimple-color("orange", "dark");
 $siimple-orange: siimple-color("orange", "base");
 $siimple-orange-light: siimple-color("orange", "light");
+$siimple-orange-extra-dark: siimple-color("orange", "extra-light");
 
 //yellow colors
+$siimple-yellow-extra-dark: siimple-color("yellow", "extra-dark");
 $siimple-yellow-dark: siimple-color("yellow", "dark");
 $siimple-yellow: siimple-color("yellow", "base");
 $siimple-yellow-light: siimple-color("yellow", "light");
+$siimple-yellow-extra-light: siimple-color("yellow", "extra-light");
 
 //brown colors
+$siimple-brown-extra-dark: siimple-color("brown", "extra-dark");
 $siimple-brown-dark: siimple-color("brown", "dark");
 $siimple-brown: siimple-color("brown", "base");
 $siimple-brown-light: siimple-color("brown", "light");
+$siimple-brown-extra-light: siimple-color("brown", "extra-light");
 
 //royal colors
+$siimple-royal-extra-dark: siimple-color("royal", "extra-dark");
 $siimple-royal-dark: siimple-color("royal", "dark");
 $siimple-royal: siimple-color("royal", "base");
 $siimple-royal-light: siimple-color("royal", "light");
+$siimple-royal-extra-light: siimple-color("royal", "extra-light");
 
 //beige colors
+$siimple-beige-extra-dark: siimple-color("beige", "extra-dark");
 $siimple-beige-dark: siimple-color("beige", "dark");
 $siimple-beige: siimple-color("beige", "base");
 $siimple-beige-light: siimple-color("beige", "light");
+$siimple-beige-extra-light: siimple-color("beige", "extra-light");
 
 //watermelon colors
+$siimple-watermelon-extra-dark: siimple-color("watermelon", "extra-dark");
 $siimple-watermelon-dark: siimple-color("watermelon", "dark");
 $siimple-watermelon: siimple-color("watermelon", "base");
 $siimple-watermelon-light: siimple-color("watermelon", "light");
+$siimple-watermelon-extra-light: siimple-color("watermelon", "extra-light");
 
 //grey colors
+$siimple-grey-extra-dark: siimple-color("grey", "extra-dark");
 $siimple-grey-dark: siimple-color("grey", "dark");
 $siimple-grey: siimple-color("grey", "base");
 $siimple-grey-light: siimple-color("grey", "light");
-
+$siimple-grey-extra-light: siimple-color("grey", "extra-light");
 
 //White base color 
 $siimple-white: #ffffff;
