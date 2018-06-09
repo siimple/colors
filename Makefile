@@ -33,6 +33,6 @@ clean:
 compile-templates:
 	@set -e
 	# Compile templates placed in ./templates folder
-	node ./scripts/templates.js --source scss
+	#node ./scripts/templates.js --source scss
 	node ./scripts/templates.js --source test
 
