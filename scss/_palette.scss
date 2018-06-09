@@ -6,8 +6,8 @@
 //
 
 //Darker/lighter amount
-$siimple-colors-amount: 20%;
-$siimple-colors-extra-amount: 40%;
+$siimple-colors-amount: 15%;
+$siimple-colors-extra-amount: 30%;
 
 //Base colors
 $siimple-colors-navy: #546778;
@@ -32,7 +32,7 @@ $siimple-colors: (
         "extra-dark": darken($siimple-colors-navy, $siimple-colors-extra-amount),
         "dark": darken($siimple-colors-navy, $siimple-colors-amount),
         "base": $siimple-colors-navy, 
-        "light": ligthen($siimple-colors-navy, $siimple-colors-amount),
+        "light": lighten($siimple-colors-navy, $siimple-colors-amount),
         "extra-light": lighten($siimple-colors-navy, $siimple-colors-extra-amount)
     ), 
     "green": (
