@@ -1,30 +1,26 @@
 {{header}}
 
 //
-// siimple-colors: a color palette for UI design
-// Under the MIT LICENSE.
-// License:    https://github.com/siimple/siimple-colors/blob/master/LICENSE.md
-// Repository: https://github.com/siimple/siimple-colors
-// Website:    https://www.siimple.xyz/colors
+// Name:         siimple-colors
+// Description:  A color palette for UI design
+// License:      https://github.com/siimple/siimple-colors/blob/master/LICENSE
+// Repository:   https://github.com/siimple/siimple-colors
 //
 
-//Colors palette
-$siimple-colors: (
-{{#each colors}}
-    "{{this.name}}": ("dark": {{this.dark}}, "base": {{this.base}}, "light": {{this.light}}){{#unless @last}}, {{/unless}}
-{{/each}}
-);
-
-$siimple-palette: $siimple-colors;
+//Import dependencies
+@import "./_palette.scss";
+@import "./_functions.scss";
 
 {{#each colors}}
-//{{this.name}} colors
+//{{this.name}} color
+$siimple-{{this.name}}-extra-dark: siimple-color("{{this.name}}", "extra-dark");
 $siimple-{{this.name}}-dark: siimple-color("{{this.name}}", "dark");
 $siimple-{{this.name}}: siimple-color("{{this.name}}", "base");
 $siimple-{{this.name}}-light: siimple-color("{{this.name}}", "light");
+$siimple-{{this.name}}-extra-light: siimple-color("{{this.name}}", "extra-light");
 
 {{/each}}
 
-//White base color 
+//White color 
 $siimple-white: #ffffff;
 
