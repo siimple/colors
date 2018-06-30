@@ -1,0 +1,34 @@
+{{header}}
+
+//
+// Name:         siimple-colors
+// Description:  A color palette for UI design
+// License:      https://github.com/siimple/siimple-colors/blob/master/LICENSE
+// Repository:   https://github.com/siimple/siimple-colors
+//
+
+//Darker/lighter amount
+$siimple-colors-amount: 10%;
+$siimple-colors-extra-amount: 20%;
+
+//Base colors
+{{#each colors}}
+$siimple-colors-{{this.name}}: {{this.color}};
+{{/each}}
+
+//Colors palette
+$siimple-colors: (
+{{#each colors}}
+    "{{this.name}}": (
+        "extra-dark": darken($siimple-colors-{{this.name}}, $siimple-colors-extra-amount{{#if this.isSpecial}} / 2{{/if}}),
+        "dark": darken($siimple-colors-{{this.name}}, $siimple-colors-amount{{#if this.isSpecial}} / 2{{/if}}),
+        "base": $siimple-colors-{{this.name}}, 
+        "light": lighten($siimple-colors-{{this.name}}, $siimple-colors-amount{{#if this.isSpecial}} / 2{{/if}}),
+        "extra-light": lighten($siimple-colors-{{this.name}}, $siimple-colors-extra-amount{{#if this.isSpecial}} / 2{{/if}})
+        ){{#unless @last}},{{/unless}}
+{{/each}}
+);
+
+//Color palette alias
+$siimple-palette: $siimple-colors;
+
