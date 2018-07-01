@@ -18,7 +18,7 @@ help:
 build:
 	@set -e
 	@logger -s "Build started"
-	${NODE_BIN}/node-sass ./scss/siimple-colors.scss ${OUTPUT_CSS}
+	${NODE_BIN}/sass ./scss/siimple-colors.scss ${OUTPUT_CSS}
 	@logger -s "Adding the header"
 	node ./scripts/header.js > ./dist/header.txt
 	cat ./dist/header.txt ${OUTPUT_CSS} > ${OUTPUT_CSS}.temp
