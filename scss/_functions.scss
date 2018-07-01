@@ -23,9 +23,19 @@
     @return siimple-color($color, "light");
 }
 
+//Get the extra-light variant of the color
+@function siimple-color-extra-light($color) {
+    @return siimple-color($color, "extra-light");
+}
+
 //Get the dark variant of the color
 @function siimple-color-dark($color) {
     @return siimple-color($color, "dark");
+}
+
+//Get the extra-dark variant of the color
+@function siimple-color-extra-dark($color) {
+    @return siimple-color($color, "extra-dark");
 }
 
 //Get the over color [DEPRECATED]
