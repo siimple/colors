@@ -1,8 +1,14 @@
-// siimple-colors: a color palette for UI design
-// Under the MIT LICENSE.
-// License:    https://github.com/siimple/siimple-colors/blob/master/LICENSE.md
-// Repository: https://github.com/siimple/siimple-colors
-// Website:    https://www.siimple.xyz/colors
+//
+// WARNING: THIS FILE IS AUTO-GENERATED. DO NOT EDIT IT.
+// You can generate this file running the following command from the project root: 
+// $ make templates
+//
+
+//
+// Name:         siimple-colors
+// Description:  A color palette for UI design
+// License:      https://github.com/siimple/siimple-colors/blob/master/LICENSE
+// Repository:   https://github.com/siimple/siimple-colors
 //
 
 //Darker/lighter amount
@@ -14,7 +20,7 @@ $siimple-colors-navy: #546778;
 $siimple-colors-green: #93d260;
 $siimple-colors-mint: #60d2b6;
 $siimple-colors-blue: #4e91e4;
-$siimple-colors-aqua: #4ecbe4;
+$siimple-colors-aqua: #4ebce4;
 $siimple-colors-purple: #9d81e4;
 $siimple-colors-pink: #e77eb8;
 $siimple-colors-red: #ee675d;
@@ -34,105 +40,105 @@ $siimple-colors: (
         "base": $siimple-colors-navy, 
         "light": lighten($siimple-colors-navy, $siimple-colors-amount),
         "extra-light": lighten($siimple-colors-navy, $siimple-colors-extra-amount)
-    ), 
+        ),
     "green": (
         "extra-dark": darken($siimple-colors-green, $siimple-colors-extra-amount),
-        "dark": darken($siimple-colors-green, $siimple-colors-amount), 
+        "dark": darken($siimple-colors-green, $siimple-colors-amount),
         "base": $siimple-colors-green, 
         "light": lighten($siimple-colors-green, $siimple-colors-amount),
         "extra-light": lighten($siimple-colors-green, $siimple-colors-extra-amount)
-    ), 
+        ),
     "mint": (
         "extra-dark": darken($siimple-colors-mint, $siimple-colors-extra-amount),
-        "dark": darken($siimple-colors-mint, $siimple-colors-amount), 
+        "dark": darken($siimple-colors-mint, $siimple-colors-amount),
         "base": $siimple-colors-mint, 
         "light": lighten($siimple-colors-mint, $siimple-colors-amount),
         "extra-light": lighten($siimple-colors-mint, $siimple-colors-extra-amount)
-    ), 
+        ),
     "blue": (
-        "extra-dark": darken($siimple-colors-blue, $siimple-colors-extra-amount), 
-        "dark": darken($siimple-colors-blue, $siimple-colors-amount), 
+        "extra-dark": darken($siimple-colors-blue, $siimple-colors-extra-amount),
+        "dark": darken($siimple-colors-blue, $siimple-colors-amount),
         "base": $siimple-colors-blue, 
         "light": lighten($siimple-colors-blue, $siimple-colors-amount),
         "extra-light": lighten($siimple-colors-blue, $siimple-colors-extra-amount)
-    ), 
+        ),
     "aqua": (
-        "extra-dark": darken($siimple-colors-aqua, $siimple-colors-extra-amount), 
-        "dark": darken($siimple-colors-aqua, $siimple-colors-amount), 
+        "extra-dark": darken($siimple-colors-aqua, $siimple-colors-extra-amount),
+        "dark": darken($siimple-colors-aqua, $siimple-colors-amount),
         "base": $siimple-colors-aqua, 
         "light": lighten($siimple-colors-aqua, $siimple-colors-amount),
         "extra-light": lighten($siimple-colors-aqua, $siimple-colors-extra-amount)
-    ), 
+        ),
     "purple": (
-        "extra-dark": darken($siimple-colors-purple, $siimple-colors-extra-amount), 
-        "dark": darken($siimple-colors-purple, $siimple-colors-amount), 
+        "extra-dark": darken($siimple-colors-purple, $siimple-colors-extra-amount),
+        "dark": darken($siimple-colors-purple, $siimple-colors-amount),
         "base": $siimple-colors-purple, 
         "light": lighten($siimple-colors-purple, $siimple-colors-amount),
         "extra-light": lighten($siimple-colors-purple, $siimple-colors-extra-amount)
-    ),
+        ),
     "pink": (
-        "extra-dark": darken($siimple-colors-pink, $siimple-colors-extra-amount), 
-        "dark": darken($siimple-colors-pink, $siimple-colors-amount), 
+        "extra-dark": darken($siimple-colors-pink, $siimple-colors-extra-amount),
+        "dark": darken($siimple-colors-pink, $siimple-colors-amount),
         "base": $siimple-colors-pink, 
         "light": lighten($siimple-colors-pink, $siimple-colors-amount),
         "extra-light": lighten($siimple-colors-pink, $siimple-colors-extra-amount)
-    ), 
+        ),
     "red": (
-        "extra-dark": darken($siimple-colors-red, $siimple-colors-extra-amount), 
-        "dark": darken($siimple-colors-red, $siimple-colors-amount), 
+        "extra-dark": darken($siimple-colors-red, $siimple-colors-extra-amount),
+        "dark": darken($siimple-colors-red, $siimple-colors-amount),
         "base": $siimple-colors-red, 
         "light": lighten($siimple-colors-red, $siimple-colors-amount),
         "extra-light": lighten($siimple-colors-red, $siimple-colors-extra-amount)
-    ), 
+        ),
     "orange": (
-        "extra-dark": darken($siimple-colors-orange, $siimple-colors-extra-amount), 
-        "dark": darken($siimple-colors-orange, $siimple-colors-amount), 
+        "extra-dark": darken($siimple-colors-orange, $siimple-colors-extra-amount),
+        "dark": darken($siimple-colors-orange, $siimple-colors-amount),
         "base": $siimple-colors-orange, 
         "light": lighten($siimple-colors-orange, $siimple-colors-amount),
         "extra-light": lighten($siimple-colors-orange, $siimple-colors-extra-amount)
-    ), 
+        ),
     "yellow": (
-        "extra-dark": darken($siimple-colors-yellow, $siimple-colors-extra-amount), 
-        "dark": darken($siimple-colors-yellow, $siimple-colors-amount), 
+        "extra-dark": darken($siimple-colors-yellow, $siimple-colors-extra-amount),
+        "dark": darken($siimple-colors-yellow, $siimple-colors-amount),
         "base": $siimple-colors-yellow, 
         "light": lighten($siimple-colors-yellow, $siimple-colors-amount),
         "extra-light": lighten($siimple-colors-yellow, $siimple-colors-extra-amount)
-    ), 
+        ),
     "brown": (
-        "extra-dark": darken($siimple-colors-brown, $siimple-colors-extra-amount), 
-        "dark": darken($siimple-colors-brown, $siimple-colors-amount), 
+        "extra-dark": darken($siimple-colors-brown, $siimple-colors-extra-amount),
+        "dark": darken($siimple-colors-brown, $siimple-colors-amount),
         "base": $siimple-colors-brown, 
         "light": lighten($siimple-colors-brown, $siimple-colors-amount),
         "extra-light": lighten($siimple-colors-brown, $siimple-colors-extra-amount)
-    ), 
+        ),
     "royal": (
-        "extra-dark": darken($siimple-colors-royal, $siimple-colors-extra-amount), 
-        "dark": darken($siimple-colors-royal, $siimple-colors-amount), 
+        "extra-dark": darken($siimple-colors-royal, $siimple-colors-extra-amount),
+        "dark": darken($siimple-colors-royal, $siimple-colors-amount),
         "base": $siimple-colors-royal, 
         "light": lighten($siimple-colors-royal, $siimple-colors-amount),
         "extra-light": lighten($siimple-colors-royal, $siimple-colors-extra-amount)
-    ), 
+        ),
     "beige": (
-        "extra-dark": darken($siimple-colors-beige, $siimple-colors-extra-amount), 
-        "dark": darken($siimple-colors-beige, $siimple-colors-amount), 
+        "extra-dark": darken($siimple-colors-beige, $siimple-colors-extra-amount),
+        "dark": darken($siimple-colors-beige, $siimple-colors-amount),
         "base": $siimple-colors-beige, 
         "light": lighten($siimple-colors-beige, $siimple-colors-amount),
         "extra-light": lighten($siimple-colors-beige, $siimple-colors-extra-amount)
-    ),
+        ),
     "watermelon": (
-        "extra-dark": darken($siimple-colors-watermelon, $siimple-colors-extra-amount), 
-        "dark": darken($siimple-colors-watermelon, $siimple-colors-amount), 
+        "extra-dark": darken($siimple-colors-watermelon, $siimple-colors-extra-amount),
+        "dark": darken($siimple-colors-watermelon, $siimple-colors-amount),
         "base": $siimple-colors-watermelon, 
         "light": lighten($siimple-colors-watermelon, $siimple-colors-amount),
         "extra-light": lighten($siimple-colors-watermelon, $siimple-colors-extra-amount)
-    ), 
+        ),
     "grey": (
-        "extra-dark": #bbcbdd, 
-        "dark": #cbd8e6, 
-        "base": #dde5ee, 
-        "light": #eef2f7,
-        "extra-light": #ffffff
-    )
+        "extra-dark": darken($siimple-colors-grey, $siimple-colors-extra-amount * 0.5),
+        "dark": darken($siimple-colors-grey, $siimple-colors-amount * 0.5),
+        "base": $siimple-colors-grey, 
+        "light": lighten($siimple-colors-grey, $siimple-colors-amount * 0.5),
+        "extra-light": lighten($siimple-colors-grey, $siimple-colors-extra-amount * 0.5)
+        )
 );
 
 //Color palette alias
