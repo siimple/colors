@@ -1,92 +1,17 @@
 [
-    {
-        "name": "navy",
-        "dark": "#3f4d5a",
-        "base": "#546778",
-        "light": "#698196"
-    },
-    {
-        "name": "green",
-        "dark": "#78c738",
-        "base": "#93d260",
-        "light": "#aedd88"
-    },
-    {
-        "name": "mint",
-        "dark": "#38c7a3",
-        "base": "#60d2b6",
-        "light": "#88ddc8"
-    },
-    {
-        "name": "blue",
-        "dark": "#2176de",
-        "base": "#4e91e4",
-        "light": "#7aadeb"
-    },
-    {
-        "name": "aqua",
-        "dark": "#21acde",
-        "base": "#4ebce4",
-        "light": "#7acdeb"
-    },
-    {
-        "name": "purple",
-        "dark": "#7c57db",
-        "base": "#9d81e4",
-        "light": "#beabed"
-    },
-    {
-        "name": "pink",
-        "dark": "#df53a0",
-        "base": "#e77eb8",
-        "light": "#efa9d0"
-    },
-    {
-        "name": "red",
-        "dark": "#e93c2f",
-        "base": "#ee675d",
-        "light": "#f3928c"
-    },
-    {
-        "name": "orange",
-        "dark": "#f55c24",
-        "base": "#f78055",
-        "light": "#f9a485"
-    },
-    {
-        "name": "yellow",
-        "dark": "#fab81e",
-        "base": "#fbc850",
-        "light": "#fcd882"
-    },
-    {
-        "name": "brown",
-        "dark": "#864b46",
-        "base": "#a75d58",
-        "light": "#b97e79"
-    },
-    {
-        "name": "royal",
-        "dark": "#6a74e2",
-        "base": "#939aea",
-        "light": "#bfc3f2"
-    },
-    {
-        "name": "beige",
-        "dark": "#e7ad7e",
-        "base": "#efc8a9",
-        "light": "#f7e4d4"
-    },
-    {
-        "name": "watermelon",
-        "dark": "#d72836",
-        "base": "#df535e",
-        "light": "#e77e87"
-    },
-    {
-        "name": "grey",
-        "dark": "#cbd8e6",
-        "base": "#dde5ee",
-        "light": "#eef2f7"
-    }
+    {"name": "navy", "color": "#546778"},
+    {"name": "green", "color": "#93d260"},
+    {"name": "mint", "color": "#60d2b6"},
+    {"name": "blue", "color": "#4e91e4"},
+    {"name": "aqua", "color": "#4ebce4"},
+    {"name": "purple", "color": "#9d81e4"},
+    {"name": "pink", "color": "#e77eb8"},
+    {"name": "red","color": "#ee675d"},
+    {"name": "orange", "color": "#f78055"},
+    {"name": "yellow", "color": "#fbc850"},
+    {"name": "brown", "color": "#a75d58"},
+    {"name": "royal", "color": "#939aea"},
+    {"name": "beige", "color": "#ebbb93"},
+    {"name": "watermelon", "color": "#df535e"},
+    {"name": "grey", "color": "#dde5ee", "scale": 0.5}
 ]
