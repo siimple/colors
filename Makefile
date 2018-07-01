@@ -1,4 +1,4 @@
-.PHONY: build compile-templates clean
+.PHONY: build templates clean
 
 # Node binaries path
 NODE_BIN=./node_modules/.bin
@@ -12,7 +12,7 @@ help:
 	@echo ""
 	@echo "  make build               Generate the compiled CSS files of siimple-colors"
 	@echo "  make clean               Clean the generated folders"
-	@echo "  make compile-templates   Compile all the templates"
+	@echo "  make templates           Compile all the templates"
 	@echo ""
 
 build:
@@ -34,9 +34,10 @@ clean:
 	rm -rf ./dist
 	mkdir -p dist
 
-compile-templates:
+templates:
 	@set -e
-	# Compile templates placed in ./templates folder
-	#node ./scripts/templates.js --source scss
+	@logger -s "Compile templates task started"
+	node ./scripts/templates.js --source scss
 	node ./scripts/templates.js --source test
+	@logger -s "Compile templates task finished"
 
