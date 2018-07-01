@@ -12,7 +12,7 @@ let header = [];
 header.push("//");
 header.push("// WARNING: THIS FILE IS AUTO-GENERATED. DO NOT EDIT IT.");
 header.push("// You can generate this file running the following command from the project root: ");
-header.push("// $ make compile-templates");
+header.push("// $ make templates");
 header.push("//");
 
 //Get all templates from the specified source
