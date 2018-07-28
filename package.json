@@ -18,10 +18,10 @@
         "sass"
     ],
     "devDependencies": {
-        "node-sass": "^4.9.0",
+        "sass": "^1.8.0",
         "get-args": "^2.0.0",
-        "autoprefixer": "^8.4.1",
-        "postcss-cli": "^5.0.0",
+        "autoprefixer": "^9.0.1",
+        "postcss-cli": "^6.0.0",
         "clean-css-cli": "^4.1.11",
         "handlebars": "^4.0.11",
         "glob": "^7.1.2"
