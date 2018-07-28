@@ -1,4 +1,4 @@
-.PHONY: build templates clean
+.PHONY: build templates clean docs
 
 # Node binaries path
 NODE_BIN=./node_modules/.bin
@@ -40,4 +40,13 @@ templates:
 	node ./scripts/templates.js --source scss
 	node ./scripts/templates.js --source test
 	@logger -s "Compile templates task finished"
+
+docs: 
+	@set -e
+	@logger -s "Docs build task started"
+	@logger -s "Building documentation site with Jekyll"
+	cd ./docs && jekyll build
+	@logger -s "Copying assets files"
+	cp ./bower_components/siimple/dist/siimple.min.css ./docs/_site/assets/css/
+	@logger -s "Docs build task finished"
 
