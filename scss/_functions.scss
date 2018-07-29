@@ -43,7 +43,7 @@
     @if $color == "grey" {
         @return $siimple-navy;
     } @else {
-        @return $siimple-navy;
+        @return $siimple-white;
     }
 }
 
