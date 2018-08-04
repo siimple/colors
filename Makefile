@@ -60,6 +60,8 @@ docs:
 	@logger -s "Copying assets files"
 	cp ./bower_components/siimple/dist/siimple.min.css ./docs/_site/assets/css/
 	cp ${OUTPUT_MIN} ./docs/_site/assets/css/
+	mkdir -p ./docs/_site/assets/images
+	cp ./media/logo.png ./docs/_site/assets/images/
 	@logger -s "Docs build task finished"
 
 
