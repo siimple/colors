@@ -11,6 +11,7 @@ help:
 	@echo "Available commands: "
 	@echo ""
 	@echo "  make build               Generate the compiled CSS files of siimple-colors"
+	@echo "  make install             Install all dependencies"
 	@echo "  make clean               Clean the generated folders"
 	@echo "  make templates           Compile all the templates"
 	@echo ""
@@ -41,6 +42,16 @@ templates:
 	node ./scripts/templates.js --source test
 	@logger -s "Compile templates task finished"
 
+install:
+	@logger -s "Setup started"
+	npm install 
+	@# Install documentation dependencies
+	bower install
+	cd ./docs && bundle install
+	@# Hack to ensure that sass finds the siimple source code
+	ln -s ${PWD} ./bower_components/siimple-color 
+	@logger -s "Setup finished"
+
 docs: 
 	@set -e
 	@logger -s "Docs build task started"
@@ -48,5 +59,7 @@ docs:
 	cd ./docs && jekyll build
 	@logger -s "Copying assets files"
 	cp ./bower_components/siimple/dist/siimple.min.css ./docs/_site/assets/css/
+	cp ${OUTPUT_MIN} ./docs/_site/assets/css/
 	@logger -s "Docs build task finished"
+
 
