@@ -10,13 +10,9 @@
     "license": "MIT",
     "keywords": [
         "siimple",
-        "colors",
-        "palette",
-        "ui",
-        "design",
-        "flat"
+        "colors"
     ],
     "devDependencies": {
-        "siimple": "siimple/siimple#develop"
+        "siimple": "siimple/siimple#v3.1.1"
     }
 }
