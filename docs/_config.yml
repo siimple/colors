@@ -1,0 +1,60 @@
+# Build settings
+env: "production"
+permalink: "none" 
+exclude: ["LICENSE"]
+
+# Theme configuration
+theme: "siimple-theme"
+color: "watermelon"
+
+# Sass build settings
+sass:
+    style: "compressed"
+    load_paths: ["../bower_components", "_sass"]
+
+# Site settings
+title: "siimple-colors"
+version: "1.0.0"
+url: "https://plugins.siimple.xyz/colors"
+
+# Documentation settings
+documentation:
+    issues: "https://github.com/siimple/siimple-colors/issues"
+
+# Navbar settings
+navbar:
+    - title: "Plugins"
+      url: "https://plugins.siimple.xyz"
+
+# Footer settings
+footer:
+    contributors: "https://github.com/siimple/siimple-colors/graphs/contributors"
+    privacy_url: "https://www.siimple.xyz/legal/privacy.html"
+    cookies_url: "https://www.siimple.xyz/legal/cookies.html"
+    code_license: 
+        title: "MIT License"
+        url: "https://github.com/siimple/siimple-colors/blob/develop/LICENSE"
+    docs_license: 
+        title: "Creative Commons CC BY 4.0 License"
+        url: "https://github.com/siimple/siimple-colors/blob/develop/docs/LICENSE"
+    social:
+        - title: "GitHub"
+          url: "https://github.com/siimple/siimple-colors"
+        - title: "Twitter"
+          url: "https://twitter.com/siimplecss"
+        - title: "Gitter"
+          url: "https://gitter.im/siimple"
+
+## Search settings
+search:
+    entry: "/search.html"
+    database: "./assets/search.json"
+    title: "Search"
+    subtitle: "Search in <strong>siimple-colors</strong> docs"
+
+# Cookies settings
+#cookies:
+#    analytics: "UA-70800807-5"
+#    path: "/"
+#    domain: ".siimple.xyz"
+
