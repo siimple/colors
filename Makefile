@@ -49,7 +49,7 @@ install:
 	bower install
 	cd ./docs && bundle install
 	@# Hack to ensure that sass finds the siimple source code
-	ln -s ${PWD} ./bower_components/siimple-color 
+	ln -s ${PWD} ./bower_components/siimple-colors 
 	@logger -s "Setup finished"
 
 docs: 
