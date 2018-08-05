@@ -1,0 +1,18 @@
+[
+    {
+        "title": "A color library",
+        "description": "A minimal and elegant color palette with 15 colors specially selected to build flat and clean UI designs.",
+        "icon": "palette.png"
+    },
+    {
+        "title": "Built in <strong>CSS</strong>",
+        "description": "The library includes CSS variables and selectors for each color in the palette to design a colorful website!",
+        "icon": "css.png"
+    },
+    {
+        "title": "With <strong>SASS</strong> powers!",
+        "description": "The library also provides SASS/SCSS variables for each color. Just use only the colors that you need!",
+        "icon": "sass.png"
+    }
+]
+
