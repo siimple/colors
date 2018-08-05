@@ -12,15 +12,15 @@
 :root {
     @each $color, $list in $siimple-colors {
         //Base color
-        --siimple-#{$color}: #{siimple-color-base($color)};
+        #{--siimple}-#{$color}: #{siimple-color-base($color)};
         @each $color-id, $color-hex in $list {
             @if $color-id != "base" {
-                --siimple-#{$color}-#{$color-id}: #{$color-hex};
+                #{--siimple}-#{$color}-#{$color-id}: #{$color-hex};
             }
         }
     }
     //White color
-    --siimple-white: #{$siimple-white};
+    #{--siimple-white}: #{$siimple-white};
 }
 
 //Colors styles
@@ -40,7 +40,7 @@
                 &--color-#{$color}-#{$color-id} {
                     color: $color-hex;
                 }
-                &--bg-#{$color}-#{$color_id} {
+                &--bg-#{$color}-#{$color-id} {
                     background-color: $color-hex;
                 }
             }
