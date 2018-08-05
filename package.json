@@ -18,6 +18,7 @@
         "sass"
     ],
     "devDependencies": {
+        "sass-lint": "^1.12.1",
         "sass": "^1.8.0",
         "get-args": "^2.0.0",
         "autoprefixer": "^9.0.1",
