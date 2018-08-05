@@ -17,7 +17,6 @@ help:
 	@echo ""
 
 build:
-	@set -e
 	@logger -s "Build started"
 	${NODE_BIN}/sass ./scss/siimple-colors.scss ${OUTPUT_CSS}
 	@logger -s "Adding the header"
@@ -34,7 +33,6 @@ lint:
 	${NODE_BIN}/sass-lint -v
 
 templates:
-	@set -e
 	@logger -s "Compile templates task started"
 	node ./scripts/templates.js --source scss
 	node ./scripts/templates.js --source test
@@ -51,7 +49,6 @@ install:
 	@logger -s "Setup finished"
 
 docs: 
-	@set -e
 	@logger -s "Docs build task started"
 	@logger -s "Building documentation site with Jekyll"
 	cd ./docs && jekyll build
@@ -61,5 +58,4 @@ docs:
 	mkdir -p ./docs/_site/assets/images
 	cp ./media/logo.png ./docs/_site/assets/images/
 	@logger -s "Docs build task finished"
-
 
