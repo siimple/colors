@@ -64,7 +64,7 @@
         }
         $colors: map-merge($colors, ($name: $value));
     }
-    @return (map-get($colors, 'red') * .2126) + (map-get($colors, 'green') * .7152) + (map-get($colors, 'blue') * .0722);
+    @return (map-get($colors, "red") * .2126) + (map-get($colors, "green") * .7152) + (map-get($colors, "blue") * .0722);
 }
 
 
