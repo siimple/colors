@@ -1,4 +1,4 @@
-.PHONY: build templates clean docs
+.PHONY: build templates lint docs
 
 # Node binaries path
 NODE_BIN=./node_modules/.bin
@@ -12,7 +12,7 @@ help:
 	@echo ""
 	@echo "  make build               Generate the compiled CSS files of siimple-colors"
 	@echo "  make install             Install all dependencies"
-	@echo "  make clean               Clean the generated folders"
+	@echo "  make lint                Run sass-lint"
 	@echo "  make templates           Compile all the templates"
 	@echo ""
 
@@ -30,10 +30,8 @@ build:
 	${NODE_BIN}/cleancss --compatibility "*" --level 2 --output ${OUTPUT_MIN} ${OUTPUT_CSS}
 	@logger -s "Build finished"
 
-clean:
-	@set -e
-	rm -rf ./dist
-	mkdir -p dist
+lint:
+	${NODE_BIN}/sass-lint -v
 
 templates:
 	@set -e
