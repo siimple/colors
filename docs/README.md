@@ -1,3 +1,0 @@
-# siimple-colors documentation
-
-
