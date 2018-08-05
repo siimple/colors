@@ -36,7 +36,7 @@
         }
         //Each color in the palette
         @each $color_id, $color_hex in $list {
-            @if $color_id != "over" {
+            @if $color_id != "base" {
                 &--color-#{$color}-#{$color_id} {
                     color: $color_hex;
                 }
