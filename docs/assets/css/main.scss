@@ -1,0 +1,11 @@
+---
+# Ensure that Jekyll will compile this file
+---
+
+//Import theme
+@import "{{ site.theme }}";
+
+//Import partials
+@import "features.scss";
+@import "welcome.scss";
+
