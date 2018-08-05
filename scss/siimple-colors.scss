@@ -13,9 +13,9 @@
     @each $color, $list in $siimple-colors {
         //Base color
         --siimple-#{$color}: #{siimple-color-base($color)};
-        @each $color_id, $color_hex in $list {
-            @if $color_id != "base" {
-                --siimple-#{$color}-#{$color_id}: #{$color_hex};
+        @each $color-id, $color-hex in $list {
+            @if $color-id != "base" {
+                --siimple-#{$color}-#{$color-id}: #{$color-hex};
             }
         }
     }
@@ -35,13 +35,13 @@
             background-color: siimple-color-base($color);
         }
         //Each color in the palette
-        @each $color_id, $color_hex in $list {
-            @if $color_id != "base" {
-                &--color-#{$color}-#{$color_id} {
-                    color: $color_hex;
+        @each $color-id, $color-hex in $list {
+            @if $color-id != "base" {
+                &--color-#{$color}-#{$color-id} {
+                    color: $color-hex;
                 }
                 &--bg-#{$color}-#{$color_id} {
-                    background-color: $color_hex;
+                    background-color: $color-hex;
                 }
             }
         }
