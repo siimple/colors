@@ -9,11 +9,11 @@ title: "Color palette"
 <div class="siimple-content siimple-content--large sd-section" align="center">
     {% for color in site.data.colors %}
     <div class="siimple-h4">{{ color }}</div>
-    <div class="docs-colors" align="center">
+    <div class="docs-cheatsheet" align="center">
         {% for type in site.documentation.colors %}
-        <div class="docs-colors-item docs-colors-{{ color }}-{{ type }}">
-            <div class="docs-colors-item-name">{{ type }}</div>
-            <div class="docs-colors-item-hex"></div>
+        <div class="docs-cheatsheet-item docs-cheatsheet-{{ color }}-{{ type }}">
+            <div class="docs-cheatsheet-item-name">{{ type }}</div>
+            <div class="docs-cheatsheet-item-hex"></div>
         </div>
         {% endfor %}
     </div>
