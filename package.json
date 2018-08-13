@@ -18,6 +18,9 @@
         "sass"
     ],
     "devDependencies": {
+        "stattic": "^0.3.2",
+        "react": "^16.4.2",
+        "react-dom": "^16.4.2",
         "sass-lint": "^1.12.1",
         "sass": "^1.8.0",
         "get-args": "^2.0.0",
