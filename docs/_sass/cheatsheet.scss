@@ -1,0 +1,45 @@
+//Import mixins
+@import "siimple/scss/_utils.scss";
+
+//Colors cheatshett
+.docs-cheatsheet {
+    margin-bottom: 15px;
+    @include siimple-utils-clear;
+    &-item {
+        display: inline-block;
+        width: calc(20% - 20px);
+        float: left;
+        padding: 10px;
+        &:first-child {
+            border-top-left-radius: 5px;
+            border-bottom-left-radius: 5px;
+        }
+        &:last-child {
+            border-top-right-radius: 5px;
+            border-bottom-right-radius: 5px;
+        }
+        //Item name 
+        &-name {
+            display: block;
+            font-weight: 600;
+        }
+        //Item color hex
+        &-hex {
+            display: block;
+            font-size: 12px;
+        }
+    }
+    //Colors items
+    @each $color, $list in $siimple-colors {
+        @each $color-id, $color-hex in $list {
+            &-#{$color}-#{$color-id} {
+                background-color: #{$color-hex};
+                color: siimple-color-invert($color-hex);
+            }
+            //Item hex
+            &-#{$color}-#{$color-id} &-item-hex::before {
+                content: quote(inspect($color-hex));
+            }
+        }
+    }
+}
