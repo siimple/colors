@@ -1,0 +1,22 @@
+---
+layout: "default"
+title: "Color palette"
+---
+
+{% assign palette_title = "Our color cheatsheet" %}
+{% assign palette_subtitle = "Our <strong>15</strong> colors with the 5 variations for each one!" %}
+{% include header.html title=palette_title subtitle=palette_subtitle %}
+<div class="siimple-content siimple-content--large sd-section" align="center">
+    {% for color in site.data.colors %}
+    <div class="siimple-h4">{{ color }}</div>
+    <div class="docs-colors" align="center">
+        {% for type in site.documentation.colors %}
+        <div class="docs-colors-item docs-colors-{{ color }}-{{ type }}">
+            <div class="docs-colors-item-name">{{ type }}</div>
+            <div class="docs-colors-item-hex"></div>
+        </div>
+        {% endfor %}
+    </div>
+    {% endfor %}
+</div>
+
