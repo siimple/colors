@@ -1,0 +1,22 @@
+//Docs features
+.docs-features {
+    padding-top: 20px !important;
+    padding-bottom: 0px !important;
+    //Item
+    &-item {
+        min-height: 200px;
+        border-radius: 5px;
+        margin-bottom: 10px;
+        //Item image
+        &-image {
+            display: block;
+            width: 75px;
+            height: 75px;
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: 75px 75px;
+        }
+    }
+}
+
+
