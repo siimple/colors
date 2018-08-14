@@ -51,6 +51,7 @@ install:
 docs: 
 	@logger -s "Docs build task started"
 	@logger -s "Building documentation site with Jekyll"
+	cp ./colors.json ./docs/_data/
 	cd ./docs && jekyll build
 	@logger -s "Copying assets files"
 	cp ./colors.json ./docs/_site/assets/
