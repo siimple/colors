@@ -1,0 +1,44 @@
+---
+layout: "default"
+title: "An elegant and minimalistic color palette for UI design"
+---
+
+<script type="text/javascript" src="./assets/js/react.production.min.js"></script>
+<script type="text/javascript" src="./assets/js/react-dom.production.min.js"></script>
+<script type="text/javascript" src="./assets/js/example.js"></script>
+<title>{{ page.title }} | {{ site.title }}</title>
+<div class="siimple-jumbotron siimple-jumbotron--large siimple--bg-watermelon siimple--color-white docs-welcome" align="center">
+    <div class="docs-welcome-logo"></div>
+    <div class="siimple-jumbotron-title">siimple-colors</div>
+    <div class="siimple-jumbotron-subtitle">An elegant and minimalistic color palette for UI design</div>
+    <div align="center" class="docs-welcome-buttons">
+        <a href="" class="siimple-btn siimple--color-watermelon siimple--bg-white">
+            View <strong>docs</strong>
+        </a>
+        <a href="" class="siimple-btn siimple--color-watermelon siimple--bg-white">
+            Download <strong>v{{ site.version }}</strong>
+        </a>
+    </div>
+</div>
+<div class="siimple-content siimple-content--large sd-section siimple--bg-grey-light" align="center">
+    <div class="siimple-h3">You will love <strong>siimple-colors</strong></div>
+    <div class="siimple-grid-row docs-features">
+        {% for feature in site.data.features %}
+        <div class="siimple-grid-col siimple-grid-col--4 siimple-grid-col--sm-12 docs-features-item">
+            <div class="docs-features-item-image" style="background-image: url('./assets/images/icons/{{ feature.icon }}');"></div>
+            <div class="siimple-h5">{{ feature.title }}</div>
+            {{ feature.description }}
+        </div>
+        {% endfor %}
+    </div>
+</div>
+<div class="siimple-content siimple-content--large sd-section">
+    <div class="siimple-h3" align="center">
+        Try <strong>siimple-colors</strong>
+    </div>
+    <div class="sd-section-description" align="center">
+        See how you can change the color of your text or background with only one line of our easy and very <strong>siiiiimple</strong> code!
+    </div>
+    <div id="example" class="siimple-grid-row"></div>
+</div>
+
