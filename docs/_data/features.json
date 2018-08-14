@@ -1,11 +1,11 @@
 [
     {
-        "title": "A color library",
+        "title": "<strong>Flat</strong> color library",
         "description": "A minimal and elegant color palette with 15 colors specially selected to build flat and clean UI designs.",
         "icon": "palette.png"
     },
     {
-        "title": "Built in <strong>CSS</strong>",
+        "title": "<strong>CSS</strong> modifiers",
         "description": "The library includes CSS variables and selectors for each color in the palette to design a colorful website!",
         "icon": "css.png"
     },
