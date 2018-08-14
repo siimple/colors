@@ -40,6 +40,8 @@ bower_components
 Gemfile.lock
 package-lock.json
 docs/.sass-cache
+docs/_data/colors.json
+docs/_site
 *.iml
 *.swp
 
