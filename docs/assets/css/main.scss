@@ -6,6 +6,8 @@
 @import "{{ site.theme }}";
 
 //Import partials
+@import "cheatsheet.scss";
+@import "example.scss";
 @import "features.scss";
 @import "welcome.scss";
 
