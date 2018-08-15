@@ -1,12 +1,12 @@
 ---
-layout: "default"
-title: "Color cheatsheet"
+layout: "documentation"
+category: "guides"
+title: "Cheatsheet"
+description: "The cheatsheet with our <strong>15</strong> colors!"
+updated_at: "2018-08-15"
 ---
 
-{% assign palette_title = "Our color cheatsheet" %}
-{% assign palette_subtitle = "Our <strong>15</strong> colors with the 5 variations for each one!" %}
-{% include header.html title=palette_title subtitle=palette_subtitle %}
-<div class="siimple-content siimple-content--large sd-section" align="center">
+<div align="center">
     {% for color in site.data.colors.palette %}
     <div class="siimple-h4">{{ color.name }}</div>
     <div class="docs-cheatsheet" align="center">
