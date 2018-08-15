@@ -6,9 +6,9 @@ class Example extends React.Component {
         this.state = {
             "selectedColor": null,
             "hoveredColor": null,
-            "selectedVariant": null
+            "selectedLightness": null,
+            "hoveredLightness": null
         };
-        //Bind methods
     }
 
     renderStepTitle(num, title) {
@@ -17,17 +17,17 @@ class Example extends React.Component {
 
     renderStep1() {
         let self = this;
-        let title = this.renderStepTitle("1", "Select a color");
+        let title = this.renderStepTitle("1", "Choose a color");
         //Add a box for each color in props
-        let contentItems = this.props.colors.map(function (color, index) {
+        let contentItems = this.props.colors.palette.map(function (color, index) {
             let props = {
                 "className": "docs-example-item siimple--bg-" + color.name,
                 "key": index,
                 "onClick": function () {
-                    return self.setState({"selectedColor": color.name, "selectedVariant": null});
+                    return self.setState({"selectedColor": index, "selectedLightness": null});
                 },
                 "onMouseEnter": function (event) {
-                    return self.setState({"hoveredColor": color.name});
+                    return self.setState({"hoveredColor": index});
                 },
                 "onMouseLeave": function (event) {
                     return self.setState({"hoveredColor": null});
@@ -38,12 +38,12 @@ class Example extends React.Component {
                 props.className = props.className + " docs-example-item--dark";
             }
             //Check if this color is selected
-            if (self.state.selectedColor === color.name) {
+            if (self.state.selectedColor === index) {
                 props.className = props.className + " docs-example-item--selected";
             }
             //Check the tooltip element
             let tooltip = null;
-            if (self.state.hoveredColor !== null && self.state.hoveredColor === color.name) {
+            if (self.state.hoveredColor !== null && self.state.hoveredColor === index) {
                 tooltip = React.createElement("div", {"className": "docs-example-tooltip"}, color.name);
             }
             return React.createElement("div", props, tooltip);
@@ -55,40 +55,40 @@ class Example extends React.Component {
 
     renderStep2() {
         let self = this;
-        let title = React.createElement("div", {"className": "siimple-h5"}, "2 - Select a variant of the color");
+        let title = React.createElement("div", {"className": "siimple-h5"}, "2 - Choose the lightness of the color");
         //Add all variants
-        let contentItems = this.props.variants.map(function (variant, index) {
+        let contentItems = this.props.colors.lightness.map(function (lightness, index) {
             let props = {
                 "className": "docs-example-item",
                 "key": index,
                 "onClick": function () {
                     if (self.state.selectedColor !== null) {
-                        return self.setState({"selectedVariant": variant});
+                        return self.setState({"selectedLightness": index});
                     }
                 },
                 "onMouseEnter": function (event) {
-                    return self.setState({"hoveredVariant": variant});
+                    return self.setState({"hoveredLightness": index});
                 },
                 "onMouseLeave": function (event) {
-                    return self.setState({"hoveredVariant": null});
+                    return self.setState({"hoveredLightness": null});
                 }
             };
             //Add the selected color
             if (self.state.selectedColor !== null) {
-                let variantClassName = (variant === "base") ? "" : "-" + variant;
-                props.className = props.className + " siimple--bg-" + self.state.selectedColor + variantClassName;
+                let color = self.props.colors.palette[self.state.selectedColor]
+                props.className = props.className + " siimple--bg-" + color.name + lightness.modifier;
                 //Check for dark selected
-                if (self.state.selectedColor === "grey") {
+                if (color.name === "grey") {
                     props.className = props.className + " docs-example-item--dark";
                 }
             }
             //Check if is selected
-            if (self.state.selectedVariant === variant) {
+            if (self.state.selectedLightness === index) {
                 props.className = props.className + " docs-example-item--selected";
             }
             let tooltip = null;
-            if (self.state.hoveredVariant !== null && self.state.hoveredVariant === variant) {
-                tooltip = React.createElement("div", {"className": "docs-example-tooltip"}, variant);
+            if (self.state.hoveredLightness !== null && self.state.hoveredLightness === index) {
+                tooltip = React.createElement("div", {"className": "docs-example-tooltip"}, lightness.name);
             }
             return React.createElement("div", props, tooltip);
         });
@@ -115,14 +115,17 @@ class Example extends React.Component {
             "className": "docs-example-result"
         };
         //Generate the title for the example
-        if (this.state.selectedColor !== null && this.state.selectedVariant !== null) {
-            let colorClass = "docs-example-result--" + this.state.selectedColor + "-" + this.state.selectedVariant;
+        if (this.state.selectedColor !== null && this.state.selectedLightness !== null) {
+            let color = this.props.colors.palette[this.state.selectedColor];
+            let lightness = this.props.colors.lightness[this.state.selectedLightness];
+            let colorClass = "docs-example-result--" + color.name + "-" + lightness.name;
             //Render the example navbar
             let navbarTitle = React.createElement("div", {"className": "siimple-navbar-title"}, "Example");
             let navbarLink = React.createElement("div", {"className": "siimple-navbar-item"}, "Link");
             let exampleNavbar = React.createElement("div", {"className": "siimple-navbar siimple-navbar--fluid " + colorClass}, navbarTitle, navbarLink);
             //Render the example content
-            let contentText = React.createElement("div", {"className": "siimple-paragraph"}, this.props.exampleText);
+            let text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.";
+            let contentText = React.createElement("div", {"className": "siimple-paragraph"}, text);
             let contentBtn = React.createElement("div", {"className": "siimple-btn " + colorClass}, "Action button");
             let exampleContent = React.createElement("div", {"className": "siimple-content siimple-content--fluid"}, contentText, contentBtn);
             //Render the example footer
@@ -155,9 +158,7 @@ class Example extends React.Component {
 utils.loadJSON("./assets/colors.json", function (error, colors) {
     let parent = document.getElementById("example");
     let props = {
-        "colors": colors,
-        "exampleText": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-        "variants": ["extra-dark", "dark", "base", "light", "extra-light"]
+        "colors": colors
     };
     //Render the example component
     ReactDOM.render(React.createElement(Example, props), parent); 
