@@ -23,8 +23,8 @@ documentation:
 
 # Navbar settings
 navbar:
-    - title: "Plugins"
-      url: "https://plugins.siimple.xyz"
+    - title: "siimple.xyz"
+      url: "https://www.siimple.xyz"
 
 # Footer settings
 footer:
@@ -44,13 +44,6 @@ footer:
           url: "https://twitter.com/siimplecss"
         - title: "Gitter"
           url: "https://gitter.im/siimple"
-
-## Search settings
-search:
-    entry: "/search.html"
-    database: "./assets/search.json"
-    title: "Search"
-    subtitle: "Search in <strong>siimple-colors</strong> docs"
 
 # Cookies settings
 #cookies:
