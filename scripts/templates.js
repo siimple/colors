@@ -22,7 +22,10 @@ glob("./templates/" + opt.source + "/*.hbs", function(error, files){
         return process.exit(1);
     }
     //Initialize the data object to be passed to all templates
-    let data = {colors: colors, header: header.join("\n")};
+    let data = {
+        "colors": colors.palette, 
+        "header": header.join("\n")
+    };
     //Output directory
     let outputDir = path.join(process.cwd(), opt.source);
     //Compile each template
