@@ -1,0 +1,106 @@
+---
+layout: "documentation"
+category: "guides"
+title: "Using SCSS"
+description: "Using SCSS variables and functions of <strong>siimple-colors</strong>"
+updated_at: "2018-08-15"
+---
+
+<div class="siimple-paragraph">
+    All <code class="siimple-code">.scss</code> source files that powers <strong>siimple-colors</strong> are placed in <code class="siimple-code">./scss</code> folder. There are some details about the files that you can import from this folder:
+</div>
+<div class="siimple-table siimple-table--border siimple-table--striped">
+    <div class="siimple-table-header">
+        <div class="siimple-table-row">
+            <div class="siimple-table-cell"><strong>File</strong></div>
+            <div class="siimple-table-cell"><strong>Description</strong></div>
+        </div>
+    </div>
+    <div class="siimple-table-body">
+        <div class="siimple-table-row">
+            <div class="siimple-table-cell"><code class="siimple-code">_palette.scss</code></div>
+            <div class="siimple-table-cell">Base colors definition</div>
+        </div>
+        <div class="siimple-table-row">
+            <div class="siimple-table-cell"><code class="siimple-code">_colors.scss</code></div>
+            <div class="siimple-table-cell">Where the variables for each color are defined</div>
+        </div>
+        <div class="siimple-table-row">
+            <div class="siimple-table-cell"><code class="siimple-code">_functions.scss</code></div>
+            <div class="siimple-table-cell">Utility functions to work with colors</div>
+        </div>
+        <div class="siimple-table-row">
+            <div class="siimple-table-cell"><code class="siimple-code">_all.scss</code></div>
+            <div class="siimple-table-cell">A single file that imports all variables and functions</div>
+        </div>
+    </div>
+</div>
+
+<div class="siimple-h5">Adding siimple-colors to your SCSS files</div>
+<div class="siimple-paragraph">
+    You can copy the <code class="siimple-code">scss</code> folder into your project and import the file that you need with the <code class="siimple-code">@import</code> rule using relative paths, or you can add the parent folder where <strong>siimple-colors</strong> is located to the <code class="siimple-code">includePaths</code> option of the SASS compiler. 
+</div>
+<div class="siimple-paragraph">
+    For example, if you have installed <strong>siimple-colors</strong> using a package manager (like npm or yarn), you should add the <code class="siimple-code">node_modules</code> folder to the <code class="siimple-code">includePaths</code> option of your SASS compiler.
+</div>
+<pre class="siimple-pre">$ node-sass --include-path ./node_modules source.scss output.css</pre>
+<div class="siimple-paragraph">
+    And then you can import the SCSS files adding the following line to your <code class="siimple-code">.scss</code> file:
+</div>
+<pre class="siimple-pre">@import "siimple-colors/scss/_all.scss";</pre>
+
+<div class="siimple-h5">Using SCSS variables</div>
+<div class="siimple-paragraph">
+    Each color has the following variables defined in <code class="siimple-code">_colors.scss</code>:
+</div>
+<div class="siimple-table siimple-table--border">
+    <div class="siimple-table-header">
+        <div class="siimple-table-row">
+            <div class="siimple-table-cell">Variable name</div>
+            <div class="siimple-table-cell">Description</div>
+        </div>
+    </div>
+    <div class="siimple-table-body">
+        <div class="siimple-table-row">
+            <div class="siimple-table-cell"><code class="siimple-code">$siimple-{COLOR}-extra-dark</code></div>
+            <div class="siimple-table-cell">Extra dark</div>
+        </div>
+        <div class="siimple-table-row">
+            <div class="siimple-table-cell"><code class="siimple-code">$siimple-{COLOR}-dark</code></div>
+            <div class="siimple-table-cell">Dark lightness of the base color</div>
+        </div>
+        <div class="siimple-table-row">
+            <div class="siimple-table-cell"><code class="siimple-code">$siimple-{COLOR}</code></div>
+            <div class="siimple-table-cell">Base color</div>
+        </div>
+        <div class="siimple-table-row">
+            <div class="siimple-table-cell"><code class="siimple-code">$siimple-{COLOR}-light</code></div>
+            <div class="siimple-table-cell"></div>
+        </div>
+        <div class="siimple-table-row">
+            <div class="siimple-table-cell"><code class="siimple-code">$siimple-{COLOR}-extra-light</code></div>
+            <div class="siimple-table-cell"></div>
+        </div>
+    </div>
+</div>
+<div class="siimple-paragraph">
+    There is an example of how to use them:
+</div>
+<pre class="siimple-pre">
+.my-style {
+    background-color: <strong>$siimple-grey-light</strong>;
+    color: <strong>$siimple-blue</strong>;
+}
+</pre>
+
+<div class="siimple-h5">Using SCSS functions</div>
+<div class="siimple-paragraph">
+    You can also load colors using the SCSS function <code class="siimple-code">siimple-color($color, $lightness)</code>. The first argument is a string with the color name, and the second (optionally) is the lightness of the color. You can omit the second argument if you want the base color.
+</div>
+<pre class="siimple-pre">
+.my-style {
+    background-color: siimple-color("grey", "light");
+    color: siimple-color("blue");
+}
+</pre>
+
