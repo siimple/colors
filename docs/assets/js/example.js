@@ -109,7 +109,7 @@ class Example extends React.Component {
     }
 
     renderRightSide() {
-        let title = React.createElement("div", {"className": "siimple-h5"}, "3 - See in action");
+        let title = React.createElement("div", {"className": "siimple-h5"}, "3 - See the result");
         let content = null;
         let exampleProps = {
             "className": "docs-example-result"
