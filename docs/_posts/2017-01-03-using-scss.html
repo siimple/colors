@@ -51,40 +51,7 @@ updated_at: "2018-08-15"
 
 <div class="siimple-h5">Using SCSS variables</div>
 <div class="siimple-paragraph">
-    Each color has the following variables defined in <code class="siimple-code">_colors.scss</code>:
-</div>
-<div class="siimple-table siimple-table--border">
-    <div class="siimple-table-header">
-        <div class="siimple-table-row">
-            <div class="siimple-table-cell">Variable name</div>
-            <div class="siimple-table-cell">Description</div>
-        </div>
-    </div>
-    <div class="siimple-table-body">
-        <div class="siimple-table-row">
-            <div class="siimple-table-cell"><code class="siimple-code">$siimple-{COLOR}-extra-dark</code></div>
-            <div class="siimple-table-cell">Extra dark</div>
-        </div>
-        <div class="siimple-table-row">
-            <div class="siimple-table-cell"><code class="siimple-code">$siimple-{COLOR}-dark</code></div>
-            <div class="siimple-table-cell">Dark lightness of the base color</div>
-        </div>
-        <div class="siimple-table-row">
-            <div class="siimple-table-cell"><code class="siimple-code">$siimple-{COLOR}</code></div>
-            <div class="siimple-table-cell">Base color</div>
-        </div>
-        <div class="siimple-table-row">
-            <div class="siimple-table-cell"><code class="siimple-code">$siimple-{COLOR}-light</code></div>
-            <div class="siimple-table-cell"></div>
-        </div>
-        <div class="siimple-table-row">
-            <div class="siimple-table-cell"><code class="siimple-code">$siimple-{COLOR}-extra-light</code></div>
-            <div class="siimple-table-cell"></div>
-        </div>
-    </div>
-</div>
-<div class="siimple-paragraph">
-    There is an example of how to use them:
+    You can include the colors in yout SCSs files using the variables with the structure <code class="siimple-code">$siimple-{COLOR}-{LIGHTNESS}</code>. You should import at least <code class="siimple-code">_colors.scss</code> to use these variables.
 </div>
 <pre class="siimple-pre">
 .my-style {
@@ -92,6 +59,9 @@ updated_at: "2018-08-15"
     color: <strong>$siimple-blue</strong>;
 }
 </pre>
+<div class="siimple-tip siimple-tip--warning siimple-tip--exclamation">
+    The <strong>base</strong> color has no lightness suffix, so you should use <code class="siimple-code">$siimple-{COLOR}</code> instead of <code class="siimple-code">$siimple-{COLOR}-base</code>.
+</div>
 
 <div class="siimple-h5">Using SCSS functions</div>
 <div class="siimple-paragraph">
