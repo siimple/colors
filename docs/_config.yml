@@ -25,6 +25,7 @@ documentation:
 navbar:
     - title: "siimple.xyz"
       url: "https://www.siimple.xyz"
+      target: "_parent"
 
 # Footer settings
 footer:
