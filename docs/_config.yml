@@ -47,8 +47,8 @@ footer:
           url: "https://gitter.im/siimple"
 
 # Cookies settings
-#cookies:
-#    analytics: "UA-70800807-5"
-#    path: "/"
-#    domain: ".siimple.xyz"
+cookies:
+    analytics: "UA-70800807-6"
+    path: "/"
+    domain: ".siimple.xyz"
 
