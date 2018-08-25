@@ -69,3 +69,17 @@ docs:
 docs-serve: 
 	${NODE_BIN}/stattic --folder ./docs/_site/ --port 5000 --cors
 
+# Publish docs
+docs-publish:
+	@logger -s "Deploy started"
+	make docs
+	@logger -s "Building deploy folder"
+	mkdir -p _deploy
+	cp ./docs/_site ./_deploy/_colors
+	cp ./deploy.yml ./_deploy/colors.yml
+	@logger -s "Deploying documentation website"
+	cd ./_deploy && gcloud app deploy colors.yaml --project siimple-plugins
+	rm -rf ./_deploy
+	@logger -s "Deploy finished"
+
+
