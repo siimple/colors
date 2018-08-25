@@ -2,22 +2,24 @@
 @import "siimple/scss/_utils.scss";
 
 //Colors cheatshett
-.docs-cheatsheet {
+.docs-colors {
     margin-bottom: 15px;
     @include siimple-utils-clear;
     &-item {
         display: inline-block;
-        width: calc(20% - 20px);
-        float: left;
+        width: calc(20% - 35px);
+        //float: left;
         padding: 10px;
-        &:first-child {
-            border-top-left-radius: 5px;
-            border-bottom-left-radius: 5px;
-        }
-        &:last-child {
-            border-top-right-radius: 5px;
-            border-bottom-right-radius: 5px;
-        }
+        margin: 5px;
+        border-radius: 5px;
+        //&:first-child {
+        //    border-top-left-radius: 5px;
+        //    border-bottom-left-radius: 5px;
+        //}
+        //&:last-child {
+        //    border-top-right-radius: 5px;
+        //    border-bottom-right-radius: 5px;
+        //}
         //Item name 
         &-name {
             display: block;
@@ -27,6 +29,21 @@
         &-hex {
             display: block;
             font-size: 12px;
+        }
+        //Item media
+        @media screen and (max-width: 600px) {
+            display: block;
+            width: calc(100% - 20px) !important;
+            margin: 0px !important;
+            border-radius: 0px;
+            &:first-child {
+                border-top-left-radius: 5px !important;
+                border-top-right-radius: 5px !important;
+            }
+            &:last-child {
+                border-bottom-left-radius: 5px !important;
+                border-bottom-right-radius: 5px !important;
+            }
         }
     }
     //Colors items
