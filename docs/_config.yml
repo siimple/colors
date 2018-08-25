@@ -1,7 +1,7 @@
 # Build settings
 env: "production"
 permalink: "none" 
-exclude: ["LICENSE"]
+exclude: ["LICENSE", "Gemfile", "Gemfile.lock"]
 
 # Theme configuration
 theme: "siimple-theme"
@@ -23,6 +23,8 @@ documentation:
 
 # Navbar settings
 navbar:
+    - title: "Colors"
+      url: "/colors.html"
     - title: "siimple.xyz"
       url: "https://www.siimple.xyz"
       target: "_parent"
