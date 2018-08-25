@@ -75,8 +75,8 @@ docs-publish:
 	make docs
 	@logger -s "Building deploy folder"
 	mkdir -p _deploy
-	cp ./docs/_site ./_deploy/_colors
-	cp ./deploy.yml ./_deploy/colors.yml
+	cp -R ./docs/_site ./_deploy/_colors/
+	cp ./deploy.yaml ./_deploy/colors.yaml
 	@logger -s "Deploying documentation website"
 	cd ./_deploy && gcloud app deploy colors.yaml --project siimple-plugins
 	rm -rf ./_deploy
