@@ -14,11 +14,12 @@ help:
 	@echo "  make install             Install all dependencies"
 	@echo "  make lint                Run sass-lint"
 	@echo "  make templates           Compile all the templates"
+	@echo "  make docs                Generate documentation site"
 	@echo ""
 
 build:
 	@logger -s "Build started"
-	${NODE_BIN}/sass ./scss/siimple-colors.scss ${OUTPUT_CSS}
+	${NODE_BIN}/sass ./index.scss ${OUTPUT_CSS}
 	@logger -s "Adding the header"
 	node ./scripts/header.js > ./dist/header.txt
 	cat ./dist/header.txt ${OUTPUT_CSS} > ${OUTPUT_CSS}.temp
@@ -44,7 +45,7 @@ install:
 	@# Install documentation dependencies
 	bower install
 	cd ./docs && bundle install
-	@# Hack to ensure that sass finds the siimple source code
+	@# Hack to ensure that sass finds the siimple-colors source code
 	ln -s ${PWD} ./bower_components/siimple-colors 
 	@logger -s "Setup finished"
 
@@ -52,7 +53,7 @@ docs:
 	@logger -s "Docs build task started"
 	@logger -s "Building documentation site with Jekyll"
 	cp ./colors.json ./docs/_data/
-	cd ./docs && jekyll build
+	cd ./docs && bundle exec jekyll build
 	@logger -s "Copying assets files"
 	cp ./colors.json ./docs/_site/assets/
 	mkdir -p ./docs/_site/assets/css
@@ -73,13 +74,8 @@ docs-serve:
 docs-publish:
 	@logger -s "Deploy started"
 	make docs
-	@logger -s "Building deploy folder"
-	mkdir -p _deploy
-	cp -R ./docs/_site ./_deploy/_colors/
-	cp ./deploy.yaml ./_deploy/colors.yaml
 	@logger -s "Deploying documentation website"
-	cd ./_deploy && gcloud app deploy colors.yaml --project siimple-plugins
-	rm -rf ./_deploy
+	gsutil rsync -d -r ./docs/_site gs://siimple-documentation.appspot.com/colors
 	@logger -s "Deploy finished"
 
 
