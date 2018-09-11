@@ -6,7 +6,9 @@
 //
 
 //Import all variables, mixins and functions
-@import "./_all.scss";
+@import "./scss/palette.scss";
+@import "./scss/functions.scss";
+@import "./scss/colors.scss";
 
 //CSS Color variables
 :root {
