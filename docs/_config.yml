@@ -32,21 +32,8 @@ navbar:
 # Footer settings
 footer:
     contributors: "https://github.com/siimple/siimple-colors/graphs/contributors"
-    privacy_url: "https://www.siimple.xyz/legal/privacy.html"
-    cookies_url: "https://www.siimple.xyz/legal/cookies.html"
-    code_license: 
-        title: "MIT License"
-        url: "https://github.com/siimple/siimple-colors/blob/develop/LICENSE"
-    docs_license: 
-        title: "Creative Commons CC BY 4.0 License"
-        url: "https://github.com/siimple/siimple-colors/blob/develop/docs/LICENSE"
-    social:
-        - title: "GitHub"
-          url: "https://github.com/siimple/siimple-colors"
-        - title: "Twitter"
-          url: "https://twitter.com/siimplecss"
-        - title: "Gitter"
-          url: "https://gitter.im/siimple"
+    repository_url: "https://github.com/siimple/siimple-colors"
+    license: "MIT License"
 
 # Cookies settings
 cookies:
