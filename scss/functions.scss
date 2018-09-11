@@ -5,6 +5,9 @@
 // Repository:   https://github.com/siimple/siimple-colors
 //
 
+//Import dependencies
+@import "./palette.scss";
+
 //Get a color
 @function siimple-color($color, $index: "base") {
     $list: map-get($siimple-colors, "#{$color}");
