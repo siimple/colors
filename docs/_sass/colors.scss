@@ -5,6 +5,15 @@
 .docs-colors {
     margin-bottom: 15px;
     @include siimple-utils-clear;
+    //Colors header
+    &-header {
+        font-size: 24px;
+        font-weight: bold;
+        display: block;
+        margin-bottom: 15px;
+        padding: 10px;
+        border-bottom: 1px solid $siimple-grey;
+    }
     &-item {
         display: inline-block;
         width: calc(20% - 35px);
@@ -24,6 +33,7 @@
         &-name {
             display: block;
             font-weight: 600;
+            font-size: 13px;
         }
         //Item color hex
         &-hex {
