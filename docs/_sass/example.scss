@@ -9,23 +9,15 @@
         margin-bottom: 15px;
         transition: opacity 0.3s;
     }
-    //Example result
+    //Example preview
+    &-preview {
+        display: block;
+        padding: 10px;
+        margin-bottom: 15px;
+    }
+    //Example result block
     &-result {
         transition: opacity 0.3s;
-        //Result content
-        &-content {
-            padding-left: 20px;
-            padding-right: 20px;
-        }
-        //Colored result example
-        @each $color, $list in $siimple-colors {
-            @each $color-id, $color-hex in $list {
-                &--#{$color}-#{$color-id} {
-                    background-color: #{$color-hex} !important;
-                    color: siimple-color-invert($color-hex) !important;
-                }
-            }
-        }
     }
     //Example tooltip
     &-tooltip {
@@ -69,9 +61,10 @@
         height: 34px;
         border-radius: 100px;
         border: 8px solid #ffffff;
-        margin: 5px;
+        margin: 8px;
         z-index: 1;
         cursor: pointer;
+        transition: background-color 0.3s;
         //Tick
         &::before {
             display: block;
