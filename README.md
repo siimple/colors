@@ -1,9 +1,7 @@
 <div align="center">
   <img height="300px" src="https://rawgit.com/siimple/siimple-colors/develop/media/logo.png" alt="siimple-colors">
-  <br>
 </div>
-
-# siimple-colors
+<h1 align="center">siimple-colors</h1>
 
 [![npm](https://img.shields.io/npm/v/siimple-colors.svg?style=flat-square)](https://www.npmjs.com/package/siimple-colors)
 [![npm](https://img.shields.io/npm/dt/siimple-colors.svg?style=flat-square)](https://www.npmjs.com/package/siimple-colors)
@@ -24,7 +22,7 @@ $ npm install --save siimple-colors
 Or imported in your HTML files using a [CDN](https://www.jsdelivr.com/package/npm/siimple-colors).
 
 ```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/siimple-colors@1.0.0-beta.1/dist/siimple-colors.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/siimple-colors@1.0.0/dist/siimple-colors.min.css">
 ```
 
 ## Documentation 
