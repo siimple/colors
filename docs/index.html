@@ -25,7 +25,7 @@ title: "An elegant and minimalistic color palette for UI design"
     <div class="siimple-grid-row docs-features">
         {% for feature in site.data.features %}
         <div class="siimple-grid-col siimple-grid-col--4 siimple-grid-col--sm-12 docs-features-item">
-            <div class="docs-features-item-image" style="background-image: url('./assets/images/icons/{{ feature.icon }}');"></div>
+            <div class="docs-features-item-image docs-features-item-image--{{ feature.icon }}"></div>
             <div class="siimple-h5">{{ feature.title }}</div>
             {{ feature.description }}
         </div>
