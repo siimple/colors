@@ -128,7 +128,7 @@ class Example extends React.Component {
                 React.createElement("div", {"className": "docs-example-preview siimple--color-" + color}, "Your " + color + " text."),
                 React.createElement("pre", {"className": "siimple-pre"}, "<span class=\"siimple--color-" + color + "\">\n    Your " + color + " text.\n</span>"),
                 React.createElement("div", {"className": "siimple-h6"}, "Change the background color:"),
-                React.createElement("div", {"className": "docs-example-preview siimple--bg-" + color}, "Your " + color + " background."),
+                React.createElement("div", {"className": "docs-example-preview docs-example-preview--" + color}, "Your " + color + " background."),
                 React.createElement("pre", {"className": "siimple-pre"}, "<span class=\"siimple--bg-" + color + "\">\n    Your " + color + " background.\n</span>"),
                 React.createElement("div", {})
             );
