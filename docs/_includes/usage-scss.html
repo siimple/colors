@@ -11,20 +11,16 @@
     </div>
     <div class="siimple-table-body">
         <div class="siimple-table-row">
-            <div class="siimple-table-cell"><code class="siimple-code">_palette.scss</code></div>
+            <div class="siimple-table-cell"><code class="siimple-code">palette.scss</code></div>
             <div class="siimple-table-cell">Base colors definition</div>
         </div>
         <div class="siimple-table-row">
-            <div class="siimple-table-cell"><code class="siimple-code">_colors.scss</code></div>
+            <div class="siimple-table-cell"><code class="siimple-code">colors.scss</code></div>
             <div class="siimple-table-cell">Where the variables for each color are defined</div>
         </div>
         <div class="siimple-table-row">
-            <div class="siimple-table-cell"><code class="siimple-code">_functions.scss</code></div>
+            <div class="siimple-table-cell"><code class="siimple-code">functions.scss</code></div>
             <div class="siimple-table-cell">Utility functions to work with colors</div>
-        </div>
-        <div class="siimple-table-row">
-            <div class="siimple-table-cell"><code class="siimple-code">_all.scss</code></div>
-            <div class="siimple-table-cell">A single file that imports all variables and functions</div>
         </div>
     </div>
 </div>
@@ -38,13 +34,17 @@
 </div>
 <pre class="siimple-pre">$ node-sass --include-path ./node_modules source.scss output.css</pre>
 <div class="siimple-paragraph">
-    And then you can import the SCSS files adding the following line to your <code class="siimple-code">.scss</code> file:
+    And then you can import the SCSS files adding the following lines to your <code class="siimple-code">.scss</code> file:
 </div>
-<pre class="siimple-pre">@import "siimple-colors/scss/_all.scss";</pre>
+<pre class="siimple-pre">
+@import "siimple-colors/scss/palette.scss";
+@import "siimple-colors/scss/colors.scss";
+@import "siimple-colors/scss/functions.scss";
+</pre>
 
 <div class="siimple-h5">Using SCSS variables</div>
 <div class="siimple-paragraph">
-    You can include the colors in yout SCSs files using the variables with the structure <code class="siimple-code">$siimple-{COLOR}-{LIGHTNESS}</code>. You should import at least <code class="siimple-code">_colors.scss</code> to use these variables.
+    You can include the colors in yout SCSs files using the variables with the structure <code class="siimple-code">$siimple-{COLOR}-{LIGHTNESS}</code>. You should import at least <code class="siimple-code">colors.scss</code> to use these variables.
 </div>
 <pre class="siimple-pre">
 .my-style {
