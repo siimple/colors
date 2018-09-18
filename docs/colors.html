@@ -8,11 +8,11 @@ title: "Colors"
 {% include header.html title=header_title subtitle=header_subtitle %}
 <div class="siimple-content siimple-content--large">
     {% for color in site.data.colors.palette %}
-    <div class="siimple-h4" align="center">{{ color.name }}</div>
+    <div class="docs-colors-header">{{ color.name }}</div>
     <div class="docs-colors" align="center">
         {% for lightness in site.data.colors.lightness %}
         <div class="docs-colors-item docs-colors-{{ color.name }}-{{ lightness.name }}" align="center">
-            <div class="docs-colors-item-name">{{ lightness.name }}</div>
+            <div class="docs-colors-item-name">{{ color.name }} {{ lightness.name }}</div>
             <div class="docs-colors-item-hex"></div>
         </div>
         {% endfor %}
