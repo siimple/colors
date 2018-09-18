@@ -14,6 +14,22 @@
         display: block;
         padding: 10px;
         margin-bottom: 15px;
+        @each $color, $list in $siimple-colors {
+            @each $color-id, $color-hex in $list {
+                @if $color-id != "base" {
+                    &--#{$color}-#{$color-id} {
+                        background-color: #{$color-hex} !important;
+                        color: siimple-color-invert($color-hex) !important;
+                    }
+                }
+                @else {
+                    &--#{$color} {
+                        background-color: #{$color-hex} !important;
+                        color: siimple-color-invert($color-hex) !important;
+                    }
+                }
+            }
+        }
     }
     //Example result block
     &-result {
