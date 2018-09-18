@@ -1,7 +1,8 @@
 <div align="center">
   <img height="300px" src="https://rawgit.com/siimple/siimple-colors/develop/media/logo.png" alt="siimple-colors">
 </div>
-<h1 align="center">siimple-colors</h1>
+
+# siimple-colors
 
 [![npm](https://img.shields.io/npm/v/siimple-colors.svg?style=flat-square)](https://www.npmjs.com/package/siimple-colors)
 [![npm](https://img.shields.io/npm/dt/siimple-colors.svg?style=flat-square)](https://www.npmjs.com/package/siimple-colors)
