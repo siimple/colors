@@ -75,7 +75,7 @@ We are working on a new documentation for `v1.0.0`.
 
 ## License
 
-Code and documentation &copy; 2018 the **siimple team**. The code is released under the [MIT License](./LICENSE) and the documentation is released undex the [Creative Commons CC BY 4.0 License](https://creativecommons.org/licenses/by/4.0/).
+Code and documentation &copy; 2018 the **siimple team**. The code is released under the [MIT License](./LICENSE) and the documentation is released under the [Creative Commons CC BY 4.0 License](https://creativecommons.org/licenses/by/4.0/).
 
 The **siimple-colors** logo is &copy; 2018 Josemi Juanes. Released under the [Creative Commons CC BY-SA 4.0 License](https://creativecommons.org/licenses/by-sa/4.0/).
 
