@@ -1,43 +1,41 @@
-# Build settings
-env: "production"
-permalink: "none" 
-exclude: ["LICENSE", "Gemfile", "Gemfile.lock"]
-
-# Theme configuration
-theme: "siimple-theme"
-color: "watermelon"
-
-# Sass build settings
-sass:
-    style: "compressed"
-    load_paths: ["../bower_components", "_sass"]
-
-# Site settings
+## Site settings
+##############################################
 title: "siimple-colors"
 version: "1.0.0"
 url: "https://colors.siimple.xyz"
-
-# Documentation settings
-documentation:
+## Theme configuration
+color: "watermelon"
+## License configuration
+license:
+    title: "MIT License"
+    url: "https://github.com/siimple/siimple-colors/blob/develop/LICENSE"
+## Repository configuration
+repository:
+    url: "https://github.com/siimple/siimple-colors"
     issues: "https://github.com/siimple/siimple-colors/issues"
-
-# Navbar settings
-navbar:
+    contributors: "https://github.com/siimple/siimple-colors/graphs/contributors"
+## Navbar links
+links:
+    - title: "Usage"
+      url: "/usage.html"
     - title: "Colors"
       url: "/colors.html"
-    - title: "siimple.xyz"
-      url: "https://www.siimple.xyz"
-      target: "_parent"
-
-# Footer settings
-footer:
-    contributors: "https://github.com/siimple/siimple-colors/graphs/contributors"
-    repository_url: "https://github.com/siimple/siimple-colors"
-    license: "MIT License"
-
-# Cookies settings
+## Cookies settings
 cookies:
     analytics: "UA-70800807-6"
     path: "/"
     domain: ".siimple.xyz"
+
+
+## Build settings
+##############################################
+env: "production"
+permalink: "none"
+theme: "siimple-theme"
+# Sass build configuration
+sass:
+    style: "compressed"
+    load_paths: ["../bower_components", "_sass"]
+# Exclude files
+exclude: ["LICENSE", "Gemfile", "Gemfile.lock"]
 
