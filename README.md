@@ -60,7 +60,7 @@ We are working on a new documentation for `v1.0.0`.
 Using the `siimple-color` function defined in `scss/functions.scss` is the easiest way to load our colors in your **SASS/SCSS** files. This function will return a string with the hex value of the desired color, and gets two arguments:
 
 - `COLOR`: a string with the desired color.
-- `LIGHTNESS`: a string with the desired lightness variant of the color. This argument is optionally, so if is not provided the function will return the base color.
+- `LIGHTNESS` (optionally): a string with the desired lightness variant of the color. If not provided, the function will return the base color.
 
 ```scss
 @import "siimple-colors/scss/functions.scss";
@@ -76,7 +76,9 @@ Using the `siimple-color` function defined in `scss/functions.scss` is the easie
 }
 ```
 
-You can also use the colors variables defined in `scss/colors.scss`. Each color has a variable with the format `$siimple-{COLOR}` for the base color and `$siimple-{COLOR}-{LIGHTNESS}` for the darken and lighten variants of the color. 
+You can also use the colors variables defined in `scss/colors.scss`. Each color has a variable with the following formats: 
+- `$siimple-{COLOR}` for the base color. 
+- `$siimple-{COLOR}-{LIGHTNESS}` for the darken and lighten variants of the color. 
 
 ```scss
 @import "siimple-colors/scss/colors.scss";
