@@ -57,20 +57,38 @@ We are working on a new documentation for `v1.0.0`.
 
 ### Using SASS/SCSS 
 
+Using the `siimple-color` function defined in `scss/functions.scss` is the easiest way to load our colors in your **SASS/SCSS** files. This function will return a string with the hex value of the desired color, and gets two arguments:
+
+- `COLOR`: a string with the desired color.
+- `LIGHTNESS`: a string with the desired lightness variant of the color. This argument is optionally, so if is not provided the function will return the base color.
+
 ```scss
-@import "siimple-colors/scss/colors.scss";
 @import "siimple-colors/scss/functions.scss";
 
-.red-text {
-    color: siimple-color("red");
+.blue-text {
+    color: siimple-color("blue");
 }
+.red-text {
+    color: siimple-color("red", "extra-dark");
+}
+.green-bg {
+    background-color: siimple-color("green", "light");
+}
+```
+
+You can also use the colors variables defined in `scss/colors.scss`. Each color has a variable with the format `$siimple-{COLOR}` for the base color and `$siimple-{COLOR}-{LIGHTNESS}` for the darken and lighten variants of the color. 
+
+```scss
+@import "siimple-colors/scss/colors.scss";
 
 .blue-text {
-    color: siimple-color-light("blue");
+    color: $siimple-blue;
 }
-
+.red-text {
+    color: $siimple-red-extra-dark;
+}
 .green-bg {
-    background-color: $siimple-green-dark;
+    background-color: $siimple-green-light;
 }
 ```
 
