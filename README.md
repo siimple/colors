@@ -58,7 +58,8 @@ We are working on a new documentation for `v1.0.0`.
 ### Using SASS/SCSS 
 
 ```scss
-@import "siimple-colors/scss/_all.scss";
+@import "siimple-colors/scss/colors.scss";
+@import "siimple-colors/scss/functions.scss";
 
 .red-text {
     color: siimple-color("red");
