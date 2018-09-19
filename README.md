@@ -30,7 +30,7 @@ Or imported in your HTML files using a [CDN](https://www.jsdelivr.com/package/np
 
 We are working on a new documentation for `v1.0.0`.
 
-## Examples 
+## Usage 
 
 ### Using CSS variables: 
 
