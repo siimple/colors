@@ -55,15 +55,11 @@ docs:
 	cp ./colors.json ./docs/_data/
 	cd ./docs && bundle exec jekyll build
 	@logger -s "Copying assets files"
-	cp ./colors.json ./docs/_site/assets/
 	mkdir -p ./docs/_site/assets/css
 	cp ./bower_components/siimple/dist/siimple.min.css ./docs/_site/assets/css/
 	cp ${OUTPUT_MIN} ./docs/_site/assets/css/
 	mkdir -p ./docs/_site/assets/images
 	cp ./media/logo.png ./docs/_site/assets/images/
-	mkdir -p ./docs/_site/assets/js/
-	cp ./node_modules/react/umd/react.production.min.js ./docs/_site/assets/js/
-	cp ./node_modules/react-dom/umd/react-dom.production.min.js ./docs/_site/assets/js/
 	@logger -s "Docs build task finished"
 
 # Serve docs
