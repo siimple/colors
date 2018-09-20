@@ -2,7 +2,6 @@
     "name": "siimple-colors",
     "main": "dist/siimple-colors.css",
     "author": "Josemi Juanes <josemijuanes@gmail.com>",
-    "homepage": "https://www.siimple.xyz/colors",
     "repository": "https://github.com/siimple/siimple-colors.git",
     "license": "MIT",
     "devDependencies": {
