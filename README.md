@@ -34,6 +34,8 @@ We are working on a new documentation for `v1.0.0`.
 
 ### Using CSS variables: 
 
+You can apply the color in your CSS styles simply by using our CSS variables: 
+
 ```css 
 .red-text {
     color: var(--siimple-red);
