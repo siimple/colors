@@ -1,16 +1,24 @@
 {
     "palette": [
         {
-            "name": "navy", 
-            "color": "#546778"
+            "name": "watermelon", 
+            "color": "#df535e"
         },
         {
-            "name": "green", 
-            "color": "#4acf7f"
+            "name": "red",
+            "color": "#ee675d"
         },
         {
-            "name": "mint", 
-            "color": "#4ccdac"
+            "name": "pink", 
+            "color": "#e77eb8"
+        },
+        {
+            "name": "purple", 
+            "color": "#9d81e4"
+        },
+        {
+            "name": "royal", 
+            "color": "#939aea"
         },
         {
             "name": "blue", 
@@ -21,40 +29,32 @@
             "color": "#4ecbe4"
         },
         {
-            "name": "purple", 
-            "color": "#9d81e4"
+            "name": "mint", 
+            "color": "#4ccdac"
         },
         {
-            "name": "pink", 
-            "color": "#e77eb8"
-        },
-        {
-            "name": "red",
-            "color": "#ee675d"
-        },
-        {
-            "name": "orange", 
-            "color": "#f78055"
+            "name": "green", 
+            "color": "#4acf7f"
         },
         {
             "name": "yellow", 
             "color": "#fbc850"
         },
         {
-            "name": "brown", 
-            "color": "#a75d58"
-        },
-        {
-            "name": "royal", 
-            "color": "#939aea"
+            "name": "orange", 
+            "color": "#f78055"
         },
         {
             "name": "beige", 
             "color": "#ebbb93"
         },
         {
-            "name": "watermelon", 
-            "color": "#df535e"
+            "name": "brown", 
+            "color": "#a75d58"
+        },
+        {
+            "name": "navy", 
+            "color": "#546778"
         },
         {
             "name": "grey", 
