@@ -50,6 +50,8 @@ We are working on a new documentation for `v1.0.0`.
 
 ### Using CSS selectors
 
+Use `.siimple--color-{COLOR}` class to change the text color, or `.siimple--bg-{COLOR}` to change the background color. Optionally, you can use a lighten or darken color using `.siimple--color{COLOR}-{LIGHTNESS}` class for changing the text color, and `.siimple--bg-{COLOR}-{LIGHTNESS}` for changing the background color.
+
 ```html 
 <span class="siimple--color-red">Text with red color</span>
 <span class="siimple--bg-blue-dark siimple--color-white">White text with dark blue color</span>
