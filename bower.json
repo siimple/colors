@@ -3,15 +3,8 @@
     "main": "dist/siimple-colors.css",
     "author": "Josemi Juanes <josemijuanes@gmail.com>",
     "homepage": "https://www.siimple.xyz/colors",
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/siimple/siimple-colors.git"
-    },
+    "repository": "https://github.com/siimple/siimple-colors.git",
     "license": "MIT",
-    "keywords": [
-        "siimple",
-        "colors"
-    ],
     "devDependencies": {
         "siimple": "siimple/siimple#v3.1.1"
     }
