@@ -5,6 +5,17 @@
 //Import theme
 @import "{{ site.theme }}";
 
+//Code colors
+.b {
+    color: siimple-default-color("primary", "dark");
+}
+.g {
+    color: siimple-default-color("success", "dark");
+}
+.y {
+    color: siimple-default-color("warning", "dark");
+}
+
 //Import partials
 @import "colors.scss";
 @import "example.scss";
