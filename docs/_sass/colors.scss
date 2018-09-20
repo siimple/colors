@@ -3,32 +3,26 @@
 
 //Colors cheatshett
 .docs-colors {
-    margin-bottom: 15px;
-    @include siimple-utils-clear;
-    //Colors header
-    &-header {
-        font-size: 24px;
-        font-weight: bold;
-        display: block;
-        margin-bottom: 15px;
-        padding: 10px;
-        border-bottom: 1px solid $siimple-grey;
-    }
+    //@include siimple-utils-clear;
+    display: inline-block;
+    width: 260px;
+    margin: 10px;
+    border-radius: 5px;
     &-item {
-        display: inline-block;
-        width: calc(20% - 35px);
+        display: block;
+        //width: calc(20% - 35px);
         //float: left;
         padding: 10px;
-        margin: 5px;
-        border-radius: 5px;
-        //&:first-child {
-        //    border-top-left-radius: 5px;
-        //    border-bottom-left-radius: 5px;
-        //}
-        //&:last-child {
-        //    border-top-right-radius: 5px;
-        //    border-bottom-right-radius: 5px;
-        //}
+        //margin: 5px;
+        //border-radius: 5px;
+        &:first-child {
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+        }
+        &:last-child {
+            border-bottom-left-radius: 5px;
+            border-bottom-right-radius: 5px;
+        }
         //Item name 
         &-name {
             display: block;
@@ -39,21 +33,6 @@
         &-hex {
             display: block;
             font-size: 12px;
-        }
-        //Item media
-        @media screen and (max-width: 600px) {
-            display: block;
-            width: calc(100% - 20px) !important;
-            margin: 0px !important;
-            border-radius: 0px;
-            &:first-child {
-                border-top-left-radius: 5px !important;
-                border-top-right-radius: 5px !important;
-            }
-            &:last-child {
-                border-bottom-left-radius: 5px !important;
-                border-bottom-right-radius: 5px !important;
-            }
         }
     }
     //Colors items
