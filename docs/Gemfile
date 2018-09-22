@@ -1,3 +1,7 @@
 source 'https://rubygems.org'
-gem 'siimple-theme', :git => 'https://github.com/siimple/theme.git', :tag => 'v0.0.1'
+# Develop gem
+#gem 'siimple-theme', :git => 'https://github.com/siimple/theme.git', :branch => 'develop'
+
+# Production gem
+gem 'siimple-theme', :git => 'https://github.com/siimple/theme.git', :tag => 'v0.0.2'
 
