@@ -4,6 +4,7 @@
 
 # siimple-colors
 
+[![Made with siimple](https://badge.siimple.xyz/plugin-squared.svg)](https://www.siimple.xyz)
 [![npm](https://img.shields.io/npm/v/siimple-colors.svg?style=flat-square)](https://www.npmjs.com/package/siimple-colors)
 [![npm](https://img.shields.io/npm/dt/siimple-colors.svg?style=flat-square)](https://www.npmjs.com/package/siimple-colors)
 [![devDependency Status](https://david-dm.org/siimple/siimple-colors/dev-status.svg?style=flat-square)](https://david-dm.org/siimple/siimple-colors#info=devDependencies)
