@@ -19,12 +19,15 @@ title: "An elegant and minimalistic color palette for UI design"
 </div>
 <div class="siimple-content siimple-content--large theme-section siimple--bg-grey-light" align="center">
     <div class="siimple-h3">You will love <strong>siimple-colors</strong></div>
-    <div class="siimple-grid-row docs-features">
+    <div class="theme-section-description" align="center">
+        Description of the section
+    </div>
+    <div class="siimple-grid-row">
         {% for feature in site.data.features %}
-        <div class="siimple-grid-col siimple-grid-col--4 siimple-grid-col--sm-12 docs-features-item">
-            <div class="docs-features-item-image docs-features-item-image--{{ feature.icon }}"></div>
-            <div class="siimple-h5">{{ feature.title }}</div>
-            {{ feature.description }}
+        <div class="siimple-grid-col siimple-grid-col--4 siimple-grid-col--sm-12 theme-feature">
+            <div class="theme-feature-image docs-feature--{{ feature.icon }}"></div>
+            <div class="theme-feature-title">{{ feature.title }}</div>
+            <div class="theme-feature-description">{{ feature.description }}</div>
         </div>
         {% endfor %}
     </div>
@@ -52,7 +55,7 @@ title: "An elegant and minimalistic color palette for UI design"
             </div>
         </div>
         <div class="siimple-grid-col siimple-grid-col--7 siimple-grid-col--sm-12">
-<pre class="siimple-pre" style="font-size:12px;line-height:20px;font-weight:600;">
+<pre class="siimple-pre theme-code">
 <span class="b">&lt;div</span> <span class="y">class=</span><span class="g">"example siimple--bg-grey-light"</span> <span class="y">align=</span><span class="g">"center"</span><span class="b">&gt;</span>
 <span class="b">&lt;div</span> <span class="y">class=</span><span class="g">"example-icon siimple--bg-blue siimple--color-white"</span> <span class="y">align=</span><span class="g">"center"</span><span class="b">&gt;&lt;/div&gt;</span> 
     <span class="b">&lt;div</span> <span class="y">class=</span><span class="g">"example-title siimple--color-navy-light"</span><span class="b">&gt;</span>You are done!<span class="b">&lt;/div&gt;</span>
