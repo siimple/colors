@@ -5,20 +5,18 @@
 //Import theme
 @import "{{ site.theme }}";
 
-//Code colors
-.b {
-    color: siimple-default-color("primary", "dark");
-}
-.g {
-    color: siimple-default-color("success", "dark");
-}
-.y {
-    color: siimple-default-color("warning", "dark");
+//Features icons
+$features-icons: "palette","css","sass";
+@for $i from 1 through length($features-icons) {
+    $icon: nth($features-icons, $i);
+    .docs-feature--#{$icon} {
+        background-image: url("../images/icons.png");
+        background-position: #{($i - 1) * 75px * (-1)} 0px;
+    }
 }
 
 //Import partials
 @import "colors.scss";
 @import "example.scss";
-@import "features.scss";
 @import "welcome.scss";
 
