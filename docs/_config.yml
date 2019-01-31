@@ -7,6 +7,7 @@ author: "Josemi Juanes"
 url: "https://colors.siimple.xyz"
 license: "MIT License"
 repository: "https://github.com/siimple/siimple-colors"
+releases: "https://github.com/siimple/siimple-colors/releases"
 links:
     - title: "Usage"
       url: "/usage.html"
