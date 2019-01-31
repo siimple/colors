@@ -1,9 +1,6 @@
----
-# Ensure that Jekyll will compile this file
----
-
-//Import theme
-@import "{{ site.theme }}";
+//Import dependencies and mixins
+@import "siimple/scss/_variables.scss";
+@import "siimple-colors/scss/colors.scss";
 
 //Features icons
 $features-icons: "palette","css","sass";
@@ -16,7 +13,7 @@ $features-icons: "palette","css","sass";
 }
 
 //Import partials
-@import "colors.scss";
-@import "example.scss";
-@import "welcome.scss";
+@import "./colors.scss";
+@import "./example.scss";
+@import "./welcome.scss";
 
