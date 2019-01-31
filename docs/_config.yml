@@ -1,41 +1,38 @@
 ## Site settings
 ##############################################
 title: "siimple-colors"
+description: ""
 version: "1.0.0"
+author: "Josemi Juanes"
 url: "https://colors.siimple.xyz"
-## Theme configuration
-color: "watermelon"
-## License configuration
-license:
-    title: "MIT License"
-    url: "https://github.com/siimple/siimple-colors/blob/develop/LICENSE"
-## Repository configuration
-repository:
-    url: "https://github.com/siimple/siimple-colors"
-    issues: "https://github.com/siimple/siimple-colors/issues"
-    contributors: "https://github.com/siimple/siimple-colors/graphs/contributors"
-## Navbar links
+license: "MIT License"
+repository: "https://github.com/siimple/siimple-colors"
 links:
     - title: "Usage"
       url: "/usage.html"
     - title: "Colors"
       url: "/colors.html"
-## Cookies settings
-cookies:
-    analytics: "UA-70800807-6"
-    path: "/"
-    domain: ".siimple.xyz"
+    - title: "GitHub"
+      url: "https://github.com/siimple/siimple-colors"
+      target: "_blank"
 
+## Theme configuration
+##############################################
+theme_config:
+    color: "watermelon"
+    custom_styles: ["/assets/css/main.css"]
+    changes_url: "https://github.com/ssimple/siimple-colors/issues/new"
+    analytics: "UA-70800807-6"
+    legal_urls:
+        cookies: "https://www.siimple.xyz/legal/cookies.html"
+        privacy: "https://www.siimple.xyz/legal/privacy.html"
+    copyright: "&copy; 2015-present <strong>siimple</strong>"
 
 ## Build settings
 ##############################################
 env: "production"
 permalink: "none"
 theme: "siimple-theme"
-# Sass build configuration
-sass:
-    style: "compressed"
-    load_paths: ["../bower_components", "_sass"]
 # Exclude files
 exclude: ["LICENSE", "Gemfile", "Gemfile.lock"]
 
