@@ -1,9 +1,10 @@
 ## Site settings
 ##############################################
-title: "siimple-colors"
-description: ""
+title: "siimple"
+subtitle: "colors"
+description: "An elegant and minimalistic color palette for UI design"
 version: "1.0.0"
-author: "Josemi Juanes"
+author: "Josemi Juanes and Pablo Marin-Garcia"
 url: "https://colors.siimple.xyz"
 license: "MIT License"
 repository: "https://github.com/siimple/siimple-colors"
@@ -32,7 +33,7 @@ theme_config:
 ## Build settings
 ##############################################
 env: "production"
-permalink: "none"
+permalink: "/:title.html"
 theme: "siimple-theme"
 # Exclude files
 exclude: ["LICENSE", "Gemfile", "Gemfile.lock"]
