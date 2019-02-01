@@ -4,37 +4,43 @@ title: "An elegant and minimalistic color palette for UI design"
 ---
 
 <link rel="stylesheet" href="/assets/css/siimple-colors.min.css">
-<div class="siimple-jumbotron siimple-jumbotron--large siimple--bg-watermelon siimple--color-white docs-welcome" align="center">
-    <div class="docs-welcome-logo"></div>
-    <div class="siimple-jumbotron-title">siimple-colors</div>
-    <div class="siimple-jumbotron-subtitle">An elegant and minimalistic color palette for UI design</div>
-    <div align="center" class="docs-welcome-buttons">
-        <a href="./usage.html" class="siimple-btn siimple--color-watermelon siimple--bg-white">
-            Usage <strong>guide</strong>
-        </a>
-        <a href="./colors.html" class="siimple-btn siimple--color-watermelon siimple--bg-white">
-            Browse <strong>colors</strong>
-        </a>
+<div class="siimple-jumbotron theme-header siimple-jumbotron--large" align="center">
+    <div class="siimple-jumbotron-title">
+        <span class="siimple-brand">siimple</span>
+        <span class="siimple--text-normal" style="margin-left:-5px;">colors</span> 
+    </div>
+    <div class="siimple-jumbotron-subtitle">{{ page.title }}</div>
+    <div align="center" class="siimple--mt-3">
+        Current version: <strong>v{{ site.version }}</strong>
     </div>
 </div>
-<div class="siimple-content siimple-content--large theme-section siimple--bg-grey-light" align="center">
-    <div class="siimple-h3">You will love <strong>siimple-colors</strong></div>
-    <div class="theme-section-description" align="center">What will you get with <strong>siimple-colors</strong>?</div>
-    <div class="siimple-grid-row">
-        {% for feature in site.data.features %}
-        <div class="siimple-grid-col siimple-grid-col--4 siimple-grid-col--sm-12 theme-feature">
-            <div class="theme-feature-image docs-feature--{{ feature.icon }}"></div>
-            <div class="theme-feature-title">{{ feature.title }}</div>
-            <div class="theme-feature-description">{{ feature.description }}</div>
+<div class="siimple-content siimple-content--large siimple--py-5">
+    <div class="siimple--py-4" align="center">
+        <div class="siimple-h3 siimple--mb-2 siimple--text-normal">
+            Install <strong>siimple-colors</strong>
         </div>
-        {% endfor %}
+        <div class="siimple-paragraph siimple-paragraph--lead">
+            You only need one command to add <strong>siimple-colors</strong> to your project:
+        </div>
+        <div class="siimple--mb-3" align="center">
+            <pre class="siimple-pre">$ npm install <strong>siimple-colors</strong></pre>
+        </div>
+        <div class="siimple-paragraph siimple-paragraph--lead">
+            Or you can use an alternative method to download and install <strong>siimple-colors</strong> on your project:
+        </div>
+        <div align="center">
+            <a href="/installation.html" class="siimple-btn siimple-btn--primary">
+                Read <strong>installation</strong> docs
+            </a>
+        </div>
     </div>
 </div>
-<div class="siimple-content siimple-content--large theme-section">
-    <div class="siimple-h3" align="center">
+<div class="docs-rule"></div>
+<div class="siimple-content siimple-content--large siimple--my-5">
+    <div class="siimple-h3 siimple--mb-2 siimple--text-normal" align="center">
         Using <strong>siimple-colors</strong>
     </div>
-    <div class="theme-section-description" align="center">
+    <div class="siimple-paragraph siimple-paragraph--lead" align="center">
         See how you can change the color of your text or background with only one line of our easy and very <strong>siiiiimple</strong> code!
     </div>
     <div class="siimple-grid-row">
@@ -53,7 +59,7 @@ title: "An elegant and minimalistic color palette for UI design"
             </div>
         </div>
         <div class="siimple-grid-col siimple-grid-col--7 siimple-grid-col--sm-12">
-<pre class="siimple-pre theme-code">
+<pre class="siimple-pre theme-code theme-code--small">
 <span class="b">&lt;div</span> <span class="y">class=</span><span class="g">"example siimple--bg-grey-light"</span> <span class="y">align=</span><span class="g">"center"</span><span class="b">&gt;</span>
 <span class="b">&lt;div</span> <span class="y">class=</span><span class="g">"example-icon siimple--bg-blue siimple--color-white"</span> <span class="y">align=</span><span class="g">"center"</span><span class="b">&gt;&lt;/div&gt;</span> 
     <span class="b">&lt;div</span> <span class="y">class=</span><span class="g">"example-title siimple--color-navy-light"</span><span class="b">&gt;</span>You are done!<span class="b">&lt;/div&gt;</span>
@@ -71,13 +77,15 @@ title: "An elegant and minimalistic color palette for UI design"
         </div>
     </div>
 </div>
-<div class="siimple-content siimple-content--large theme-section" align="center" style="padding-top:0px!important;">
-    <div class="siimple-h3">Get started with <strong>siimple-colors</strong>!</div>
-    <div class="theme-section-description" align="center">
+<div class="siimple-content siimple-content--large siimple--mb-5" align="center">
+    <div class="siimple-h3 siimple--mb-2 siimple--text-normal">
+        Get started with <strong>siimple-colors</strong>!
+    </div>
+    <div class="siimple-paragraph siimple-paragraph--lead" align="center">
         Our installation and usage guide is the best place to get started with <strong>siimple-colors</strong>!
     </div>
-    <a href="/usage.html" class="siimple-btn siimple--bg-watermelon siimple--color-white">
-        Read the <strong>guide</strong>
+    <a href="/installation.html" class="siimple-btn siimple--bg-primary siimple--color-white">
+        Start using <strong>siimple-colors</strong>
     </a>
 </div>
 
