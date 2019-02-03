@@ -4,6 +4,7 @@ title: "siimple"
 subtitle: "colors"
 description: "An elegant and minimalistic color palette for UI design"
 version: "1.0.0"
+package: "siimple-colors"
 author: "Josemi Juanes and Pablo Marin-Garcia"
 url: "https://colors.siimple.xyz"
 license: "MIT License"
@@ -28,6 +29,9 @@ theme_config:
     legal_urls:
         cookies: "https://www.siimple.xyz/legal/cookies.html"
         privacy: "https://www.siimple.xyz/legal/privacy.html"
+    home:
+        installation_cmd: "npm install --save siimple-colors"
+        installation_url: "/installation.html"
     copyright: "&copy; 2015-present <strong>siimple</strong>"
 
 ## Build settings
