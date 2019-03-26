@@ -56,10 +56,11 @@ docs:
 	cd ./docs && bundle exec jekyll build
 	@logger -s "Copying assets files"
 	mkdir -p ./docs/_site/assets/css
+	${NODE_BIN}/sass ./docs/_sass/main.scss ./docs/_site/assets/css/main.css --load-path=./bower_components/
 	cp ./bower_components/siimple/dist/siimple.min.css ./docs/_site/assets/css/
 	cp ${OUTPUT_MIN} ./docs/_site/assets/css/
-	mkdir -p ./docs/_site/assets/images
-	cp ./media/logo.png ./docs/_site/assets/images/
+	@#mkdir -p ./docs/_site/assets/images
+	@#cp ./media/logo.png ./docs/_site/assets/images/
 	@logger -s "Docs build task finished"
 
 # Serve docs
