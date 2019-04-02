@@ -1,16 +1,15 @@
-<div align="center">
-  <img height="300px" src="https://rawgit.com/siimple/siimple-colors/develop/media/logo.png" alt="siimple-colors">
-</div>
-
 # siimple-colors
 
-[![Made with siimple](https://badge.siimple.xyz/plugin-squared.svg)](https://www.siimple.xyz)
 [![npm](https://img.shields.io/npm/v/siimple-colors.svg?style=flat-square)](https://www.npmjs.com/package/siimple-colors)
 [![npm](https://img.shields.io/npm/dt/siimple-colors.svg?style=flat-square)](https://www.npmjs.com/package/siimple-colors)
 [![devDependency Status](https://david-dm.org/siimple/siimple-colors/dev-status.svg?style=flat-square)](https://david-dm.org/siimple/siimple-colors#info=devDependencies)
+[![jsdelivr](https://data.jsdelivr.com/v1/package/npm/siimple-colors/badge)](https://www.jsdelivr.com/package/npm/siimple-colors)
 [![npm](https://img.shields.io/npm/l/siimple-colors.svg?style=flat-square)](https://github.com/siimpl/siimple-colors)
 
-**siimple-colors** is an elegant and minimalistic color palette for UI design.
+[**siimple-colors**]() is an elegant and minimalistic color palette for UI design.
+
+- [Documentation](): Official documentation for **siimple-colors**.
+- [@siimplecss](https://twitter.com/siimplecss) - Follow us on Twitter and share your love to **siimple** with the HT [#siimplecolors](https://twitter.com/search?q=%23siimplecolors&src=typd).
 
 
 ## Getting started
