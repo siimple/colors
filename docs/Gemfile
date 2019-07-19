@@ -1,7 +1,0 @@
-source 'https://rubygems.org'
-# Develop gem
-#gem 'siimple-theme', :git => 'https://github.com/siimple/theme.git', :branch => 'develop'
-
-# Production gem
-gem 'siimple-theme', :git => 'https://github.com/siimple/theme.git', :tag => 'v0.2.4'
-
