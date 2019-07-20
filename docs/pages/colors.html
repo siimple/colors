@@ -1,21 +1,33 @@
 ---
-layout: "documentation"
-title: "Colors"
-description: "The 75 flat colors available in <strong>siimple-colors</strong>"
-updated_at: "2019-01-31"
+layout: "default"
+title: "Color palette"
 --- 
 
-<div class="" align="center">
-    {% for color in site.data.colors.palette %}
-    <!-- <div class="docs-colors-header">{{ color.name }}</div> -->
-    <div class="docs-colors" align="center">
-        {% for lightness in site.data.colors.lightness %}
-        <div class="docs-colors-item docs-colors-{{ color.name }}-{{ lightness.name }}" align="center">
-            <div class="docs-colors-item-name">{{ color.name }} {{ lightness.name }}</div>
-            <div class="docs-colors-item-hex"></div>
-        </div>
-        {% endfor %}
+<div class="siimple-content siimple-press-content siimple-content--large">
+    <div class="siimple-breadcrumb siimple--mb-2">
+        <a class="siimple-breadcrumb-item" href="/">Home</a>
+        <a class="siimple-breadcrumb-item">Colors</a>
     </div>
-    {% endfor %}
+    <div class="siimple--mt-4 siimple--mb-5">
+        <div class="siimple-h1 siimple--mb-1">
+            Color palette
+        </div>
+        <div class="siimple-paragraph siimple-paragraph--lead" style="opacity:0.7;">
+            The 75 flat colors available in <strong>siimple colors</strong>
+        </div>
+    </div>
+    <div class="" align="center">
+        {{#each data.colors.palette as |color|}}
+        <!-- <div class="docs-colors-header">{{ color.name }}</div> -->
+        <div class="docs-colors" align="center">
+            {{#each ../data.colors.lightness as |lightness|}}
+            <div class="docs-colors-item docs-colors-{{ color.name }}-{{ lightness.name }}" align="center">
+                <div class="docs-colors-item-name">{{ color.name }} {{ lightness.name }}</div>
+                <div class="docs-colors-item-hex"></div>
+            </div>
+            {{/each }}
+        </div>
+        {{/each }}
+    </div>
 </div>
 
