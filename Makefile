@@ -1,4 +1,4 @@
-.PHONY: build templates lint docs
+.PHONY: build templates lint docs publish docs-serve docs-build docs-publish
 
 # Node binaries path
 NODE_BIN=./node_modules/.bin
@@ -44,28 +44,35 @@ install:
 	npm install 
 	@# Install documentation dependencies
 	bower install
-	cd ./docs && bundle install
+	#cd ./docs && bundle install
 	@# Hack to ensure that sass finds the siimple-colors source code
 	ln -s ${PWD} ./bower_components/siimple-colors 
 	@logger -s "Setup finished"
 
-docs: 
+# Docs generation and serving
+docs:
+	${MAKE} docs-build
+	${MAKE} docs-serve
+
+# Build docs
+docs-build: 
 	@logger -s "Docs build task started"
-	@logger -s "Building documentation site with Jekyll"
-	cp ./colors.json ./docs/_data/
-	cd ./docs && bundle exec jekyll build
+	@logger -s "Building documentation site"
+	mkdir -p ./docs/data && cp ./colors.json ./docs/data/
+	./node_modules/.bin/siimplepress --config docs/config.js
+	#cd ./docs && bundle exec jekyll build
 	@logger -s "Copying assets files"
-	mkdir -p ./docs/_site/assets/css
-	${NODE_BIN}/sass ./docs/_sass/main.scss ./docs/_site/assets/css/main.css --load-path=./bower_components/
-	cp ./bower_components/siimple/dist/siimple.min.css ./docs/_site/assets/css/
-	cp ${OUTPUT_MIN} ./docs/_site/assets/css/
-	@#mkdir -p ./docs/_site/assets/images
-	@#cp ./media/logo.png ./docs/_site/assets/images/
+	#mkdir -p ./docs/_site/assets/css
+	#${NODE_BIN}/sass ./docs/_sass/main.scss ./docs/_site/assets/css/main.css --load-path=./bower_components/
+	#cp ./bower_components/siimple/dist/siimple.min.css ./docs/_site/assets/css/
+	cp ${OUTPUT_MIN} ./docs/public/css/
+	mkdir -p ./docs/public/images
+	cp ./art/*.svg ./docs/public/images/
 	@logger -s "Docs build task finished"
 
 # Serve docs
 docs-serve: 
-	${NODE_BIN}/stattic --folder ./docs/_site/ --port 5000 --cors
+	${NODE_BIN}/stattic --folder ./docs/public/ --port 5000 --cors
 
 # Publish docs
 docs-publish:
