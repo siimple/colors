@@ -60,7 +60,7 @@ docs-build:
 	#cp ./bower_components/siimple/dist/siimple.min.css ./docs/_site/assets/css/
 	cp ${OUTPUT_MIN} ./docs/public/css/
 	mkdir -p ./docs/public/images
-	cp ./art/*.svg ./docs/public/images/
+	cp ./art/docs/*.svg ./docs/public/images/
 	@logger -s "Docs build task finished"
 
 # Serve docs
