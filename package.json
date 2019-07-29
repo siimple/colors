@@ -1,12 +1,12 @@
 {
-    "name": "siimple-colors",
-    "version": "1.0.0-beta.1",
+    "name": "@siimple/colors",
+    "version": "1.0.0",
     "description": "An elegant and minimalistic color palette for UI design",
     "author": "Josemi Juanes <josemijuanes@gmail.com>",
     "license": "MIT",
-    "homepage": "https://www.siimple.xyz/colors",
-    "repository": "https://github.com/siimple/siimple-colors",
-    "bugs": "https://github.com/siimple/siimple-colors/issues",
+    "homepage": "https://colors.siimple.xyz",
+    "repository": "https://github.com/siimple/colors",
+    "bugs": "https://github.com/siimple/colors/issues",
     "keywords": [
         "siimple",
         "colors",
@@ -18,16 +18,15 @@
         "sass"
     ],
     "devDependencies": {
-        "stattic": "^0.3.2",
-        "react": "^16.4.2",
-        "react-dom": "^16.4.2",
-        "sass-lint": "^1.12.1",
-        "sass": "^1.8.0",
-        "get-args": "^2.0.0",
         "autoprefixer": "^9.0.1",
-        "postcss-cli": "^6.0.0",
         "clean-css-cli": "^4.1.11",
-        "handlebars": "^4.0.11",
-        "glob": "^7.1.2"
+        "get-args": "^2.0.0",
+        "glob": "^7.1.2",
+        "handlebars": "^4.1.2",
+        "postcss-cli": "^6.0.0",
+        "sass": "^1.8.0",
+        "sass-lint": "^1.12.1",
+        "siimple": "^3.3.1",
+        "@siimple/press": "^0.0.2"
     }
 }
