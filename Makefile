@@ -40,14 +40,7 @@ templates:
 	@logger -s "Compile templates task finished"
 
 install:
-	@logger -s "Setup started"
 	npm install 
-	@# Install documentation dependencies
-	bower install
-	#cd ./docs && bundle install
-	@# Hack to ensure that sass finds the siimple-colors source code
-	ln -s ${PWD} ./bower_components/siimple-colors 
-	@logger -s "Setup finished"
 
 # Docs generation and serving
 docs:
