@@ -69,9 +69,9 @@ docs-serve:
 # Publish docs
 docs-publish:
 	@logger -s "Deploy started"
-	make docs
+	make docs-build
 	@logger -s "Deploying documentation website"
-	gsutil rsync -d -r ./docs/_site gs://siimple-documentation.appspot.com/colors
+	gsutil rsync -d -r ./docs/public gs://siimple-documentation.appspot.com/colors
 	@logger -s "Deploy finished"
 
 
