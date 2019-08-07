@@ -59,8 +59,7 @@ docs-build:
 	#${NODE_BIN}/sass ./docs/_sass/main.scss ./docs/_site/assets/css/main.css --load-path=./bower_components/
 	#cp ./bower_components/siimple/dist/siimple.min.css ./docs/_site/assets/css/
 	cp ${OUTPUT_MIN} ./docs/public/css/
-	mkdir -p ./docs/public/images
-	cp ./art/docs/*.svg ./docs/public/images/
+	cp -R ./docs/images ./docs/public/
 	@logger -s "Docs build task finished"
 
 # Serve docs
