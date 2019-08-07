@@ -1,29 +1,29 @@
-# siimple-colors
+# @siimple/colors
 
-[![npm](https://img.shields.io/npm/v/siimple-colors.svg?style=flat-square)](https://www.npmjs.com/package/siimple-colors)
-[![npm](https://img.shields.io/npm/dt/siimple-colors.svg?style=flat-square)](https://www.npmjs.com/package/siimple-colors)
-[![devDependency Status](https://david-dm.org/siimple/siimple-colors/dev-status.svg?style=flat-square)](https://david-dm.org/siimple/siimple-colors#info=devDependencies)
-[![jsdelivr](https://data.jsdelivr.com/v1/package/npm/siimple-colors/badge)](https://www.jsdelivr.com/package/npm/siimple-colors)
-[![npm](https://img.shields.io/npm/l/siimple-colors.svg?style=flat-square)](https://github.com/siimpl/siimple-colors)
+[![npm](https://img.shields.io/npm/v/@siimple/colors.svg?style=flat-square)](https://www.npmjs.com/package/@siimple/colors)
+[![npm](https://img.shields.io/npm/dt/@siimple/colors.svg?style=flat-square)](https://www.npmjs.com/package/@siimple/colors)
+[![devDependency Status](https://david-dm.org/siimple/colors/dev-status.svg?style=flat-square)](https://david-dm.org/siimple/colors#info=devDependencies)
+[![jsdelivr](https://data.jsdelivr.com/v1/package/npm/@siimple/colors/badge)](https://www.jsdelivr.com/package/npm/@siimple/colors)
+[![npm](https://img.shields.io/npm/l/@siimple/colors.svg?style=flat-square)](https://github.com/siimple/colors)
 
-[**siimple-colors**]() is an elegant and minimalistic color palette for UI design.
+[**siimple colors**]() is an elegant and minimalistic color palette for UI design.
 
-- [Documentation](): Official documentation for **siimple-colors**.
+- [Documentation](): Official documentation for **siimple colors**.
 - [@siimplecss](https://twitter.com/siimplecss) - Follow us on Twitter and share your love to **siimple** with the HT [#siimplecolors](https://twitter.com/search?q=%23siimplecolors&src=typd).
 
 
 ## Getting started
 
-**siimple-colors** can be installed using [npm](https://www.npmjs.com/package/siimple-colors):
+**siimple colors** can be installed using [npm](https://www.npmjs.com/package/@siimple/colors):
 
 ```bash
-$ npm install --save siimple-colors
+$ npm install --save @siimple/colors
 ```
 
-Or imported in your HTML files using a [CDN](https://www.jsdelivr.com/package/npm/siimple-colors).
+Or imported in your HTML files using a [CDN](https://www.jsdelivr.com/package/npm/@siimple/colors).
 
 ```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/siimple-colors@1.0.0/dist/siimple-colors.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@siimple/colors@1.0.0/dist/siimple-colors.min.css">
 ```
 
 ## Documentation 
@@ -67,7 +67,7 @@ Using the `siimple-color` function defined in `scss/functions.scss` is the easie
 - `LIGHTNESS` (optionally): a string with the desired lightness variant of the color. If not provided, the function will return the base color.
 
 ```scss
-@import "siimple-colors/scss/functions.scss";
+@import "@siimple/colors/scss/functions.scss";
 
 .blue-text {
     color: siimple-color("blue");
@@ -101,6 +101,4 @@ You can also use the colors variables defined in `scss/colors.scss`. Each color 
 ## License
 
 Code and documentation &copy; 2018 the **siimple team**. The code is released under the [MIT License](./LICENSE) and the documentation is released under the [Creative Commons CC BY 4.0 License](https://creativecommons.org/licenses/by/4.0/).
-
-The **siimple-colors** logo is &copy; 2018 Josemi Juanes. Released under the [Creative Commons CC BY-SA 4.0 License](https://creativecommons.org/licenses/by-sa/4.0/).
 
