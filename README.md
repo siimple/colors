@@ -103,5 +103,7 @@ You can also use the colors variables defined in `scss/colors.scss`. Each color 
 Code and documentation &copy; 2018 the **siimple team**. The code is released under the [MIT License](./LICENSE) and the documentation is released under the [Creative Commons CC BY 4.0 License](https://creativecommons.org/licenses/by/4.0/).
 
 
-<a href="https://www.siimple.xyz"><img src="https://raw.githubusercontent.com/siimple/art/master/footer.png"></a>
+<p align="center">
+    <img src="https://raw.githubusercontent.com/siimple/art/master/footer.png">
+</p>
 
