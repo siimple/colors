@@ -12,7 +12,7 @@ module.exports = {
         "license": "MIT License",
         //Navbar links
         "navbarLinks": [
-            {"text": "Getting started", "url": "/guide/installation.html"},
+            {"text": "Getting started", "url": "/installation.html"},
             {"text": "Colors", "url": "/colors.html"},
             {"text": "GitHub", "url": "https://github.com/siimple/colors", "target": "_blank"}
         ],
